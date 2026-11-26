@@ -296,19 +296,21 @@
       "description": "Hair salon.",
       "location": "57 Hakiaha Street, Taumarunui 3920",
       "approved": true,
-      "source": "https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "source": "https://www.yellow.co.nz/taumarunui/hairdressers",
       "checked": "2026-11-26",
-      "verification_status": "public_listing_crosschecked"
+      "verification_status": "recent_public_business_listing",
+      "phone": "07 895 3050"
     },
     {
-      "name": "Physio Direct Taumarunui",
+      "name": "Physio Direct — Taumarunui",
       "category": "Health & Wellbeing",
       "description": "Physiotherapy services.",
-      "location": "101 Hakiaha Street, Taumarunui 3920",
+      "location": "Shop 2, 101 Hakiaha Street, Taumarunui 3920",
       "approved": true,
-      "source": "https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "source": "Business listing checked 26 Nov 2026",
       "checked": "2026-11-26",
-      "verification_status": "public_listing_crosschecked"
+      "verification_status": "recent_public_business_listing",
+      "phone": "0800 555 5123"
     },
     {
       "name": "Seriously Outdoors",
@@ -398,8 +400,8 @@
       "category": "Retail & Shopping",
       "description": "Hardware and home improvement retailer.",
       "approved": true,
-      "verification_status": "public_listing_crosschecked",
-      "source": "https://www.zenbu.co.nz/locations/r3/taumarunui",
+      "verification_status": "recent_public_business_listing",
+      "source": "Business listing checked 26 Nov 2026",
       "checked": "2026-11-26",
       "location": "Taitua Street, Taumarunui 3920",
       "phone": "07 895 8107"
@@ -409,11 +411,12 @@
       "category": "Retail & Shopping",
       "description": "Home appliances and electronics retailer.",
       "approved": true,
-      "verification_status": "public_listing_crosschecked",
-      "source": "https://www.cylex.co.nz/taumarunui/retail-shops/",
+      "verification_status": "recent_public_business_listing",
+      "source": "Business listing checked 26 Nov 2026",
       "checked": "2026-11-26",
       "location": "137 Hakiaha Street, Taumarunui 3920",
-      "verification_note": "Address cross-checked against public business listings; business should confirm before final handover."
+      "verification_note": "Address cross-checked against public business listings; business should confirm before final handover.",
+      "phone": "07 895 7348"
     },
     {
       "name": "PC Solutions Taumarunui",
@@ -455,14 +458,15 @@
       "location": "Taumarunui, New Zealand"
     },
     {
-      "name": "Homersham Mechanical",
+      "name": "Homersham Mechanical Ltd",
       "category": "Automotive",
-      "description": "Automotive mechanical services.",
+      "description": "Mechanical, hydraulic and mobile equipment servicing.",
       "approved": true,
-      "verification_status": "public_listing_crosschecked",
-      "source": "https://businessme.co.nz/city/taumarunui/",
+      "verification_status": "recent_public_business_listing",
+      "source": "Business listing checked 26 Nov 2026",
       "checked": "2026-11-26",
-      "location": "Taumarunui, New Zealand"
+      "location": "52 Bell Road, Taumarunui 3920",
+      "phone": "027 382 8978"
     },
     {
       "name": "The Heating Company Taumarunui",
@@ -716,9 +720,9 @@
       "category": "Health & Wellbeing",
       "location": "Shop 6, 101 Hakiaha Street, Taumarunui 3920",
       "description": "Local business identified in public directory or company records; services and operating status require confirmation.",
-      "approved": false,
-      "verification_status": "research_candidate",
-      "source": "https://www.zenbu.co.nz/locations/r3/taumarunui",
+      "approved": true,
+      "verification_status": "local_public_listing",
+      "source": "Business listing checked 26 Nov 2026",
       "checked": "2026-11-26"
     },
     {
@@ -762,14 +766,15 @@
       "checked": "2026-11-26"
     },
     {
-      "name": "Kayz Beauty",
+      "name": "Kayz Beauty Ltd",
       "category": "Health & Beauty",
-      "location": "Taumarunui, New Zealand",
-      "description": "Local business identified in public directory or company records; services and operating status require confirmation.",
-      "approved": false,
-      "verification_status": "research_candidate",
-      "source": "https://www.checkbase.co.nz/locations/taumarunui",
-      "checked": "2026-11-26"
+      "location": "Shop 4, 101 Hakiaha Street, Taumarunui 3920",
+      "description": "Beauty and wellbeing treatments with online appointment bookings.",
+      "approved": true,
+      "verification_status": "recent_public_business_listing",
+      "source": "https://book.gettimely.com/Booking/Location/305431?mobile=True",
+      "checked": "2026-11-26",
+      "website": "https://book.gettimely.com/Booking/Location/305431?mobile=True"
     },
     {
       "name": "Ruapehu Refrigeration",
@@ -1056,13 +1061,15 @@
       "checked": "2026-11-26"
     },
     {
-      "name": "Blakley",
-      "category": "Creative & Digital",
-      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
-      "approved": false,
-      "verification_status": "research_candidate",
-      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
-      "checked": "2026-11-26"
+      "name": "Blakley Ltd",
+      "category": "Professional Services",
+      "description": "Business management and consulting services.",
+      "approved": true,
+      "verification_status": "recent_public_business_listing",
+      "source": "Business listing checked 26 Nov 2026",
+      "checked": "2026-11-26",
+      "location": "45 Miriama Street, Taumarunui 3920",
+      "phone": "027 646 2446"
     },
     {
       "name": "Xquizart Ltd",
@@ -1083,13 +1090,15 @@
       "checked": "2026-11-26"
     },
     {
-      "name": "Taumarunui Auto Centre Limited",
+      "name": "Taumarunui Auto Centre Ltd",
       "category": "Automotive",
-      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
-      "approved": false,
-      "verification_status": "research_candidate",
-      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
-      "checked": "2026-11-26"
+      "description": "Motor vehicle, 4WD and truck servicing and repairs.",
+      "approved": true,
+      "verification_status": "recent_public_business_listing",
+      "source": "Business listing checked 26 Nov 2026",
+      "checked": "2026-11-26",
+      "location": "109 Bell Road, Taumarunui 3920",
+      "phone": "07 895 7493"
     },
     {
       "name": "Morepork Camper Trailers",
@@ -1133,9 +1142,10 @@
       "category": "Professional Services",
       "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
       "approved": false,
-      "verification_status": "research_candidate",
+      "verification_status": "possible_duplicate_of_Cheal_Taumarunui",
       "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
-      "checked": "2026-11-26"
+      "checked": "2026-11-26",
+      "verification_note": "Cheal Taumarunui published separately; this may be a duplicate."
     },
     {
       "name": "Visit Ruapehu",
@@ -1716,6 +1726,124 @@
       "verification_status": "current_business_search_listing",
       "checked": "2026-11-26",
       "source": "Business listing checked 26 Nov 2026"
+    },
+    {
+      "name": "Time For Me",
+      "category": "Health & Beauty",
+      "description": "Wellbeing, relaxation and beauty services in Taumarunui.",
+      "location": "Shop 6, 101 Hakiaha Street, Taumarunui 3920",
+      "phone": "021 657 574",
+      "source": "https://www.timeforme.co.nz/",
+      "approved": true,
+      "verification_status": "recent_public_business_listing",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Bellasolé Hair Design",
+      "category": "Health & Beauty",
+      "description": "Home-based hairdressing studio in the Taumarunui district.",
+      "location": "Taumarunui district",
+      "phone": "027 759 5073",
+      "source": "https://www.findglocal.com/NZ/Taumarunui/104872421376938/Bellasol%C3%A8-hair-design",
+      "approved": true,
+      "verification_status": "recent_public_business_listing",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Sharon's Hair Design",
+      "category": "Health & Beauty",
+      "description": "Local hairdressing services in Taumarunui.",
+      "location": "99 Hakiaha Street, Taumarunui 3920",
+      "phone": "027 722 1377",
+      "source": "https://rohe.nz/hairdressers/manawatu-whanganui/taumarunui",
+      "approved": true,
+      "verification_status": "recent_public_business_listing",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Central Panelbeaters",
+      "category": "Automotive",
+      "description": "Vehicle panel beating and collision repairs.",
+      "location": "54 Bell Road, Taumarunui 3920",
+      "phone": "07 895 8806",
+      "source": "Business listing checked 26 Nov 2026",
+      "approved": true,
+      "verification_status": "recent_public_business_listing",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Manunui Service Station",
+      "category": "Automotive",
+      "description": "Automotive mechanical repairs and servicing in Manunui.",
+      "location": "1 Miro Street, Manunui, Taumarunui district",
+      "phone": "07 895 8726",
+      "source": "Business listing checked 26 Nov 2026",
+      "approved": true,
+      "verification_status": "recent_public_business_listing",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "BTW Company Ltd",
+      "category": "Professional Services",
+      "description": "Engineering, surveying, planning and environmental consulting.",
+      "location": "35 Morero Terrace, Taumarunui 3920",
+      "phone": "07 595 0020",
+      "source": "Business listing checked 26 Nov 2026",
+      "approved": true,
+      "verification_status": "recent_public_business_listing",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Doyle Valuations",
+      "category": "Property & Professional Services",
+      "description": "Independent property valuations and advice.",
+      "location": "58 Miriama Street, Taumarunui 3920",
+      "phone": "027 642 6519",
+      "source": "Business listing checked 26 Nov 2026",
+      "approved": true,
+      "verification_status": "recent_public_business_listing",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Cheal Taumarunui",
+      "category": "Professional Services",
+      "description": "Surveying, engineering and land development consultancy.",
+      "location": "163 Hakiaha Street, Taumarunui 3920",
+      "phone": "07 895 7604",
+      "source": "Business listing checked 26 Nov 2026",
+      "approved": true,
+      "verification_status": "recent_public_business_listing",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Rapunzel Hair Salon",
+      "category": "Health & Beauty",
+      "location": "87 Hakiaha Street, Taumarunui 3920",
+      "source": "https://www.yellow.co.nz/taumarunui/hairdressers",
+      "description": "Public listing located; current trading status requires confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Classique Design",
+      "category": "Health & Beauty",
+      "location": "47 Hakiaha Street, Taumarunui 3920",
+      "source": "https://www.yellow.co.nz/taumarunui/hairdressers",
+      "description": "Public listing located; current trading status requires confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "One 2 One Total Beauty & Body Care",
+      "category": "Health & Beauty",
+      "location": "5 Hakiaha Street, Taumarunui 3920",
+      "source": "https://www.naturaltherapypages.co.nz/therapist/3238",
+      "description": "Public listing located; current trading status requires confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "checked": "2026-11-26"
     }
   ]
 }
