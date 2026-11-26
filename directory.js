@@ -1,26 +1,120 @@
-document.addEventListener('DOMContentLoaded',async()=>{
- const q=document.getElementById('business-search'),cat=document.getElementById('business-category'),sort=document.getElementById('business-sort'),out=document.getElementById('business-results'),empty=document.getElementById('directory-empty'),count=document.getElementById('directory-count');
- let records=[];let loadError=false;
- const safeUrl=(value)=>{try{const u=new URL(value);return ['https:','http:'].includes(u.protocol)?u.href:null;}catch{return null;}};
- const addText=(parent,tag,text,cls)=>{if(!text)return;const el=document.createElement(tag);el.textContent=text;if(cls)el.className=cls;parent.append(el);return el;};
- const addLink=(parent,label,url)=>{const href=safeUrl(url);if(!href)return;const a=document.createElement('a');a.href=href;a.target='_blank';a.rel='noopener noreferrer';a.textContent=label;parent.append(a);};
- try{const response=await fetch('businesses.json',{cache:'no-store'});if(!response.ok)throw Error('Unable to load directory');const data=await response.json();records=(Array.isArray(data.businesses)?data.businesses:[]).filter(x=>x&&x.approved===true&&typeof x.name==='string'&&x.name.trim());}
- catch(e){loadError=true;empty.textContent='The directory could not be loaded. Please refresh or try again later.';}
- for(const c of [...new Set(records.map(x=>x.category).filter(Boolean))].sort()){const o=document.createElement('option');o.value=c;o.textContent=c;cat.append(o);}
- function render(){
-  const term=q.value.trim().toLocaleLowerCase(),category=cat.value;
-  const shown=records.filter(x=>(!category||x.category===category)&&[x.name,x.category,x.description,x.location].join(' ').toLocaleLowerCase().includes(term)).sort((a,b)=>sort.value==='za'?b.name.localeCompare(a.name):a.name.localeCompare(b.name));
-  out.replaceChildren();
-  for(const x of shown){const item=document.createElement('article');item.className='listing';
-   addText(item,'h3',x.name);addText(item,'small',x.category);addText(item,'p',x.description);addText(item,'p',x.location,'muted');
-   if(x.website)addLink(item,'Visit website ↗',x.website);
-   if(x.phone&&/^\+?[0-9() .-]{6,25}$/.test(x.phone)){const a=document.createElement('a');a.href='tel:'+x.phone.replace(/[^+0-9]/g,'');a.textContent='Call '+x.phone;item.append(a);}
-   out.append(item);
+document.addEventListener('DOMContentLoaded', async () => {
+  const search = document.getElementById('business-search');
+  const category = document.getElementById('business-category');
+  const sort = document.getElementById('business-sort');
+  const membersOnly = document.getElementById('members-only');
+  const reset = document.getElementById('directory-reset');
+  const results = document.getElementById('business-results');
+  const empty = document.getElementById('directory-empty');
+  const count = document.getElementById('directory-count');
+  let businesses = [];
+  let error = false;
+
+  const create = (tag, cls, content) => {
+    const el = document.createElement(tag);
+    if (cls) el.className = cls;
+    if (content !== undefined && content !== null) el.textContent = String(content);
+    return el;
+  };
+  const safeWeb = value => {
+    try {
+      const u = new URL(value);
+      return ['https:', 'http:'].includes(u.protocol) ? u.href : '';
+    } catch { return ''; }
+  };
+  const phoneHref = phone => /^\\+?[0-9() .-]{6,25}$/.test(phone || '')
+    ? 'tel:' + phone.replace(/[^+0-9]/g, '') : '';
+  const link = (text, href, external = false) => {
+    const a = create('a', '', text);
+    a.href = href;
+    if (external) { a.target = '_blank'; a.rel = 'noopener noreferrer'; }
+    return a;
+  };
+  const pageLink = business => 'business.html?business=' + encodeURIComponent(business.name);
+  const searchable = business => [
+    business.name, business.category, business.description, business.location
+  ].filter(Boolean).join(' ').toLocaleLowerCase('en-NZ');
+
+  try {
+    const response = await fetch('businesses.json', {cache:'no-store'});
+    if (!response.ok) throw new Error('Cannot load directory');
+    const json = await response.json();
+    businesses = (Array.isArray(json.businesses) ? json.businesses : [])
+      .filter(b => b && b.approved === true && typeof b.name === 'string' && b.name.trim());
+  } catch (err) {
+    error = true;
+    empty.textContent = 'The directory is temporarily unavailable. Please try again later.';
   }
-  count.textContent=loadError?'Directory unavailable':shown.length+' business listing'+(shown.length===1?'':'s');
-  empty.hidden=shown.length>0;
-  if(!loadError)empty.textContent=records.length?(term||category?'No matching businesses found. Try another search or category.':'No approved businesses are available yet.'):'Business listings are being verified before publication.';
- }
- for(const control of [q,cat,sort])control.addEventListener('input',render);
- render();
+
+  const categories = [...new Set(businesses.map(b => b.category).filter(Boolean))].sort((a, b) => a.localeCompare(b));
+  for (const c of categories) {
+    const option = create('option', '', c);
+    option.value = c;
+    category.append(option);
+  }
+
+  const initial = new URLSearchParams(window.location.search);
+  if (initial.has('q')) search.value = initial.get('q') || '';
+  if (initial.has('category') && categories.includes(initial.get('category'))) category.value = initial.get('category');
+
+  function render() {
+    const term = search.value.trim().toLocaleLowerCase('en-NZ');
+    const filtered = businesses.filter(b =>
+      (!term || searchable(b).includes(term)) &&
+      (!category.value || b.category === category.value) &&
+      (!membersOnly.checked || b.member === true)
+    ).sort((a, b) => {
+      if (sort.value === 'members') return Number(b.member === true) - Number(a.member === true) || a.name.localeCompare(b.name);
+      return sort.value === 'za' ? b.name.localeCompare(a.name) : a.name.localeCompare(b.name);
+    });
+
+    results.replaceChildren();
+    const fragment = document.createDocumentFragment();
+    for (const b of filtered) {
+      const card = create('article', 'listing directory-card');
+      const header = create('div', 'directory-card-head');
+      const icon = create('div', 'directory-monogram', b.name.slice(0, 1).toUpperCase());
+      icon.setAttribute('aria-hidden', 'true');
+      header.append(icon);
+      const titleGroup = create('div', 'directory-card-heading');
+      titleGroup.append(create('span', 'directory-category', b.category || 'Local business'));
+      const heading = create('h3');
+      heading.append(link(b.name, pageLink(b)));
+      titleGroup.append(heading);
+      header.append(titleGroup);
+      card.append(header);
+      if (b.member === true) card.append(create('span', 'member-chip', 'ETI member'));
+      if (b.description) card.append(create('p', 'directory-description', b.description));
+      if (b.location) card.append(create('p', 'directory-location', b.location));
+      const actions = create('div', 'directory-card-actions');
+      actions.append(link('View profile', pageLink(b)));
+      const website = safeWeb(b.website);
+      if (website) actions.append(link('Website ↗', website, true));
+      const phone = phoneHref(b.phone);
+      if (phone) actions.append(link('Call', phone));
+      card.append(actions);
+      fragment.append(card);
+    }
+    results.append(fragment);
+    count.textContent = error ? 'Directory unavailable' :
+      filtered.length + ' of ' + businesses.length + ' listed businesses';
+    empty.hidden = filtered.length > 0;
+    if (!error) empty.textContent = businesses.length ?
+      'No matching businesses. Clear the filters or try another search.' :
+      'Listings are being checked before publication.';
+  }
+
+  for (const control of [search, category, sort, membersOnly]) {
+    control.addEventListener(control === search ? 'input' : 'change', render);
+  }
+  reset.addEventListener('click', () => {
+    search.value = '';
+    category.value = '';
+    sort.value = 'az';
+    membersOnly.checked = false;
+    history.replaceState(null, '', window.location.pathname);
+    render();
+    search.focus();
+  });
+  render();
 });
