@@ -1,11 +1,10 @@
 import { storeName } from '../event-store.mjs';
 import { getStore } from '@netlify/blobs';
 import { reviewer as requireReviewer } from '../access.mjs';
-import { JWT } from 'google-auth-library';
 import { DateTime } from 'luxon';
 import { recurrence, occurrences } from '../recurrence.mjs';
 
-const calendarId = () => process.env.ETI_CALENDAR_ID || 'enterprisingtaumarunui@gmail.com';
+const calendarId = () => 'public-review';
 const error = (status, message) => Object.assign(new Error(message), {status});
 function reply(data, status = 200) {
   return Response.json(data, {status, headers:{'Cache-Control':'private, no-store','X-Content-Type-Options':'nosniff'}});
@@ -36,28 +35,7 @@ function eventFields(body) {
   return data;
 }
 const read = (store,key) => store.get(key,{type:'json'});
-function calendarClient() {
-  if (!process.env.ETI_CALENDAR_ID || !process.env.ETI_GOOGLE_SERVICE_ACCOUNT) throw error(503,'Google Calendar needs connecting. The event is still in the queue.');
-  const {client_email, private_key} = JSON.parse(process.env.ETI_GOOGLE_SERVICE_ACCOUNT);
-  return new JWT({email:client_email,key:private_key,scopes:['https://www.googleapis.com/auth/calendar.events']});
-}
-async function publish(client, id, event) {
-  const url = 'https://www.googleapis.com/calendar/v3/calendars/' + encodeURIComponent(calendarId()) + '/events';
-  const googleId = 'e' + id.replaceAll('-','');
-  const when = dateTime => ({dateTime:DateTime.fromISO(dateTime,{zone:'Pacific/Auckland'}).toISO(),timeZone:'Pacific/Auckland'});
-  const data = {id:googleId,summary:event.title,location:event.location,description:event.description,start:when(event.start),end:when(event.end),extendedProperties:{private:{etiSubmission:id}}};
-  try {
-    await client.request({url,method:'POST',data});
-  } catch (cause) {
-    if (cause.response?.status === 409) {
-      const existing = await client.request({url:url + '/' + googleId});
-      if (existing.data.status !== 'cancelled' && existing.data.extendedProperties?.private?.etiSubmission === id) return;
-    }
-    throw error(502,'Google Calendar could not confirm publication. Retry the saved approval after checking calendar access.');
-  }
-}
-
-export async function handle(request, store, getClient = calendarClient) {
+export async function handle(request, store) {
   const url = new URL(request.url);
   const action = url.searchParams.get('action') || 'submit';
   if (action === 'calendar' && request.method === 'GET') return reply({id:calendarId()});
@@ -120,6 +98,7 @@ export async function handle(request, store, getClient = calendarClient) {
   const id = body?.id;
   if (!/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/.test(id)) throw error(400,'Invalid submission reference.');
   if (action === 'submit') {
+    throw error(403,'Public event submissions are disabled during committee review. Use practice mode.');
     const event = eventFields(body);
     const email = field(body,'email',254);
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) throw error(400,'Check the organiser email.');

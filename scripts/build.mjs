@@ -1,30 +1,23 @@
-import { mkdir, readdir, copyFile, rm } from 'node:fs/promises';
+import {mkdir,readdir,copyFile,rm,readFile,writeFile} from 'node:fs/promises';
+import {gunzipSync} from 'node:zlib';
 await rm('dist',{recursive:true,force:true});
-await mkdir('dist', {recursive:true});
-for (const file of await readdir('.')) {
-  if (/\.(html|js|css)$/.test(file)) {
-    await copyFile(file, 'dist/' + file);
-  }
-}
-
-// Each review branch uses its own persistent submission queue.
-const { createHash } = await import('node:crypto');
-const { writeFile } = await import('node:fs/promises');
-const branch = process.env.HEAD || process.env.BRANCH || 'local';
-const scope = createHash('sha256').update(branch).digest('hex').slice(0,12);
-await writeFile('netlify/event-store.mjs', 'export const storeName = "eti-events-' + scope + '";\n');
-
-const {gunzipSync} = await import('node:zlib');
-const {readFile} = await import('node:fs/promises');
-// Comparison report remains in project archive and is not copied to public assets.
+await mkdir('dist',{recursive:true});
+const allow=new Set(['about.html','admin-account.js','admin.html','business.html','business.js','calendar-native.js','calendar.css','committee.js','community.js','contact.html','directory.html','directory.js','editor.css','editor.html','editor.js','events.html','featured-events.js','featured-home.js','index.html','legacy-events.html','legacy.js','login.html','membership.html','networking.html','news.html','news.js','page.html','privacy.html','site.js','style.css','thanks.html','workspace-public.js','workspace.html','workspace.js','taumarunui-history.webp']);
+for(const file of allow)await copyFile(file,'dist/'+file);
 await copyFile('redirects.txt','dist/_redirects');
-
-await copyFile('taumarunui-history.webp','dist/taumarunui-history.webp');
-await writeFile('dist/legacy-events.json',gunzipSync(await readFile('reports/legacy-events.json.gz')));
-
-// Optional verified public event details export; no live data writes at build time.
-try { await copyFile('event-details.json','dist/event-details.json'); } catch (e) { if(e.code!=='ENOENT') throw e; }
-
-// Only publish approved baseline business records, not candidate research.
-const directory = JSON.parse(await readFile('businesses.json','utf8'));
-await writeFile('dist/businesses.json', JSON.stringify({businesses:directory.businesses.filter(b=>b.approved===true)}));
+await writeFile('netlify/event-store.mjs','export const storeName="eti-public-review-v1";\n');
+const source=JSON.parse(gunzipSync(await readFile('reports/legacy-events.json.gz')).toString());
+if(!Array.isArray(source))throw Error('Unexpected public event snapshot structure.');
+const publicText=(v,max)=>String(v??'').replace(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/gi,'').trim().slice(0,max);
+const events=source.map(row=>{
+ if(!Array.isArray(row)||row.length<5)throw Error('Invalid public event row.');
+ const [name,start,end,venue,slug,allDay]=row;
+ return [publicText(name,240),publicText(start,40),publicText(end,40),publicText(venue,300),publicText(slug,400),allDay===true||allDay===1];
+});
+await writeFile('dist/legacy-events.json',JSON.stringify(events));
+const directory=JSON.parse(await readFile('businesses.json','utf8'));
+if(directory.businesses.some(b=>b.approved!==true))throw Error('Unexpected private directory record.');
+await writeFile('dist/businesses.json',JSON.stringify(directory));
+const actual=await readdir('dist');
+if(actual.some(x=>!allow.has(x)&&!['_redirects','legacy-events.json','businesses.json'].includes(x)))throw Error('Unexpected public output.');
+console.log('Public review build: '+events.length+' public event occurrences and '+directory.businesses.length+' approved directory listings. Internal reports excluded.');
