@@ -10,3 +10,5 @@
 /event/* /legacy-events.html?event=:splat 301
 /series/* /legacy-events.html?series=:splat 301
 /events/* /events.html 301
+/community-calendar/ /events.html 301
+/contact/ /contact.html 301
