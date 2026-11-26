@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       return ['https:', 'http:'].includes(u.protocol) ? u.href : '';
     } catch { return ''; }
   };
-  const phoneHref = phone => /^\\+?[0-9() .-]{6,25}$/.test(phone || '')
+  const phoneHref = phone => /^[+]?[0-9() .-]{6,25}$/.test(phone || '')
     ? 'tel:' + phone.replace(/[^+0-9]/g, '') : '';
   const link = (text, href, external = false) => {
     const a = create('a', '', text);
