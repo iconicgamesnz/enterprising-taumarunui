@@ -23,3 +23,7 @@ await writeFile('dist/legacy-events.json',gunzipSync(await readFile('reports/leg
 
 // Optional verified public event details export; no live data writes at build time.
 try { await copyFile('event-details.json','dist/event-details.json'); } catch (e) { if(e.code!=='ENOENT') throw e; }
+
+// Only publish approved baseline business records, not candidate research.
+const directory = JSON.parse(await readFile('businesses.json','utf8'));
+await writeFile('dist/businesses.json', JSON.stringify({businesses:directory.businesses.filter(b=>b.approved===true)}));
