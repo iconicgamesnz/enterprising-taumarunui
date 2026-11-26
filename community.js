@@ -15,14 +15,6 @@ async function api(action, body) {
 }
 const form = document.querySelector('#event-form');
 if (form) {
-  const frame = document.querySelector('.calendar iframe');
-  api('calendar').then(({id}) => {
-    const url = new URL(frame.src);
-    if (url.searchParams.get('src') === id) return;
-    url.searchParams.set('src',id);
-    frame.src = url.href;
-    document.querySelector('.calendar + p a').href = url.href;
-  }).catch(() => {});
   let id = crypto.randomUUID();
   form.addEventListener('submit',async event => {
     event.preventDefault();
@@ -44,11 +36,34 @@ if (access) {
   const queue = document.querySelector('#queue');
   const controls = document.querySelector('#controls');
   const status = document.querySelector('#review-status');
+  const management=document.querySelector('#published-management'),editor=document.querySelector('#published-editor');
+  function editPublished(item){
+    const row=document.querySelector('#review').content.firstElementChild.cloneNode(true);
+    row.querySelector('h2').textContent=item?.event?.title||'New event';
+    row.querySelector('.contact').textContent=item?.status||'Create an event directly';
+    for(const key of ['title','location','start','end','description','image','registration'])row.elements[key].value=item?.event?.[key]||'';
+    row.querySelector('[value=draft]').remove();
+    const save=row.querySelector('[value=approve]');save.textContent='Save and publish';save.value=item?'edit':'create';
+    const cancel=row.querySelector('[value=decline]');cancel.textContent='Cancel event';cancel.value='cancel';cancel.hidden=!item||item.status==='cancelled';
+    row.onsubmit=async e=>{e.preventDefault();const action=e.submitter.value;if(action==='cancel'&&!confirm('Remove this event from the public calendar?'))return;const feedback=row.querySelector('[role=status]');try{await api(action,{...Object.fromEntries(new FormData(row)),id:item?.id||crypto.randomUUID(),version:item?.version||''});await managePublished();}catch(err){feedback.textContent=err.message;}};
+    editor.replaceChildren(row);
+  }
+  async function managePublished(){
+    if(!management)return;
+    const {items}=await api('manage');management.hidden=false;
+    editor.replaceChildren();
+    const select=document.createElement('select');select.setAttribute('aria-label','Select published event');
+    const first=document.createElement('option');first.textContent='Select an event';first.value='';select.append(first);
+    items.sort((a,b)=>a.event.start.localeCompare(b.event.start)).forEach((item,i)=>{const option=document.createElement('option');option.value=String(i);option.textContent=item.event.start+' · '+item.event.title+' ('+item.status+')';select.append(option);});
+    select.onchange=()=>{if(select.value!=='')editPublished(items[Number(select.value)]);};editor.append(select);
+  }
+  document.querySelector('#create-event')?.addEventListener('click',()=>editPublished(null));
   async function refresh(note = '') {
     const key = reviewer;
     const {items} = await api('queue');
     if (key !== reviewer || !reviewer) return;
     queue.replaceChildren();
+    await managePublished();
     access.hidden = true;
     controls.hidden = false;
     status.textContent = [note,items.length ? 'Awaiting review: ' + items.length : 'The review queue is empty.'].filter(Boolean).join(' ');
@@ -56,8 +71,8 @@ if (access) {
       const row = document.querySelector('#review').content.firstElementChild.cloneNode(true);
       row.querySelector('h2').textContent = item.title;
       row.querySelector('.contact').textContent = 'Organiser: ' + item.email;
-      for (const key of ['title','location','start','end','description']) {
-        row.elements[key].value = item[key];
+      for (const key of ['title','location','start','end','description','image','registration']) {
+        row.elements[key].value = item[key] || '';
         row.elements[key].readOnly = item.locked;
       }
       if (item.locked) {
