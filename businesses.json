@@ -1,5 +1,24 @@
 {
   "updated": "2026-11-26",
-  "verification_note": "No prior 64 draft records recovered; only verified approved businesses should be added.",
-  "businesses": []
+  "verification_note": "Draft directory candidates only. All listings require ETI approval and verification of public details before publication. Membership/payment status must not be published.",
+  "businesses": [
+    {
+      "name": "King Country Glass / Novus",
+      "category": "Automotive and glazing",
+      "description": "Local glass and glazing services. Listing details awaiting ETI approval.",
+      "approved": false
+    },
+    {
+      "name": "Taumarunui i-Site",
+      "category": "Visitor information",
+      "description": "Local visitor information services. Listing details awaiting ETI approval.",
+      "approved": false
+    },
+    {
+      "name": "Inframax Construction Ltd",
+      "category": "Construction and infrastructure",
+      "description": "Construction and infrastructure services. Membership and listing approval awaiting confirmation.",
+      "approved": false
+    }
+  ]
 }
