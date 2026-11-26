@@ -1,6 +1,6 @@
 {
   "updated": "2026-11-26",
-  "verification_note": "Working research database: approved=true records are visible in directory; approved=false records are research candidates pending verification/ETI review. Directory presence does not establish ETI membership. Review and confirm business details, including potentially outdated addresses, before client handover.",
+  "verification_note": "Directory research in progress. Public listings have at least one public business listing or official source, but may still need direct business confirmation. Research candidates are not shown. ETI membership/payment data is private; publication does not imply ETI endorsement.",
   "businesses": [
     {
       "name": "King Country Glass & Home Plus",
@@ -280,8 +280,9 @@
       "description": "Hair salon.",
       "location": "57 Hakiaha Street, Taumarunui 3920",
       "approved": true,
-      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
-      "checked": "2026-11-26"
+      "source": "https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26",
+      "verification_status": "public_listing_crosschecked"
     },
     {
       "name": "Physio Direct Taumarunui",
@@ -289,8 +290,9 @@
       "description": "Physiotherapy services.",
       "location": "101 Hakiaha Street, Taumarunui 3920",
       "approved": true,
-      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
-      "checked": "2026-11-26"
+      "source": "https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26",
+      "verification_status": "public_listing_crosschecked"
     },
     {
       "name": "Seriously Outdoors",
@@ -298,8 +300,10 @@
       "description": "Outdoor clothing and equipment.",
       "location": "99 Hakiaha Street, Taumarunui 3920",
       "approved": true,
-      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
-      "checked": "2026-11-26"
+      "source": "https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26",
+      "phone": "07 896 6497",
+      "verification_status": "public_listing_crosschecked"
     },
     {
       "name": "Arcadian Antiques",
@@ -307,8 +311,9 @@
       "description": "Antiques and collectibles.",
       "location": "79 Hakiaha Street, Taumarunui 3920",
       "approved": true,
-      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
-      "checked": "2026-11-26"
+      "source": "https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26",
+      "verification_status": "public_listing_crosschecked"
     },
     {
       "name": "Advantage Tyre & Battery Shop Taumarunui",
@@ -316,8 +321,10 @@
       "description": "Tyre and battery services.",
       "location": "178 Hakiaha Street, Taumarunui 3920",
       "approved": true,
-      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
-      "checked": "2026-11-26"
+      "source": "https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26",
+      "phone": "07 895 8394",
+      "verification_status": "public_listing_crosschecked"
     },
     {
       "name": "Harcourts Taumarunui",
@@ -355,8 +362,9 @@
       "description": "Convenience groceries.",
       "location": "97 Hakiaha Street, Taumarunui 3920",
       "approved": true,
-      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
-      "checked": "2026-11-26"
+      "source": "https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26",
+      "verification_status": "public_listing_crosschecked"
     },
     {
       "name": "Mobil Taumarunui",
@@ -371,28 +379,32 @@
       "name": "Mitre 10 Taumarunui",
       "category": "Retail & Shopping",
       "description": "Hardware and home improvement retailer.",
-      "approved": false,
-      "verification_status": "research_candidate",
-      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
-      "checked": "2026-11-26"
+      "approved": true,
+      "verification_status": "public_listing_crosschecked",
+      "source": "https://www.zenbu.co.nz/locations/r3/taumarunui",
+      "checked": "2026-11-26",
+      "location": "Taitua Street, Taumarunui 3920",
+      "phone": "07 895 8107"
     },
     {
       "name": "100% Appliances Taumarunui",
       "category": "Retail & Shopping",
       "description": "Home appliances and electronics retailer.",
-      "approved": false,
-      "verification_status": "research_candidate",
-      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
-      "checked": "2026-11-26"
+      "approved": true,
+      "verification_status": "public_listing_crosschecked",
+      "source": "https://businessme.co.nz/city/taumarunui/",
+      "checked": "2026-11-26",
+      "location": "Taumarunui, New Zealand"
     },
     {
       "name": "PC Solutions Taumarunui",
       "category": "Digital & Technology",
       "description": "Computer and IT services.",
-      "approved": false,
-      "verification_status": "research_candidate",
-      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
-      "checked": "2026-11-26"
+      "approved": true,
+      "verification_status": "public_listing_crosschecked",
+      "source": "https://businessme.co.nz/city/taumarunui/",
+      "checked": "2026-11-26",
+      "location": "Taumarunui, New Zealand"
     },
     {
       "name": "Mr Plumber Taumarunui / Taumarunui Plumbing",
@@ -407,37 +419,41 @@
       "name": "Keystone Plumbing",
       "category": "Trades & Home Improvement",
       "description": "Plumbing services.",
-      "approved": false,
-      "verification_status": "research_candidate",
-      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
-      "checked": "2026-11-26"
+      "approved": true,
+      "verification_status": "public_listing_crosschecked",
+      "source": "https://businessme.co.nz/city/taumarunui/",
+      "checked": "2026-11-26",
+      "location": "Taumarunui, New Zealand"
     },
     {
       "name": "Ruapehu Auto Electrical",
       "category": "Automotive",
       "description": "Vehicle auto-electrical services.",
-      "approved": false,
-      "verification_status": "research_candidate",
-      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
-      "checked": "2026-11-26"
+      "approved": true,
+      "verification_status": "public_listing_crosschecked",
+      "source": "https://businessme.co.nz/city/taumarunui/",
+      "checked": "2026-11-26",
+      "location": "Taumarunui, New Zealand"
     },
     {
       "name": "Homersham Mechanical",
       "category": "Automotive",
       "description": "Automotive mechanical services.",
-      "approved": false,
-      "verification_status": "research_candidate",
-      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
-      "checked": "2026-11-26"
+      "approved": true,
+      "verification_status": "public_listing_crosschecked",
+      "source": "https://businessme.co.nz/city/taumarunui/",
+      "checked": "2026-11-26",
+      "location": "Taumarunui, New Zealand"
     },
     {
       "name": "The Heating Company Taumarunui",
       "category": "Trades & Home Improvement",
       "description": "Heating services.",
-      "approved": false,
-      "verification_status": "research_candidate",
-      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
-      "checked": "2026-11-26"
+      "approved": true,
+      "verification_status": "public_listing_crosschecked",
+      "source": "https://businessme.co.nz/city/taumarunui/",
+      "checked": "2026-11-26",
+      "location": "Taumarunui, New Zealand"
     },
     {
       "name": "Dean Stewart Building & Contracting",
@@ -551,19 +567,22 @@
       "name": "Bay Audiology Taumarunui",
       "category": "Health & Wellbeing",
       "description": "Hearing care services.",
-      "approved": false,
-      "verification_status": "research_candidate",
-      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
-      "checked": "2026-11-26"
+      "approved": true,
+      "verification_status": "public_listing_crosschecked",
+      "source": "https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26",
+      "location": "Shop 11, 101 Hakiaha Street, Taumarunui 3920"
     },
     {
       "name": "Rusty Nail Tavern",
       "category": "Food & Drink",
       "description": "Tavern and restaurant.",
-      "approved": false,
-      "verification_status": "research_candidate",
-      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
-      "checked": "2026-11-26"
+      "approved": true,
+      "verification_status": "public_listing_crosschecked",
+      "source": "https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26",
+      "location": "123 Hakiaha Street, Taumarunui 3920",
+      "phone": "07 895 3489"
     },
     {
       "name": "Arcade Cafe",
@@ -635,6 +654,126 @@
       "approved": false,
       "verification_status": "research_candidate",
       "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "PGG Wrightson Taumarunui",
+      "category": "Rural & Agriculture",
+      "location": "31 Miriama Street, Taumarunui 3920",
+      "description": "Local business identified in public directory or company records; services and operating status require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://rohe.nz/agriculture/manawatu-whanganui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Garry Kidd Engineering Co",
+      "category": "Trades & Home Improvement",
+      "location": "52 Bell Road, Taumarunui 3920",
+      "description": "Local business identified in public directory or company records; services and operating status require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://www.zenbu.co.nz/locations/r3/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Liquorland Taumarunui",
+      "category": "Retail & Shopping",
+      "location": "15 Hakiaha Street, Taumarunui 3920",
+      "description": "Local business identified in public directory or company records; services and operating status require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Rongoā Angel",
+      "category": "Health & Wellbeing",
+      "location": "Shop 6, 101 Hakiaha Street, Taumarunui 3920",
+      "description": "Local business identified in public directory or company records; services and operating status require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://www.zenbu.co.nz/locations/r3/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Manuka Media",
+      "category": "Digital & Technology",
+      "location": "Taumarunui, New Zealand",
+      "description": "Local business identified in public directory or company records; services and operating status require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "MobileIT",
+      "category": "Digital & Technology",
+      "location": "Taumarunui, New Zealand",
+      "description": "Local business identified in public directory or company records; services and operating status require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Central Refrigeration Services",
+      "category": "Trades & Home Improvement",
+      "location": "Taumarunui, New Zealand",
+      "description": "Local business identified in public directory or company records; services and operating status require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://www.checkbase.co.nz/locations/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Josh Cribb Plumbing",
+      "category": "Trades & Home Improvement",
+      "location": "Taumarunui, New Zealand",
+      "description": "Local business identified in public directory or company records; services and operating status require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://www.checkbase.co.nz/locations/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Kayz Beauty",
+      "category": "Health & Beauty",
+      "location": "Taumarunui, New Zealand",
+      "description": "Local business identified in public directory or company records; services and operating status require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://www.checkbase.co.nz/locations/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Ruapehu Refrigeration",
+      "category": "Trades & Home Improvement",
+      "location": "Taumarunui, New Zealand",
+      "description": "Local business identified in public directory or company records; services and operating status require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Epic Cycle Adventures",
+      "category": "Tourism & Visitor Services",
+      "location": "Taumarunui, New Zealand",
+      "description": "Local business identified in public directory or company records; services and operating status require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://www.checkbase.co.nz/locations/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Go Bush Adventures",
+      "category": "Tourism & Visitor Services",
+      "location": "Taumarunui, New Zealand",
+      "description": "Local business identified in public directory or company records; services and operating status require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://www.checkbase.co.nz/locations/taumarunui",
       "checked": "2026-11-26"
     }
   ]
