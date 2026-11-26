@@ -11,7 +11,8 @@
       "website": "https://kingcountryglass.co.nz/",
       "approved": true,
       "source": "https://kingcountryglass.co.nz/",
-      "checked": "2026-11-26"
+      "checked": "2026-11-26",
+      "verification_note": "Conflicting public addresses: company site previously listed 18 Manuaute Street, while Visit Ruapehu lists 39 Miriama Street. Confirm current premises before ETI handover."
     },
     {
       "name": "Taumarunui i-SITE Visitor Information Centre",
@@ -194,7 +195,7 @@
       "location": "2 Marae Street, Taumarunui 3920",
       "phone": "07 895 7230",
       "approved": true,
-      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
+      "source": "https://www.visitruapehu.com/see-do/eat-drink-shop/golden-kiwi",
       "checked": "2026-11-26"
     },
     {
@@ -315,9 +316,9 @@
       "name": "Physio Direct — Taumarunui",
       "category": "Health & Wellbeing",
       "description": "Physiotherapy services.",
-      "location": "Shop 2, 101 Hakiaha Street, Taumarunui 3920",
+      "location": "101 Hakiaha Street, Taumarunui 3920",
       "approved": true,
-      "source": "Business listing checked 26 Nov 2026",
+      "source": "https://www.healthpoint.co.nz/allied-health/physiotherapy/physio-direct/at/101-hakiaha-street-taumarunui/",
       "checked": "2026-11-26",
       "verification_status": "recent_public_business_listing",
       "phone": "0800 555 5123"
@@ -341,7 +342,8 @@
       "approved": true,
       "source": "https://www.visitruapehu.com/see-do/eat-drink-shop/arcadian-antiques-taumarunui",
       "checked": "2026-11-26",
-      "verification_status": "official_tourism_listing"
+      "verification_status": "official_tourism_listing",
+      "phone": "027 671 6028"
     },
     {
       "name": "Advantage Tyre & Battery Shop Taumarunui",
@@ -1968,14 +1970,15 @@
       "checked": "2026-11-26"
     },
     {
-      "name": "Wakelin Engineering",
+      "name": "Wakelin Engineering 1996",
       "category": "Trades & Home Improvement",
-      "description": "Engineering and machinery services in the Taumarunui district.",
-      "location": "Taumarunui district",
-      "source": "https://www.visitruapehu.com/see-do/eat-drink-shop?page=2",
+      "description": "Engineering, small motor servicing, hydraulic hoses and on-site mobile hydraulic support.",
+      "location": "62 Miriama Street, Taumarunui 3920",
+      "source": "https://www.visitruapehu.com/see-do/eat-drink-shop/wakelin-engineering-1996",
       "approved": true,
       "verification_status": "current_public_business_listing",
-      "checked": "2026-11-26"
+      "checked": "2026-11-26",
+      "phone": "07 895 8177"
     },
     {
       "name": "SPCA Op Shop Taumarunui",
@@ -1988,6 +1991,50 @@
       "checked": "2026-11-26",
       "website": "https://www.spca.nz/opshops/taumarunui-op-shop",
       "phone": "07 886 7722"
+    },
+    {
+      "name": "SAPS Gifts and Souvenirs",
+      "category": "Retail & Shopping",
+      "description": "Gifts, souvenirs, coffee and locally made carvings.",
+      "location": "706 Ongarue Back Road, Taumarunui 3996",
+      "phone": "021 034 0324",
+      "source": "https://www.visitruapehu.com/see-do/eat-drink-shop/saps-gifts-and-souvenirs",
+      "approved": true,
+      "verification_status": "current_public_operator_or_health_listing",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Taumarunui Dental Surgery",
+      "category": "Health & Wellbeing",
+      "description": "Dental care including urgent, adult and eligible adolescent and child dental services.",
+      "location": "63 Kururau Road, Taumarunui 3920",
+      "phone": "07 895 7850",
+      "source": "https://www.healthpoint.co.nz/dentistry/general-dentist/taumarunui-dental-surgery/",
+      "approved": true,
+      "verification_status": "current_public_operator_or_health_listing",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "LK Barbershop",
+      "category": "Health & Beauty",
+      "description": "Barbering and men's haircut services in central Taumarunui.",
+      "location": "99 Hakiaha Street, Taumarunui 3920",
+      "phone": "021 264 8495",
+      "source": "Taumarunui business listing, November 2026",
+      "approved": true,
+      "verification_status": "current_public_operator_or_health_listing",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Taumarunui Community Kōkiri Trust",
+      "category": "Community & Public Services",
+      "description": "Kaupapa Māori community organization providing health and whānau services.",
+      "location": "121 Hakiaha Street, Taumarunui 3920",
+      "phone": "07 895 5919",
+      "source": "Taumarunui business listing, November 2026",
+      "approved": true,
+      "verification_status": "current_public_operator_or_health_listing",
+      "checked": "2026-11-26"
     }
   ]
 }
