@@ -4,7 +4,7 @@ function stamp(s){if(!/^\d{4}-\d{2}-\d{2}$/.test(s))throw Error('Invalid date');
 const dayString=n=>new Date(n).toISOString().slice(0,10);
 export function recurrence(body,start,end){
  const repeat=body.repeat||'none';
- if(!['none','daily','weekly','fortnightly','monthly'].includes(repeat))throw Error('Invalid repeat pattern');
+ if(!['none','daily','weekly','fortnightly','monthly','monthly-weekday','monthly-last'].includes(repeat))throw Error('Invalid repeat pattern');
  if(repeat==='none')return {repeat,repeatUntil:'',exceptions:''};
  const first=stamp(start.slice(0,10)),last=stamp(body.repeatUntil||'');
  if(last<first||last-first>366*2*dayMs)throw Error('Repeat end must be within two years of start.');
@@ -20,6 +20,15 @@ export function occurrences(event){
  for(let i=0;i<=732;i++){
   let next;
   if(rule.repeat==='monthly'){const d=new Date(Date.UTC(base.getUTCFullYear(),base.getUTCMonth()+i,base.getUTCDate()));if(d.getUTCDate()!==base.getUTCDate())continue;next=+d;}
+  else if(rule.repeat==='monthly-weekday'||rule.repeat==='monthly-last'){
+    const monthStart=new Date(Date.UTC(base.getUTCFullYear(),base.getUTCMonth()+i,1));
+    const monthEnd=new Date(Date.UTC(monthStart.getUTCFullYear(),monthStart.getUTCMonth()+1,0));
+    const weekday=base.getUTCDay(),nth=Math.ceil(base.getUTCDate()/7);
+    const d=rule.repeat==='monthly-last'?monthEnd.getUTCDate()-((monthEnd.getUTCDay()-weekday+7)%7):1+((weekday-monthStart.getUTCDay()+7)%7)+(nth-1)*7;
+    if(d>monthEnd.getUTCDate())continue;
+    next=Date.UTC(monthStart.getUTCFullYear(),monthStart.getUTCMonth(),d);
+    if(next<first)continue;
+  }
   else next=first+i*dayMs*({daily:1,weekly:7,fortnightly:14}[rule.repeat]);
   if(next>last)break;
   const date=dayString(next);if(excluded.has(date))continue;
