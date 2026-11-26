@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       return ['https:', 'http:'].includes(u.protocol) ? u.href : '';
     } catch { return ''; }
   };
-  const phoneHref = phone => /^\\+?[0-9() .-]{6,25}$/.test(phone || '')
+  const phoneHref = phone => /^[+]?[0-9() .-]{6,25}$/.test(phone || '')
     ? 'tel:' + phone.replace(/[^+0-9]/g, '') : '';
   const fail = message => {
     root.replaceChildren(create('h1', 'business-title', 'Business not found'),
@@ -51,6 +51,19 @@ document.addEventListener('DOMContentLoaded', async () => {
     panel.append(kicker, heading);
     if (record.member === true) panel.append(create('span', 'member-chip member-chip-large', 'ETI member'));
     if (record.description) panel.append(create('p', 'business-lead', record.description));
+    if (record.member === true && record.profile_intro) {
+      panel.append(create('p', 'member-profile-intro', record.profile_intro));
+    }
+    if (record.member === true && Array.isArray(record.services) && record.services.length) {
+      const offerings = create('section', 'member-services');
+      offerings.append(create('h2', '', 'What we offer'));
+      const list = create('ul');
+      for (const service of record.services.slice(0, 12)) {
+        if (typeof service === 'string' && service.trim()) list.append(create('li', '', service));
+      }
+      offerings.append(list);
+      panel.append(offerings);
+    }
 
     const details = create('div', 'business-detail-grid');
     const info = create('section', 'business-detail-panel');
@@ -58,6 +71,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (record.location) {
       info.append(create('h3', '', 'Location'));
       info.append(create('p', '', record.location));
+      if (/\\b(street|road|terrace|avenue|drive|lane|place)\\b/i.test(record.location)) {
+        const query = encodeURIComponent(record.name + ', ' + record.location + ', New Zealand');
+        info.append(link('Find on Google Maps ↗', 'https://www.google.com/maps/search/?api=1&query=' + query, 'business-map-link', true));
+      }
     }
     if (record.phone && phoneHref(record.phone)) {
       info.append(create('h3', '', 'Phone'));
