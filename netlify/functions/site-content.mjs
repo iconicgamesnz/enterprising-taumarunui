@@ -1,7 +1,7 @@
 import {getStore} from '@netlify/blobs';
 import {storeName} from '../event-store.mjs';
 import {contentEditor,fail} from '../access.mjs';
-const pages=new Set(['index','about','membership','contact','directory','events','photos','privacy']);
+const pages=new Set(['index','about','membership','contact','directory','events','privacy']);
 const response=(body,status=200)=>Response.json(body,{status,headers:{'Cache-Control':'private,no-store','X-Content-Type-Options':'nosniff'}});
 import {clean} from '../cms-validation.mjs';
 const empty=()=>({version:'',draft:null,published:null,previous:null});
@@ -25,7 +25,7 @@ export default async function(request){
   if(request.method==='GET'&&action==='edit')return response(record);
   if(request.method!=='POST'||!['draft','publish','restore','unpublish'].includes(action))throw fail(405,'Unsupported operation.');
   if(!request.headers.get('content-type')?.startsWith('application/json'))throw fail(415,'JSON required.');
-  const raw=await request.text();if(raw.length>480000)throw fail(413,'Content too large.');
+  const raw=await request.text();if(raw.length>1800000)throw fail(413,'Content too large.');
   const body=JSON.parse(raw);
   if((body.version||'')!==record.version)throw fail(409,'Someone changed this page. Reload before editing.');
   let next={...record,version:crypto.randomUUID()};

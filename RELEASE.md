@@ -37,3 +37,7 @@ Use editor.html for existing pages, posts, media and users, workspace.html for n
 ## Demo login
 
 Username `demo`, password `eti-practice` opens local practice mode only. It never creates a server session or accesses actual data. Custom page drafts preserve their published version until explicitly published or unpublished. The build removes stale generated assets before rebuilding.
+
+## Existing content editing
+
+Marked existing text and image fields can be changed through the page editor, including replacing an image via file upload. Complex markup, links and interactive widgets are not edited as raw HTML. The build runs isolated backend tests; full browser and real owner account tests remain outstanding.

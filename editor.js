@@ -20,7 +20,7 @@ async function call(action,body){
 function read(){
  if(target.value==='appearance')return {theme:form.elements.theme.value,font:form.elements.font.value};
  const v={};for(const k of ['heading','intro','alt','seoTitle','description','body'])v[k]=form.elements[k].value.trim();
- v.photo=photo;return v;
+ v.photo=photo;v.sections=sectionValues();return v;
 }
 function show(){
  if(!record)return;
@@ -30,6 +30,7 @@ function show(){
  $('#page-fields').hidden=theme;$('#theme-fields').hidden=!theme;
  if(theme){form.elements.theme.value=v.theme||'original';form.elements.font.value=v.font||'original';}
  else{for(const k of ['heading','intro','alt','seoTitle','description','body']){form.elements[k].value=v[k]||'';form.elements[k].placeholder=baseline[k]||'';}photo=v.photo||'';form.elements.photoUrl.value=photo.startsWith('https:')?photo:'';form.elements.upload.value='';}
+ showSections(v);
  $('#open-page').href=theme?'index.html':target.value.startsWith('post-')?'news.html#'+target.value:target.value+'.html';$('#open-page').hidden=demo;
  render();
 }
@@ -45,7 +46,7 @@ async function load(){
  if(busy)return;busy=true;target.disabled=true;
  try{record=await call('edit');baseline={};
  if(target.value!=='appearance'&&!target.value.startsWith('post-')){
-  const page=await fetch(target.value+'.html');if(page.ok){const doc=new DOMParser().parseFromString(await page.text(),'text/html'),h=doc.querySelector('main h1'),p=doc.querySelector('main .hero .wrap p:not(.eyebrow)');baseline={heading:h?.textContent||'',intro:p?.textContent||'',seoTitle:doc.title,description:doc.querySelector('meta[name=description]')?.content||''};}
+  const page=await fetch(target.value+'.html');if(page.ok){const doc=new DOMParser().parseFromString(await page.text(),'text/html'),h=doc.querySelector('main h1'),p=doc.querySelector('main .hero .wrap p:not(.eyebrow)');baseline={heading:h?.textContent||'',intro:p?.textContent||'',seoTitle:doc.title,description:doc.querySelector('meta[name=description]')?.content||'',sections:[...doc.querySelectorAll('main [data-edit-key]')].filter(e=>e!==p).map(e=>e.tagName==='IMG'?{key:e.dataset.editKey,type:'image',src:e.getAttribute('src')||'',alt:e.getAttribute('alt')||''}:{key:e.dataset.editKey,type:'text',tag:e.tagName.toLowerCase(),text:e.textContent})};}
  }
  show();say('Ready to edit.');}catch(e){record=null;say(e.message);throw e;}finally{busy=false;target.disabled=false;}
 }
@@ -90,3 +91,17 @@ async function refreshAccounts(){const list=$('#accounts-list');list.replaceChil
 $('#accounts-nav').onclick=()=>{if(!panel('accounts'))return;$('#owner-accounts').hidden=demo||!!accountUser;$('#password-form').hidden=demo||!accountUser;$('#account-info').textContent=demo?'Practice mode does not create actual accounts.':accountUser?'Signed in as '+accountUser+'. Changing your password ends existing sessions.':'Owner recovery access: create and revoke individual editor accounts. Share generated credentials privately.';if(!demo&&!accountUser)refreshAccounts().catch(e=>say(e.message));};
 $('#account-form').onsubmit=async e=>{e.preventDefault();const a=e.submitter.value;if(a!=='create'&&!confirm('This invalidates existing sessions. Continue?'))return;try{const r=await service('cms-accounts',a,{username:e.target.elements.username.value});$('#account-result').textContent=r.password?'Username: '+r.username+' | Temporary password: '+r.password:'Account disabled.';await refreshAccounts();}catch(err){say(err.message);}};
 $('#password-form').onsubmit=async e=>{e.preventDefault();try{await service('cms-accounts','password',Object.fromEntries(new FormData(e.target)));key='';location.reload();}catch(err){say(err.message);}};
+
+let sectionInputs=[];
+function showSections(v){
+ const area=$('#section-fields'),list=$('#section-list');list.replaceChildren();sectionInputs=[];
+ area.hidden=!baseline.sections?.length||target.value==='appearance'||target.value.startsWith('post-');
+ for(const original of baseline.sections||[]){
+  const saved=(v.sections||[]).find(x=>x.key===original.key),box=document.createElement('details'),summary=document.createElement('summary');summary.textContent=original.type==='image'?'Image: '+(original.alt||original.key):original.tag.toUpperCase()+': '+original.text.slice(0,75);box.append(summary);
+  const field=(name,type,value)=>{const l=document.createElement('label'),i=document.createElement(type==='textarea'?'textarea':'input');l.textContent=name;if(type!=='textarea')i.type=type;else i.rows=3;i.value=value;l.append(i);box.append(l);return i;};
+  if(original.type==='text'){const text=field('Text','textarea',saved?.text??original.text);text.maxLength=4000;sectionInputs.push({original,text});}
+  else{const src=field('Image URL (or upload below)','text',saved?.src??original.src),alt=field('Image description','text',saved?.alt??original.alt);alt.maxLength=180;const file=field('Upload replacement photo','file','');file.accept='image/jpeg,image/png,image/webp';file.onchange=async()=>{const f=file.files[0];if(!f)return;try{if(!['image/jpeg','image/png','image/webp'].includes(f.type)||f.size>12000000)throw Error('Use a JPEG, PNG or WebP below 12 MB.');const bitmap=await createImageBitmap(f),ratio=Math.min(1,1200/Math.max(bitmap.width,bitmap.height)),canvas=document.createElement('canvas');canvas.width=Math.max(1,Math.round(bitmap.width*ratio));canvas.height=Math.max(1,Math.round(bitmap.height*ratio));const ctx=canvas.getContext('2d');ctx.fillStyle='#fff';ctx.fillRect(0,0,canvas.width,canvas.height);ctx.drawImage(bitmap,0,0,canvas.width,canvas.height);bitmap.close();let q=.8,data=canvas.toDataURL('image/jpeg',q);while(data.length>250000&&q>.25){q-=.1;data=canvas.toDataURL('image/jpeg',q);}if(data.length>250000)throw Error('Choose a smaller photo.');src.value=data;say('Replacement image ready. Save draft or publish.');}catch(e){say(e.message);}};sectionInputs.push({original,src,alt});}
+  list.append(box);
+ }
+}
+function sectionValues(){return sectionInputs.flatMap(({original,text,src,alt})=>{if(original.type==='text')return text.value===original.text?[]:[{key:original.key,type:'text',text:text.value}];return src.value===original.src&&alt.value===original.alt?[]:[{key:original.key,type:'image',src:src.value,alt:alt.value}];});}

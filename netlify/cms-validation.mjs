@@ -29,5 +29,7 @@ export function clean(input,id){
   }
   if(!out.alt)throw fail(400,'Describe the photo for screen readers.');
  }
- return {...out,photo};
+ const sections=[];
+ if(input.sections!==undefined){if(!Array.isArray(input.sections)||input.sections.length>120)throw fail(400,'Too many section edits.');const seen=new Set();for(const v of input.sections){if(!v||!/^e[1-9][0-9]{0,3}$/.test(v.key)||seen.has(v.key))throw fail(400,'Invalid section reference.');seen.add(v.key);if(v.type==='text'){if(typeof v.text!=='string'||v.text.length>4000)throw fail(400,'Shorten section text.');sections.push({key:v.key,type:'text',text:v.text});}else if(v.type==='image'){if(typeof v.src==='string'&&/^\/?[\w/-]+\.(?:jpg|jpeg|png|webp)$/i.test(v.src)&&typeof v.alt==='string'&&v.alt.trim()&&v.alt.length<=180){sections.push({key:v.key,type:'image',src:v.src,alt:v.alt});continue;}const image=clean({photo:v.src,alt:v.alt},'index');if(!image.photo)throw fail(400,'Choose a replacement image.');sections.push({key:v.key,type:'image',src:image.photo,alt:image.alt});}else throw fail(400,'Unknown section type.');}}
+ return {...out,photo,sections};
 }
