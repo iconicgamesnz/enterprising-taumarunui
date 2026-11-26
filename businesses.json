@@ -1,6 +1,6 @@
 {
   "updated": "2026-11-26",
-  "verification_note": "Directory research in progress. Public listings have at least one public business listing or official source, but may still need direct business confirmation. Research candidates are not shown. ETI membership/payment data is private; publication does not imply ETI endorsement.",
+  "verification_note": "Working research dataset. approved=true means visible in the directory, not ETI-approved or confirmed trading. approved=false means research-only and hidden. Source and contact accuracy vary and must be reviewed before formal handover. No membership/payment details published.",
   "businesses": [
     {
       "name": "King Country Glass & Home Plus",
@@ -203,7 +203,8 @@
       "phone": "07 895 7570",
       "approved": true,
       "source": "Public local business search and Taumarunui business directories (2026-11-26)",
-      "checked": "2026-11-26"
+      "checked": "2026-11-26",
+      "verification_note": "Public sources give 109 Hakiaha Street; confirm current operating name and address."
     },
     {
       "name": "NZ Post Taumarunui",
@@ -334,7 +335,8 @@
       "phone": "07 896 8700",
       "approved": true,
       "source": "Public local business search and Taumarunui business directories (2026-11-26)",
-      "checked": "2026-11-26"
+      "checked": "2026-11-26",
+      "verification_note": "Hakiaha Street address conflicts with other public listings; verify current branch address before publication."
     },
     {
       "name": "BNZ Taumarunui",
@@ -774,6 +776,375 @@
       "approved": false,
       "verification_status": "research_candidate",
       "source": "https://www.checkbase.co.nz/locations/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Blue Hill Cafe",
+      "category": "Food & Drink",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "BB Bushmans Bites",
+      "category": "Food & Drink",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Thai Central",
+      "category": "Food & Drink",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Snack NG",
+      "category": "Food & Drink",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Sideshow Bob's Painting Ltd",
+      "category": "Trades & Home Improvement",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "BC Electrical Services",
+      "category": "Trades & Home Improvement",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Wixel Valley Essentials",
+      "category": "Creative & Digital",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Mano Studio",
+      "category": "Creative & Digital",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Forget Me Knot Memories Limited",
+      "category": "Creative & Digital",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Casez Creations Tiakina Te Taiao Limited",
+      "category": "Creative & Digital",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Circular Wellness",
+      "category": "Health & Wellbeing",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Taumarunui Health Hub",
+      "category": "Health & Wellbeing",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Bremi & Co",
+      "category": "Health & Beauty",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "King Country Health Care",
+      "category": "Health & Wellbeing",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Te Aho Birthing",
+      "category": "Health & Wellbeing",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Slalom Lodge",
+      "category": "Accommodation",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Kellys 2016",
+      "category": "Accommodation",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Alpine Gateway Hospitality",
+      "category": "Accommodation",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Number32",
+      "category": "Accommodation",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Fren",
+      "category": "Retail & Shopping",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Forever Gifts and Decor",
+      "category": "Retail & Shopping",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Kokakonui Woolshed Nursery",
+      "category": "Retail & Shopping",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Max Save Supermarket",
+      "category": "Groceries & Food Retail",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Taumarunui Golf Shop",
+      "category": "Retail & Shopping",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Own IT Co.",
+      "category": "Retail & Shopping",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Manunui 3 Enterprises",
+      "category": "Tourism & Visitor Services",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "The Culture and Design Lab",
+      "category": "Creative & Digital",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Tamauia Consulting Ltd",
+      "category": "Professional Services",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Blakley",
+      "category": "Creative & Digital",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Xquizart Ltd",
+      "category": "Creative & Digital",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Get Set Drive",
+      "category": "Education & Training",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Taumarunui Auto Centre Limited",
+      "category": "Automotive",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Morepork Camper Trailers",
+      "category": "Automotive",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Peak FM",
+      "category": "Media & Communications",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Washking",
+      "category": "Services",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Omaka Lodge",
+      "category": "Accommodation",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Cheal Consulting",
+      "category": "Professional Services",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Visit Ruapehu",
+      "category": "Tourism & Visitor Services",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Harcourts Taumarunui Rentals & Property Management",
+      "category": "Property & Professional Services",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Clayton & Hayes Pharmacy Ltd",
+      "category": "Health & Wellbeing",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Laundromat Hakiaha Street",
+      "category": "Services",
+      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
       "checked": "2026-11-26"
     }
   ]
