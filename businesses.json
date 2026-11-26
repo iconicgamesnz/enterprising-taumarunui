@@ -1,6 +1,6 @@
 {
   "updated": "2026-11-26",
-  "verification_note": "Public business details independently checked from official sites and established listings; ETI membership and payment details are never exposed. Public listings are not an ETI endorsement. Check sources and business information regularly.",
+  "verification_note": "Public directory working data compiled from public business listings. Listings are not ETI endorsements; verify contact details and operational status periodically. ETI membership and payment records remain private.",
   "businesses": [
     {
       "name": "King Country Glass & Home Plus",
@@ -63,6 +63,307 @@
       "member": true,
       "approved": true,
       "source": "https://koruform.nz/",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Trunk Coffeehouse",
+      "category": "Food & Drink",
+      "description": "Cafe and coffeehouse.",
+      "location": "89 Hakiaha Street, Taumarunui 3920",
+      "approved": true,
+      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Jasmines Cafe & Thai Restaurant",
+      "category": "Food & Drink",
+      "description": "Cafe and Thai restaurant.",
+      "location": "43 Hakiaha Street, Taumarunui 3920",
+      "phone": "07 895 5822",
+      "approved": true,
+      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "New World Taumarunui",
+      "category": "Groceries & Food Retail",
+      "description": "Supermarket with bakery, deli and fresh food departments.",
+      "location": "10 Hakiaha Street, Taumarunui 3920",
+      "phone": "07 896 0070",
+      "approved": true,
+      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Thai Spoon Cafe and Thai Restaurant",
+      "category": "Food & Drink",
+      "description": "Thai restaurant and cafe.",
+      "location": "75 Hakiaha Street, Taumarunui 3920",
+      "phone": "07 895 7575",
+      "approved": true,
+      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Unichem Taumarunui Pharmacy",
+      "category": "Health & Wellbeing",
+      "description": "Community pharmacy and health products.",
+      "location": "93 Hakiaha Street, Taumarunui 3920",
+      "phone": "07 895 7326",
+      "approved": true,
+      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Taumarunui Bakery",
+      "category": "Food & Drink",
+      "description": "Bakery and takeaway food.",
+      "location": "53 Hakiaha Street, Taumarunui 3920",
+      "phone": "07 896 7378",
+      "approved": true,
+      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Wheels & Tyres Taumarunui Ltd",
+      "category": "Automotive",
+      "description": "Tyre and wheel retailer and service provider.",
+      "location": "127 Hakiaha Street, Taumarunui 3920",
+      "phone": "07 895 5000",
+      "approved": true,
+      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "The Bakehouse Coffee",
+      "category": "Food & Drink",
+      "description": "Bakery cafe and takeaway food.",
+      "location": "105 Hakiaha Street, Taumarunui 3920",
+      "phone": "07 895 7072",
+      "approved": true,
+      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Paper Plus Taumarunui",
+      "category": "Retail & Shopping",
+      "description": "Books, stationery and office supplies.",
+      "location": "77 Hakiaha Street, Taumarunui 3920",
+      "phone": "07 895 7430",
+      "approved": true,
+      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "McDonald's Taumarunui",
+      "category": "Food & Drink",
+      "description": "Fast food restaurant.",
+      "location": "2 Hakiaha Street, Taumarunui 3920",
+      "phone": "07 895 3520",
+      "approved": true,
+      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Golden Kiwi Takeaways Taumarunui",
+      "category": "Food & Drink",
+      "description": "Fish and chips and takeaway meals.",
+      "location": "2 Marae Street, Taumarunui 3920",
+      "phone": "07 895 7230",
+      "approved": true,
+      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Kainui Coffee & Catering",
+      "category": "Food & Drink",
+      "description": "Coffee cart and catering serving coffee and food.",
+      "location": "23 Hakiaha Street, Taumarunui 3920",
+      "phone": "027 688 7887",
+      "approved": true,
+      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Forgotten World Adventures",
+      "category": "Tourism & Visitor Services",
+      "description": "Guided rail-cart and adventure tourism experiences.",
+      "location": "9 Hakiaha Street, Taumarunui 3920",
+      "phone": "07 895 7181",
+      "approved": true,
+      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Absolute Meats",
+      "category": "Groceries & Food Retail",
+      "description": "Local butcher shop.",
+      "location": "109 Hakiaha Street, Taumarunui 3920",
+      "phone": "07 895 7570",
+      "approved": true,
+      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "NZ Post Taumarunui",
+      "category": "Community & Public Services",
+      "description": "Post office and parcel services.",
+      "location": "47 Miriama Street, Taumarunui 3920",
+      "phone": "07 960 0468",
+      "approved": true,
+      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "The ToolShed Taumarunui",
+      "category": "Retail & Shopping",
+      "description": "Tools, equipment and trade supplies.",
+      "location": "52 Bell Road, Taumarunui 3920",
+      "phone": "07 895 8582",
+      "approved": true,
+      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "T M P Fashions",
+      "category": "Retail & Shopping",
+      "description": "Clothing and fashion retailer.",
+      "location": "85 Hakiaha Street, Taumarunui 3920",
+      "phone": "07 895 7401",
+      "approved": true,
+      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Taumarunui RSA",
+      "category": "Food & Drink",
+      "description": "Community club with restaurant and social facilities.",
+      "location": "10 Marae Street, Taumarunui 3920",
+      "phone": "07 895 7517",
+      "approved": true,
+      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Farmlands Taumarunui",
+      "category": "Rural & Agriculture",
+      "description": "Rural supplies and farming retail.",
+      "location": "89 Bell Road, Taumarunui 3920",
+      "phone": "07 896 0052",
+      "approved": true,
+      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Country Carpet & Furniture",
+      "category": "Retail & Shopping",
+      "description": "Floor coverings, furniture and home furnishings.",
+      "location": "119 Hakiaha Street, Taumarunui 3920",
+      "phone": "07 895 7089",
+      "approved": true,
+      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Bike Torque",
+      "category": "Automotive",
+      "description": "Motorcycle sales and service.",
+      "location": "35 Hakiaha Street, Taumarunui 3920",
+      "approved": true,
+      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Partnerz n Hair",
+      "category": "Health & Beauty",
+      "description": "Hair salon.",
+      "location": "57 Hakiaha Street, Taumarunui 3920",
+      "approved": true,
+      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Physio Direct Taumarunui",
+      "category": "Health & Wellbeing",
+      "description": "Physiotherapy services.",
+      "location": "101 Hakiaha Street, Taumarunui 3920",
+      "approved": true,
+      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Seriously Outdoors",
+      "category": "Retail & Shopping",
+      "description": "Outdoor clothing and equipment.",
+      "location": "99 Hakiaha Street, Taumarunui 3920",
+      "approved": true,
+      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Arcadian Antiques",
+      "category": "Retail & Shopping",
+      "description": "Antiques and collectibles.",
+      "location": "79 Hakiaha Street, Taumarunui 3920",
+      "approved": true,
+      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Advantage Tyre & Battery Shop Taumarunui",
+      "category": "Automotive",
+      "description": "Tyre and battery services.",
+      "location": "178 Hakiaha Street, Taumarunui 3920",
+      "approved": true,
+      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Harcourts Taumarunui",
+      "category": "Property & Professional Services",
+      "description": "Real estate and property services.",
+      "location": "61 Hakiaha Street, Taumarunui 3920",
+      "phone": "07 896 8700",
+      "approved": true,
+      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "BNZ Taumarunui",
+      "category": "Finance & Professional Services",
+      "description": "Banking services.",
+      "location": "101 Hakiaha Street, Taumarunui 3920",
+      "phone": "0800 275 269",
+      "approved": true,
+      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "BP 2go Taumarunui",
+      "category": "Automotive",
+      "description": "Fuel station and convenience retail.",
+      "location": "4 Hakiaha Street, Taumarunui 3920",
+      "phone": "07 895 7863",
+      "approved": true,
+      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Four Square Taumarunui",
+      "category": "Groceries & Food Retail",
+      "description": "Convenience groceries.",
+      "location": "97 Hakiaha Street, Taumarunui 3920",
+      "approved": true,
+      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Mobil Taumarunui",
+      "category": "Automotive",
+      "description": "Fuel station and convenience retail.",
+      "location": "173 Hakiaha Street, Taumarunui 3920",
+      "approved": true,
+      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
       "checked": "2026-11-26"
     }
   ]
