@@ -61,7 +61,7 @@ export async function handle(request, store, getClient = calendarClient) {
   const url = new URL(request.url);
   const action = url.searchParams.get('action') || 'submit';
   if (action === 'calendar' && request.method === 'GET') return reply({id:calendarId()});
-  if (action === 'published' && request.method === 'GET') {
+  if (['published','ical'].includes(action) && request.method === 'GET') {
     const {blobs}=await store.list({prefix:'public-events/'});
     const items=[];
     for(const {key} of blobs){
@@ -72,7 +72,23 @@ export async function handle(request, store, getClient = calendarClient) {
         items.push({id:key.slice('public-events/'.length)+'-'+occurrence,title,location,start,end,description,image,registration});
       }
     }
-    return reply({items:items.sort((a,b)=>a.start.localeCompare(b.start))});
+    items.sort((a,b)=>a.start.localeCompare(b.start));
+    if(action==='ical'){
+      const esc=v=>String(v||'').replace(/\\/g,'\\\\').replace(/\r?\n/g,'\\n').replace(/;/g,'\\;').replace(/,/g,'\\,');
+      const utc=v=>DateTime.fromISO(v,{zone:'Pacific/Auckland'}).toUTC().toFormat("yyyyMMdd'T'HHmmss'Z'");
+      const lines=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Iconic Mahi//ETI Local Events//EN','CALSCALE:GREGORIAN','X-WR-CALNAME:ETI Local Events'];
+      const dt=DateTime.utc().toFormat("yyyyMMdd'T'HHmmss'Z'");
+      for(const e of items){
+        lines.push('BEGIN:VEVENT','UID:'+e.id+'@taumarunui.co.nz','DTSTAMP:'+dt,'DTSTART:'+utc(e.start),'DTEND:'+utc(e.end),'SUMMARY:'+esc(e.title),'LOCATION:'+esc(e.location),'DESCRIPTION:'+esc(e.description));
+        if(e.registration)lines.push('URL:'+e.registration);
+        lines.push('END:VEVENT');
+      }
+      lines.push('END:VCALENDAR');
+      const encoder=new TextEncoder();
+      const folded=lines.map(line=>{let out='',size=0;for(const ch of line){const n=encoder.encode(ch).length;if(size+n>75){out+='\r\n ';size=1;}out+=ch;size+=n;}return out;}).join('\r\n')+'\r\n';
+      return new Response(folded,{headers:{'Content-Type':'text/calendar; charset=utf-8','Cache-Control':'public, max-age=300','X-Content-Type-Options':'nosniff'}});
+    }
+    return reply({items});
   }
   if (action !== 'submit') await requireReviewer(request,store);
   if(action==='manage' && request.method==='GET'){
