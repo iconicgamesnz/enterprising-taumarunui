@@ -20,3 +20,6 @@ await copyFile('redirects.txt','dist/_redirects');
 
 await copyFile('taumarunui-history.webp','dist/taumarunui-history.webp');
 await writeFile('dist/legacy-events.json',gunzipSync(await readFile('reports/legacy-events.json.gz')));
+
+// Optional verified public event details export; no live data writes at build time.
+try { await copyFile('event-details.json','dist/event-details.json'); } catch (e) { if(e.code!=='ENOENT') throw e; }
