@@ -91,3 +91,13 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
 .business-profile>.directory-disclaimer{margin-top:30px}
 @media(max-width:900px){.directory-toolbar{grid-template-columns:1fr 1fr}.directory-field:first-child{grid-column:1/-1}.business-detail-grid{grid-template-columns:1fr}.directory-help{align-items:flex-start;flex-direction:column}.directory-help .button{white-space:normal}}
 @media(max-width:580px){.directory-toolbar{grid-template-columns:1fr}.directory-field:first-child{grid-column:auto}.directory-card{padding:20px}.directory-help{padding:25px 21px}.business-detail-panel,.business-help-panel{padding:23px 21px}.directory-card-actions{gap:13px}}
+
+/* Enhanced, ETI-confirmed member profiles */
+.member-profile-intro{font-size:16px;line-height:1.75;color:#405b70;max-width:790px;margin:5px 0 28px;border-left:3px solid var(--gold);padding-left:19px}
+.member-services{background:#fff;border:1px solid #e2e5e6;border-top:4px solid var(--gold);padding:27px 32px;margin:15px 0 28px;border-radius:6px}
+.member-services h2{font:800 24px Manrope,sans-serif;letter-spacing:-.03em;margin:0 0 18px}
+.member-services ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px 22px}
+.member-services li{margin:0;padding:0 0 0 26px;position:relative;line-height:1.55;color:#304b60}
+.member-services li:before{content:"✓";position:absolute;left:0;color:#86642b;font-weight:900}
+.business-map-link{display:block;font-weight:700;color:#86642b;margin-top:9px;font-size:14px}
+@media(max-width:680px){.member-services{padding:23px 21px}.member-services ul{grid-template-columns:1fr}}
