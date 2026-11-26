@@ -41,7 +41,7 @@ if (access) {
     const row=document.querySelector('#review').content.firstElementChild.cloneNode(true);
     row.querySelector('h2').textContent=item?.event?.title||'New event';
     row.querySelector('.contact').textContent=item?.status||'Create an event directly';
-    for(const key of ['title','location','start','end','description','image','registration'])row.elements[key].value=item?.event?.[key]||'';
+    for(const key of ['title','location','start','end','description','image','registration','repeat','repeatUntil','exceptions'])row.elements[key].value=item?.event?.[key]||(key==='repeat'?'none':'');
     row.querySelector('[value=draft]').remove();
     const save=row.querySelector('[value=approve]');save.textContent='Save and publish';save.value=item?'edit':'create';
     const cancel=row.querySelector('[value=decline]');cancel.textContent='Cancel event';cancel.value='cancel';cancel.hidden=!item||item.status==='cancelled';
@@ -71,9 +71,9 @@ if (access) {
       const row = document.querySelector('#review').content.firstElementChild.cloneNode(true);
       row.querySelector('h2').textContent = item.title;
       row.querySelector('.contact').textContent = 'Organiser: ' + item.email;
-      for (const key of ['title','location','start','end','description','image','registration']) {
-        row.elements[key].value = item[key] || '';
-        row.elements[key].readOnly = item.locked;
+      for (const key of ['title','location','start','end','description','image','registration','repeat','repeatUntil','exceptions']) {
+        row.elements[key].value = item[key] || (key==='repeat'?'none':'');
+        row.elements[key].readOnly = item.locked; if(key==='repeat'&&item.locked)row.elements[key].style.pointerEvents='none';
       }
       if (item.locked) {
         row.querySelector('[value=approve]').textContent = 'Retry publication';
