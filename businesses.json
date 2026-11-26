@@ -1,6 +1,6 @@
 {
   "updated": "2026-11-26",
-  "verification_note": "Public listings are current publicly discoverable businesses, with information checked from official websites, tourism pages and relevant business directory providers; a listing does not independently guarantee trading status. Research-only candidates remain hidden. Closed businesses are excluded. ETI membership is marked only with explicit ETI confirmation, and no private payment information is published.",
+  "verification_note": "Public directory shows publicly corroborated active or currently listed businesses in Taumarunui and nearby district; final operating status must be reconfirmed by businesses when details change. Historic, closed, duplicate or insufficiently evidenced leads are hidden. Only ETI-confirmed members get membership badges; private payment details remain private.",
   "businesses": [
     {
       "name": "King Country Glass & Home Plus",
@@ -24,7 +24,7 @@
       "source": "https://www.ruapehudc.govt.nz/our-facilities/ruapehu-visitor-information/isites-visitor-information",
       "checked": "2026-11-26",
       "verification_note": "Public business listing gives 116 Hakiaha Street; confirm street number before final ETI handover.",
-      "verification_status": "official_council_listing"
+      "verification_status": "official_website_or_authoritative_directory"
     },
     {
       "name": "King Country Motors",
@@ -61,8 +61,8 @@
     },
     {
       "name": "KoruForm",
-      "category": "Design, Digital & Creative Services",
-      "description": "Design, websites and 3D modelling services.",
+      "category": "Digital & Creative",
+      "description": "Independent creative studio providing graphic design, website development and 3D modelling for businesses, makers and creators.",
       "website": "https://koruform.nz/",
       "location": "Ruapehu District",
       "member": true,
@@ -70,7 +70,14 @@
       "source": "https://koruform.nz/",
       "checked": "2026-11-26",
       "membership_source": "Member status directly confirmed by ETI team for public directory",
-      "verification_status": "member_confirmed_by_eti"
+      "verification_status": "official_website_or_authoritative_directory",
+      "services": [
+        "Graphic design, logos and brand identity",
+        "Websites and e-commerce",
+        "SEO setup and website training",
+        "3D modelling, CAD and prototypes"
+      ],
+      "profile_intro": "A practical studio helping small businesses, makers and creators turn ideas into clear, useful designs and digital experiences."
     },
     {
       "name": "Trunk Coffeehouse",
@@ -78,8 +85,9 @@
       "description": "Cafe and coffeehouse.",
       "location": "89 Hakiaha Street, Taumarunui 3920",
       "approved": true,
-      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
-      "checked": "2026-11-26"
+      "source": "https://www.visitruapehu.com/see-do/eat-drink-shop/trunk-coffee-house",
+      "checked": "2026-11-26",
+      "verification_status": "official_website_or_authoritative_directory"
     },
     {
       "name": "Jasmines Cafe & Thai Restaurant",
@@ -94,14 +102,15 @@
     },
     {
       "name": "New World Taumarunui",
-      "category": "Groceries & Food Retail",
-      "description": "Supermarket with bakery, deli and fresh food departments.",
+      "category": "Food & Groceries",
+      "description": "Supermarket offering fresh food, groceries and online shopping.",
       "location": "10 Hakiaha Street, Taumarunui 3920",
       "phone": "07 896 0070",
       "approved": true,
-      "source": "https://www.newworld.co.nz/store-finder",
+      "source": "https://www.visitruapehu.com/see-do/eat-drink-shop/new-world-taumarunui",
       "checked": "2026-11-26",
-      "verification_status": "official_business_listing"
+      "verification_status": "official_website_or_authoritative_directory",
+      "website": "https://www.newworld.co.nz/"
     },
     {
       "name": "Thai Spoon Cafe and Thai Restaurant",
@@ -211,7 +220,7 @@
     },
     {
       "name": "Absolute Meats",
-      "category": "Groceries & Food Retail",
+      "category": "Food & Groceries",
       "description": "Local butcher shop.",
       "location": "109 Hakiaha Street, Taumarunui 3920",
       "phone": "07 895 7570",
@@ -244,12 +253,13 @@
     {
       "name": "T M P Fashions",
       "category": "Retail & Shopping",
-      "description": "Clothing and fashion retailer.",
+      "description": "Clothing, footwear and accessories for men, women and children, plus gifts.",
       "location": "85 Hakiaha Street, Taumarunui 3920",
       "phone": "07 895 7401",
       "approved": true,
-      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
-      "checked": "2026-11-26"
+      "source": "https://www.visitruapehu.com/see-do/eat-drink-shop/t-m-p-fashions-taumarunui",
+      "checked": "2026-11-26",
+      "verification_status": "official_website_or_authoritative_directory"
     },
     {
       "name": "Taumarunui RSA",
@@ -346,7 +356,7 @@
     },
     {
       "name": "Harcourts Taumarunui",
-      "category": "Property & Professional Services",
+      "category": "Property & Real Estate",
       "description": "Real estate and property services.",
       "phone": "07 896 8700",
       "approved": false,
@@ -357,7 +367,7 @@
     },
     {
       "name": "BNZ Taumarunui",
-      "category": "Finance & Professional Services",
+      "category": "Professional Services",
       "description": "Banking services.",
       "location": "101 Hakiaha Street, Taumarunui 3920",
       "phone": "0800 275 269",
@@ -377,7 +387,7 @@
     },
     {
       "name": "Four Square Taumarunui",
-      "category": "Groceries & Food Retail",
+      "category": "Food & Groceries",
       "description": "Convenience groceries.",
       "location": "97 Hakiaha Street, Taumarunui 3920",
       "approved": true,
@@ -411,16 +421,16 @@
       "category": "Retail & Shopping",
       "description": "Home appliances and electronics retailer.",
       "approved": true,
-      "verification_status": "recent_public_business_listing",
+      "verification_status": "official_website_or_authoritative_directory",
       "source": "Business listing checked 26 Nov 2026",
       "checked": "2026-11-26",
       "location": "137 Hakiaha Street, Taumarunui 3920",
-      "verification_note": "Address cross-checked against public business listings; business should confirm before final handover.",
+      "verification_note": "Company records identify Central Refrigeration Services Limited as the legal entity; the public retail name is 100% Appliances Taumarunui.",
       "phone": "07 895 7348"
     },
     {
       "name": "PC Solutions Taumarunui",
-      "category": "Digital & Technology",
+      "category": "Digital & Creative",
       "description": "Computer and IT services.",
       "approved": true,
       "verification_status": "public_listing_crosschecked",
@@ -493,7 +503,7 @@
     },
     {
       "name": "Jubilee Dairy",
-      "category": "Groceries & Food Retail",
+      "category": "Food & Groceries",
       "description": "Convenience grocery and dairy.",
       "approved": true,
       "verification_status": "current_business_search_listing",
@@ -623,8 +633,8 @@
       "category": "Food & Drink",
       "description": "Tavern and restaurant.",
       "approved": true,
-      "verification_status": "public_listing_crosschecked",
-      "source": "https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "verification_status": "official_website_or_authoritative_directory",
+      "source": "https://www.visitruapehu.com/see-do/eat-drink-shop/rusty-nail-tavern",
       "checked": "2026-11-26",
       "location": "123 Hakiaha Street, Taumarunui 3920",
       "phone": "07 895 3489"
@@ -663,7 +673,7 @@
     },
     {
       "name": "Peak Chartered Accountants",
-      "category": "Finance & Professional Services",
+      "category": "Professional Services",
       "description": "Chartered accounting, taxation, payroll and business advisory services.",
       "approved": true,
       "verification_status": "current_business_or_relevant_provider_listing",
@@ -675,7 +685,7 @@
     },
     {
       "name": "Active Property Management Ruapehu",
-      "category": "Property & Professional Services",
+      "category": "Property & Real Estate",
       "description": "Property management services.",
       "approved": false,
       "verification_status": "research_candidate",
@@ -697,11 +707,14 @@
     {
       "name": "Living on the Hedge",
       "category": "Trades & Home Improvement",
-      "description": "Gardening and hedge services.",
-      "approved": false,
-      "verification_status": "research_candidate",
-      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
-      "checked": "2026-11-26"
+      "description": "Landscape design, tree work, mulching, pruning and garden maintenance.",
+      "approved": true,
+      "verification_status": "official_website_or_authoritative_directory",
+      "source": "https://www.livingonthehedge.nz/",
+      "checked": "2026-11-26",
+      "website": "https://www.livingonthehedge.nz/",
+      "phone": "027 238 6413",
+      "location": "Taumarunui district"
     },
     {
       "name": "PGG Wrightson Taumarunui",
@@ -748,7 +761,7 @@
     },
     {
       "name": "Manuka Media",
-      "category": "Digital & Technology",
+      "category": "Digital & Creative",
       "location": "Taumarunui, New Zealand",
       "description": "Local business identified in public directory or company records; services and operating status require confirmation.",
       "approved": false,
@@ -758,7 +771,7 @@
     },
     {
       "name": "MobileIT",
-      "category": "Digital & Technology",
+      "category": "Digital & Creative",
       "location": "Taumarunui, New Zealand",
       "description": "Local business identified in public directory or company records; services and operating status require confirmation.",
       "approved": false,
@@ -772,9 +785,10 @@
       "location": "Taumarunui, New Zealand",
       "description": "Local business identified in public directory or company records; services and operating status require confirmation.",
       "approved": false,
-      "verification_status": "research_candidate",
+      "verification_status": "duplicate_or_unconfirmed",
       "source": "https://www.checkbase.co.nz/locations/taumarunui",
-      "checked": "2026-11-26"
+      "checked": "2026-11-26",
+      "verification_note": "Company linked to 100% Appliances Taumarunui; avoid duplicate listing until distinct active trading operation is confirmed."
     },
     {
       "name": "Josh Cribb Plumbing",
@@ -800,22 +814,25 @@
     {
       "name": "Ruapehu Refrigeration",
       "category": "Trades & Home Improvement",
-      "location": "Taumarunui, New Zealand",
-      "description": "Local business identified in public directory or company records; services and operating status require confirmation.",
-      "approved": false,
-      "verification_status": "research_candidate",
-      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
-      "checked": "2026-11-26"
+      "location": "408 Taupo Road, Taumarunui 3920",
+      "description": "Heat pump installation, air conditioning and domestic and commercial refrigeration.",
+      "approved": true,
+      "verification_status": "official_website_or_authoritative_directory",
+      "source": "https://www.ruapehurefrigeration.co.nz/",
+      "checked": "2026-11-26",
+      "website": "https://www.ruapehurefrigeration.co.nz/",
+      "phone": "027 774 4745"
     },
     {
       "name": "Epic Cycle Adventures",
       "category": "Tourism & Visitor Services",
-      "location": "Taumarunui, New Zealand",
-      "description": "Local business identified in public directory or company records; services and operating status require confirmation.",
-      "approved": false,
-      "verification_status": "research_candidate",
-      "source": "https://www.checkbase.co.nz/locations/taumarunui",
-      "checked": "2026-11-26"
+      "location": "Ongarue, Taumarunui district",
+      "description": "Timber Trail shuttles, bike hire, cycling packages and accommodation.",
+      "approved": true,
+      "verification_status": "official_website_or_authoritative_directory",
+      "source": "https://www.thetimbertrail.nz/",
+      "checked": "2026-11-26",
+      "website": "https://www.thetimbertrail.nz/"
     },
     {
       "name": "Go Bush Adventures",
@@ -853,9 +870,10 @@
       "category": "Food & Drink",
       "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
       "approved": false,
-      "verification_status": "research_candidate",
+      "verification_status": "duplicate_or_unconfirmed",
       "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
-      "checked": "2026-11-26"
+      "checked": "2026-11-26",
+      "verification_note": "Potentially historic or duplicate Thai restaurant. Need local confirmation."
     },
     {
       "name": "Snack NG",
@@ -888,7 +906,7 @@
     },
     {
       "name": "Wixel Valley Essentials",
-      "category": "Creative & Digital",
+      "category": "Digital & Creative",
       "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
       "approved": false,
       "verification_status": "research_candidate",
@@ -897,7 +915,7 @@
     },
     {
       "name": "Mano Studio",
-      "category": "Creative & Digital",
+      "category": "Digital & Creative",
       "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
       "approved": false,
       "verification_status": "research_candidate",
@@ -906,7 +924,7 @@
     },
     {
       "name": "Forget Me Knot Memories Limited",
-      "category": "Creative & Digital",
+      "category": "Digital & Creative",
       "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
       "approved": false,
       "verification_status": "research_candidate",
@@ -915,7 +933,7 @@
     },
     {
       "name": "Casez Creations Tiakina Te Taiao Limited",
-      "category": "Creative & Digital",
+      "category": "Digital & Creative",
       "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
       "approved": false,
       "verification_status": "research_candidate",
@@ -934,11 +952,13 @@
     {
       "name": "Taumarunui Health Hub",
       "category": "Health & Wellbeing",
-      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
-      "approved": false,
-      "verification_status": "research_candidate",
-      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
-      "checked": "2026-11-26"
+      "description": "General practice and rural primary health care for Taumarunui whānau.",
+      "approved": true,
+      "verification_status": "official_website_or_authoritative_directory",
+      "source": "https://www.healthpoint.nz/gps-accident-urgent-medical-care/gp/taumarunui-health-hub/",
+      "checked": "2026-11-26",
+      "website": "https://www.healthpoint.nz/gps-accident-urgent-medical-care/gp/taumarunui-health-hub/",
+      "location": "58 Miriama Street, Taumarunui 3920"
     },
     {
       "name": "Bremi & Co",
@@ -1032,7 +1052,7 @@
     },
     {
       "name": "Max Save Supermarket",
-      "category": "Groceries & Food Retail",
+      "category": "Food & Groceries",
       "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
       "approved": false,
       "verification_status": "research_candidate",
@@ -1068,7 +1088,7 @@
     },
     {
       "name": "The Culture and Design Lab",
-      "category": "Creative & Digital",
+      "category": "Digital & Creative",
       "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
       "approved": false,
       "verification_status": "research_candidate",
@@ -1097,7 +1117,7 @@
     },
     {
       "name": "Xquizart Ltd",
-      "category": "Creative & Digital",
+      "category": "Digital & Creative",
       "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
       "approved": false,
       "verification_status": "research_candidate",
@@ -1148,7 +1168,7 @@
     },
     {
       "name": "Washking",
-      "category": "Services",
+      "category": "Other Services",
       "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
       "approved": false,
       "verification_status": "research_candidate",
@@ -1170,10 +1190,10 @@
       "category": "Professional Services",
       "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
       "approved": false,
-      "verification_status": "possible_duplicate_of_Cheal_Taumarunui",
+      "verification_status": "duplicate_or_unconfirmed",
       "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
       "checked": "2026-11-26",
-      "verification_note": "Cheal Taumarunui published separately; this may be a duplicate."
+      "verification_note": "Likely duplicate of Cheal Taumarunui; no separately confirmed operation."
     },
     {
       "name": "Visit Ruapehu",
@@ -1186,12 +1206,13 @@
     },
     {
       "name": "Harcourts Taumarunui Rentals & Property Management",
-      "category": "Property & Professional Services",
+      "category": "Property & Real Estate",
       "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
       "approved": false,
-      "verification_status": "research_candidate",
+      "verification_status": "duplicate_or_unconfirmed",
       "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
-      "checked": "2026-11-26"
+      "checked": "2026-11-26",
+      "verification_note": "Potential duplication of Harcourts office: no verified separately trading entity."
     },
     {
       "name": "Clayton & Hayes Pharmacy Ltd",
@@ -1204,7 +1225,7 @@
     },
     {
       "name": "Laundromat Hakiaha Street",
-      "category": "Services",
+      "category": "Other Services",
       "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
       "approved": false,
       "verification_status": "research_candidate",
@@ -1228,9 +1249,10 @@
       "category": "Media & Communications",
       "description": "Taumarunui-area business identified in public company or directory records; current trading status requires confirmation.",
       "approved": false,
-      "verification_status": "research_candidate",
+      "verification_status": "closed_or_historic",
       "source": "https://www.checkbase.co.nz/locations/taumarunui",
-      "checked": "2026-11-26"
+      "checked": "2026-11-26",
+      "verification_note": "Historic broadcaster replaced by Peak FM in 2010; not a currently operating Taumarunui business."
     },
     {
       "name": "Arian Accounting",
@@ -1306,7 +1328,7 @@
     },
     {
       "name": "Gurman's Dairy",
-      "category": "Groceries & Food Retail",
+      "category": "Food & Groceries",
       "description": "Taumarunui-area business identified in public company or directory records; current trading status requires confirmation.",
       "approved": false,
       "verification_status": "research_candidate",
@@ -1378,7 +1400,7 @@
     },
     {
       "name": "Ruapehu Cleaning Solutions",
-      "category": "Services",
+      "category": "Other Services",
       "description": "Taumarunui-area business identified in public company or directory records; current trading status requires confirmation.",
       "approved": false,
       "verification_status": "research_candidate",
@@ -1396,18 +1418,19 @@
     },
     {
       "name": "Taumarunui Funeral Services",
-      "category": "Services",
+      "category": "Other Services",
       "description": "Funeral planning, memorials and bereavement services.",
       "approved": true,
-      "verification_status": "current_business_or_relevant_provider_listing",
-      "source": "https://taumarunuifunerals.co.nz/",
+      "verification_status": "official_website_or_authoritative_directory",
+      "source": "https://taumarunuifunerals.co.nz/contact/",
       "checked": "2026-11-26",
       "location": "34 Huia Street, Taumarunui 3920",
-      "website": "https://taumarunuifunerals.co.nz/"
+      "website": "https://taumarunuifunerals.co.nz/",
+      "phone": "07 895 7420"
     },
     {
       "name": "Real World Media",
-      "category": "Digital & Technology",
+      "category": "Digital & Creative",
       "description": "Taumarunui-area business identified in public company or directory records; current trading status requires confirmation.",
       "approved": false,
       "verification_status": "research_candidate",
@@ -1416,7 +1439,7 @@
     },
     {
       "name": "Pirihi Systems",
-      "category": "Digital & Technology",
+      "category": "Digital & Creative",
       "description": "Taumarunui-area business identified in public company or directory records; current trading status requires confirmation.",
       "approved": false,
       "verification_status": "research_candidate",
@@ -1425,7 +1448,7 @@
     },
     {
       "name": "Philip Hagan Design",
-      "category": "Creative & Digital",
+      "category": "Digital & Creative",
       "description": "Taumarunui-area business identified in public company or directory records; current trading status requires confirmation.",
       "approved": false,
       "verification_status": "research_candidate",
@@ -1434,7 +1457,7 @@
     },
     {
       "name": "Matapuna Store",
-      "category": "Groceries & Food Retail",
+      "category": "Food & Groceries",
       "description": "Local convenience store and takeaways.",
       "location": "348 Taupo Road, Taumarunui 3920",
       "approved": true,
@@ -1445,7 +1468,7 @@
     },
     {
       "name": "Your Local Property Managers Ltd",
-      "category": "Property & Professional Services",
+      "category": "Property & Real Estate",
       "description": "Residential property management in Taumarunui and wider Ruapehu.",
       "location": "44 Bell Road, Taumarunui 3920",
       "approved": true,
@@ -1713,15 +1736,15 @@
       "description": "Cafe and restaurant in the town centre.",
       "location": "75 Hakiaha Street, Taumarunui 3920",
       "approved": false,
-      "verification_status": "closure_confirmed_by_local_eti_contributor",
+      "verification_status": "closed_or_historic",
       "checked": "2026-11-26",
       "source": "https://www.visitruapehu.com/see-do/eat-drink-shop/cafe-restaurant-75",
-      "verification_note": "Cafe & Restaurant 75 has closed, as confirmed by local ETI contributor on 26 November 2026. Do not publish as a currently operating business.",
+      "verification_note": "Closed as confirmed by local ETI contributor 26 November 2026; must not publish.",
       "operating_status": "closed"
     },
     {
       "name": "Property Brokers Taumarunui",
-      "category": "Property & Professional Services",
+      "category": "Property & Real Estate",
       "description": "Residential, rural and commercial real estate services.",
       "location": "Taumarunui",
       "approved": true,
@@ -1828,7 +1851,7 @@
     },
     {
       "name": "Doyle Valuations",
-      "category": "Property & Professional Services",
+      "category": "Property & Real Estate",
       "description": "Independent property valuations and advice.",
       "location": "58 Miriama Street, Taumarunui 3920",
       "phone": "027 642 6519",
@@ -1958,11 +1981,13 @@
       "name": "SPCA Op Shop Taumarunui",
       "category": "Retail & Shopping",
       "description": "Community secondhand charity retail store.",
-      "location": "Taumarunui",
-      "source": "https://opshop.kiwi/guide/map",
+      "location": "81 Hakiaha Street, Taumarunui 3920",
+      "source": "https://www.spca.nz/opshops/taumarunui-op-shop",
       "approved": true,
-      "verification_status": "current_public_business_listing",
-      "checked": "2026-11-26"
+      "verification_status": "official_website_or_authoritative_directory",
+      "checked": "2026-11-26",
+      "website": "https://www.spca.nz/opshops/taumarunui-op-shop",
+      "phone": "07 886 7722"
     }
   ]
 }
