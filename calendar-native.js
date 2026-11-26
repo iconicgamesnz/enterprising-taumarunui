@@ -3,7 +3,7 @@ const form=document.querySelector('#calendar-filter'),target=document.querySelec
 const params=new URLSearchParams(location.search);
 const today=new Intl.DateTimeFormat('sv-SE',{timeZone:'Pacific/Auckland'}).format(new Date());
 form.elements.date.value=today;
-let rows=[],offset=0,shown=[],warnings=[];
+let rows=[],offset=0,shown=[],warnings=[],filterMonth='';
 const el=(tag,text)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n;};
 const safe=value=>{try{const u=new URL(value);return u.protocol==='https:'&&!u.username&&!u.password?u.href:'';}catch{return '';}};
 const slugKey=s=>String(s||'').replace(/^\/+|\/+$/g,'').replace(/^event\//,'');
@@ -37,17 +37,23 @@ function grid(start,items){const g=el('div');g.className='ec-grid';for(const n o
 function list(items){const wrap=el('div');wrap.className='ec-list';if(!items.length){wrap.append(el('p','No events are listed.'));return wrap;}for(const e of items){const a=el('a');a.href=e.href;a.className='ec-row';const date=el('time');date.className='ec-date';date.dateTime=day(e.start);date.append(el('b',String(utc(day(e.start)).getUTCDate())),fmt(day(e.start),{month:'short'}).toUpperCase());const desc=el('span');const meta=el('span',(e.allDay?'All day':String(e.start).slice(11,16))+(e.location?' · '+e.location:''));meta.className='ec-meta';desc.append(el('strong',e.title),meta);a.append(date,desc);wrap.append(a);}return wrap;}
 function renderMore(){const part=shown.slice(offset,offset+30);if(form.elements.view.value==='photo'||form.elements.view.value==='day'){for(const e of part)target.append(card(e));}else target.append(list(part));offset+=30;more.hidden=offset>=shown.length;}
 const period=document.querySelector('#cal-period');
+const tabs=[...document.querySelectorAll('#cal-tabs [data-view]')];
+for(const b of tabs)b.onclick=()=>{form.elements.view.value=b.dataset.view;filterMonth='';render(true);};
 function move(n){const d=form.elements.date.value||today,v=form.elements.view.value;form.elements.date.value=v==='year'?monthStart(d,n*12):v==='month'?monthStart(d,n):shift(d,n*(v==='week'?7:1));render(true);}
 document.querySelector('#cal-prev').onclick=()=>move(-1);
 document.querySelector('#cal-next').onclick=()=>move(1);
 document.querySelector('#cal-today').onclick=()=>{form.elements.date.value=today;render(true);};
 function render(focus=false){
  const date=form.elements.date.value||today,view=form.elements.view.value,q=norm(form.elements.search.value),category=form.elements.category.value;
- form.elements.month.value=date.slice(0,7);
+ const listing=view==='list'||view==='photo';
+ form.elements.month.value=listing?filterMonth:date.slice(0,7);
+ document.querySelector('#cal-month-label').textContent=listing?'Filter upcoming events by month':'Jump to month';
+ for(const b of tabs)b.setAttribute('aria-pressed',String(b.dataset.view===view));
  const filtered=rows.filter(e=>(!q||norm(e.title+' '+(e.location||'')+' '+(e.description||'')).includes(q))&&(!category||tags(e).has(category)));
  target.replaceChildren();target.className='';more.hidden=true;offset=0;
  const week=shift(date,-monday(date));
- period.textContent=view==='year'?date.slice(0,4):view==='month'?fmt(date,{month:'long',year:'numeric'}):view==='week'?'Week of '+long(week):view==='day'?long(date):'From '+long(date);
+ period.textContent=view==='year'?date.slice(0,4):view==='month'?fmt(date,{month:'long',year:'numeric'}):view==='week'?'Week of '+long(week):view==='day'?long(date):filterMonth?fmt(filterMonth+'-01',{month:'long',year:'numeric'}):'Upcoming events';
+ document.querySelector('#cal-prev').hidden=listing;document.querySelector('#cal-next').hidden=listing;
  if(focus)period.focus();
  if(view==='month'||view==='year'||view==='week'){
   if(view==='month')target.append(grid(monthStart(date),filtered));
@@ -55,13 +61,13 @@ function render(focus=false){
   if(view==='week'){const g=el('div');g.className='ec-grid';for(let i=0;i<7;i++){const d=shift(week,i);g.append(cell(d,names[i]+' '+utc(d).getUTCDate(),onDay(filtered,d).length));}target.append(g);for(let i=0;i<7;i++){const d=shift(week,i),events=onDay(filtered,d);if(events.length){const s=el('section');s.className='ec-section';s.append(el('h4',long(d)),list(events));target.append(s);}}}
   const now=onDay(filtered,today),next=filtered.filter(e=>day(e.start)>today).slice(0,3);const panel=el('section');panel.className='ec-section';panel.append(el('h3',now.length?'What’s on today':'Next up'),list(now.length?now:next));target.append(panel);status.textContent=warnings.join(' ');return;
  }
- shown=view==='day'?onDay(filtered,date):filtered.filter(e=>day(e.end||e.start)>=date);
+ shown=view==='day'?onDay(filtered,date):filtered.filter(e=>day(e.end||e.start)>=today&&(!filterMonth||(day(e.start)<monthStart(filterMonth+'-01',1)&&day(e.end||e.start)>=filterMonth+'-01')));
  if(view==='photo'||view==='day')target.className='ec-photos';
  status.textContent=shown.length+' matching events. '+warnings.join(' ');if(shown.length)renderMore();else target.append(el('p','No events are listed for this selection.'));
 }
-form.onsubmit=e=>{e.preventDefault();if(form.elements.search.value.trim()||form.elements.category.value)form.elements.view.value='list';render(true);};more.onclick=renderMore;
+form.onsubmit=e=>{e.preventDefault();if(form.elements.search.value.trim()||form.elements.category.value){form.elements.view.value='list';filterMonth='';}render(true);};more.onclick=renderMore;
 form.elements.category.onchange=()=>{if(form.elements.category.value)form.elements.view.value='list';render(true);};
-form.elements.month.onchange=()=>{if(form.elements.month.value){form.elements.date.value=form.elements.month.value+'-01';form.elements.view.value='month';render(true);}};
+form.elements.month.onchange=()=>{if(['list','photo'].includes(form.elements.view.value)){filterMonth=form.elements.month.value;render(true);}else if(form.elements.month.value){form.elements.date.value=form.elements.month.value+'-01';form.elements.view.value='month';render(true);}};
 form.elements.view.onchange=()=>render(true);form.elements.date.onchange=()=>render(true);
 const read=async url=>{const r=await fetch(url,{cache:'no-store'});if(!r.ok)throw Error('Unavailable');return r.json();};
 Promise.allSettled([read('/legacy-events.json'),read('/event-details.json'),read('/.netlify/functions/community-events?action=published')]).then(results=>{
@@ -78,6 +84,6 @@ Promise.allSettled([read('/legacy-events.json'),read('/event-details.json'),read
  const parade={...christmasParade,...(approved?approved[1]:{}),id:christmasParade.id,href:christmasParade.href};
  map.set(key(parade),parade);
  rows=[...map.values()].sort((a,b)=>a.start.localeCompare(b.start));
- const id=params.get('id');if(id){const e=rows.find(x=>x.id===id);form.hidden=true;document.querySelector('#calendar-nav').hidden=true;status.textContent=warnings.join(' ');if(e){const back=el('a','Back to calendar');back.href='/events.html';target.append(back,card(e,true));document.title=e.title+' | Enterprising Taumarunui';}else target.append(el('p','This event is unavailable or cancelled.'));return;}
+ const id=params.get('id');if(id){const e=rows.find(x=>x.id===id);form.hidden=true;document.querySelector('#calendar-nav').hidden=true;document.querySelector('#cal-tabs').hidden=true;status.textContent=warnings.join(' ');if(e){const back=el('a','Back to calendar');back.href='/events.html';target.append(back,card(e,true));document.title=e.title+' | Enterprising Taumarunui';}else target.append(el('p','This event is unavailable or cancelled.'));return;}
  render();
 });
