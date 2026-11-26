@@ -1,0 +1,111 @@
+import { storeName } from '../event-store.mjs';
+import { getStore } from '@netlify/blobs';
+import { randomBytes, timingSafeEqual, createHash } from 'node:crypto';
+import { JWT } from 'google-auth-library';
+import { DateTime } from 'luxon';
+
+const calendarId = () => process.env.ETI_CALENDAR_ID || 'enterprisingtaumarunui@gmail.com';
+const error = (status, message) => Object.assign(new Error(message), {status});
+function reply(data, status = 200) {
+  return Response.json(data, {status, headers:{'Cache-Control':'private, no-store','X-Content-Type-Options':'nosniff'}});
+}
+function field(body, key, max) {
+  const value = body?.[key];
+  if (typeof value !== 'string' || !value.trim() || value.length > max) throw error(400, 'Please check the ' + key + ' field.');
+  return value.trim();
+}
+function eventFields(body) {
+  const data = {};
+  for (const [key, max] of Object.entries({title:140, location:240, description:2000, start:16, end:16})) data[key] = field(body,key,max);
+  for (const key of ['start','end']) {
+    const time = DateTime.fromISO(data[key], {zone:'Pacific/Auckland'});
+    if (!time.isValid || time.toFormat("yyyy-MM-dd'T'HH:mm") !== data[key] || time.getPossibleOffsets().length !== 1) throw error(400,'Choose a valid, unambiguous New Zealand local time.');
+  }
+  if (data.end <= data.start) throw error(400,'The event must end after it starts.');
+  return data;
+}
+const digest = value => createHash('sha256').update(value).digest();
+async function requireReviewer(request, store) {
+  // The site owner retrieves the generated key through their signed-in Netlify dashboard.
+  let secret = await store.get('review-access');
+  if (!secret) {
+    await store.set('review-access',randomBytes(32).toString('hex'),{onlyIfNew:true});
+    secret = await store.get('review-access');
+  }
+  const header = request.headers.get('Authorization') || '';
+  if (!secret || !timingSafeEqual(digest(header),digest('Bearer ' + secret))) throw error(401,'Enter the ETI reviewer key.');
+}
+const read = (store,key) => store.get(key,{type:'json'});
+function calendarClient() {
+  if (!process.env.ETI_CALENDAR_ID || !process.env.ETI_GOOGLE_SERVICE_ACCOUNT) throw error(503,'Google Calendar needs connecting. The event is still in the queue.');
+  const {client_email, private_key} = JSON.parse(process.env.ETI_GOOGLE_SERVICE_ACCOUNT);
+  return new JWT({email:client_email,key:private_key,scopes:['https://www.googleapis.com/auth/calendar.events']});
+}
+async function publish(client, id, event) {
+  const url = 'https://www.googleapis.com/calendar/v3/calendars/' + encodeURIComponent(calendarId()) + '/events';
+  const googleId = 'e' + id.replaceAll('-','');
+  const when = dateTime => ({dateTime:DateTime.fromISO(dateTime,{zone:'Pacific/Auckland'}).toISO(),timeZone:'Pacific/Auckland'});
+  const data = {id:googleId,summary:event.title,location:event.location,description:event.description,start:when(event.start),end:when(event.end),extendedProperties:{private:{etiSubmission:id}}};
+  try {
+    await client.request({url,method:'POST',data});
+  } catch (cause) {
+    if (cause.response?.status === 409) {
+      const existing = await client.request({url:url + '/' + googleId});
+      if (existing.data.status !== 'cancelled' && existing.data.extendedProperties?.private?.etiSubmission === id) return;
+    }
+    throw error(502,'Google Calendar could not confirm publication. Retry the saved approval after checking calendar access.');
+  }
+}
+
+export async function handle(request, store, getClient = calendarClient) {
+  const url = new URL(request.url);
+  const action = url.searchParams.get('action') || 'submit';
+  if (action === 'calendar' && request.method === 'GET') return reply({id:calendarId()});
+  if (action !== 'submit') await requireReviewer(request,store);
+  if (action === 'queue' && request.method === 'GET') {
+    const {blobs} = await store.list({prefix:'submissions/'});
+    const items = [];
+    for (const {key} of blobs) {
+      const id = key.split('/')[1];
+      if (await store.get('done/' + id)) continue;
+      const decision = await read(store,'decisions/' + id);
+      if (decision?.action === 'decline') continue;
+      const submission = await read(store,key);
+      items.push({...submission,...decision?.event,id,locked:!!decision});
+    }
+    return reply({items:items.sort((a,b)=>a.created.localeCompare(b.created))});
+  }
+  if (request.method !== 'POST') throw error(405,'Use the event form.');
+  if (!request.headers.get('content-type')?.startsWith('application/json')) throw error(415,'JSON is required.');
+  const raw = await request.text();
+  if (raw.length > 10000) throw error(413,'Submission is too long.');
+  let body;
+  try { body = JSON.parse(raw); } catch { throw error(400,'Invalid submission.'); }
+  const id = body?.id;
+  if (!/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/.test(id)) throw error(400,'Invalid submission reference.');
+  if (action === 'submit') {
+    const event = eventFields(body);
+    const email = field(body,'email',254);
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) throw error(400,'Check the organiser email.');
+    if (!body.website) await store.setJSON('submissions/' + id,{...event,email,created:new Date().toISOString()},{onlyIfNew:true});
+    return reply({message:'Submitted for ETI review.'},202);
+  }
+  if (!['approve','decline'].includes(action)) throw error(404,'Unknown action.');
+  if (!await store.get('submissions/' + id)) throw error(404,'Submission unavailable.');
+  const client = action === 'approve' ? getClient() : null;
+  const proposal = action === 'approve' ? {action,event:eventFields(body),calendar:calendarId()} : {action};
+  await store.setJSON('decisions/' + id,proposal,{onlyIfNew:true});
+  const decision = await read(store,'decisions/' + id);
+  if (decision.action !== action) throw error(409,'Another reviewer already decided this event. Refresh the queue.');
+  if (action === 'approve' && !await store.get('done/' + id)) {
+    if (decision.calendar !== calendarId()) throw error(409,'The destination calendar has changed. Contact the site owner.');
+    await publish(client,id,decision.event);
+    await store.set('done/' + id,'published',{onlyIfNew:true});
+  }
+  return reply({message:action === 'approve' ? 'Published to the community calendar.' : 'Submission declined.'});
+}
+export default async function(request) {
+  try { return await handle(request,getStore({name:storeName,consistency:'strong'})); }
+  catch (cause) { return reply({message:cause.status ? cause.message : 'The request could not be completed. Please try again.'},cause.status || 500); }
+}
+export const config = {rateLimit:{windowSize:60,windowLimit:45,aggregateBy:['ip','domain']}};
