@@ -2,11 +2,11 @@
 
 ## Daily tasks
 
-Visit the Committee dashboard from the homepage footer. Use your own reviewer key. Check pending events each working day. Correct the event title, venue and NZ times before approval. Decline inappropriate or duplicate submissions. If publishing fails, retry the saved approval. Verify the event on Local Events. Correct a published event or cancel it directly in Google Calendar using a calendar editor account. For recurring events choose the intended occurrence or series.
+Visit the Committee dashboard from the homepage footer. Use your own reviewer key. Check pending events each working day. Use Save edits to retain corrections to the event title, venue or NZ times before approval. Decline inappropriate or duplicate submissions. If publishing fails, retry the saved approval. Verify the event on Local Events. Correct a published event or cancel it directly in Google Calendar using a calendar editor account. For recurring events choose the intended occurrence or series.
 
 For directory corrections, confirm details with the operator. Save, open the listing as a visitor, and use Restore previous version if needed. Unpublish closures. For new membership badges, check the current paid register including billboard memberships. Seven exact business-name matches were found in the treasurer’s 5 November records. Other trading names, including KoruForm, need individual confirmation before displaying a badge.
 
-Membership fees cover July–June. The dashboard edits the public email and the two annual fees. The owner must separately update form notification recipients in Netlify. Under Project configuration → Notifications → Emails and webhooks → Form submission notifications, add info@taumarunui.co.nz for membership and contact. Verify receipt from both forms. Check Forms → Verified and Spam each working day until delivery is confirmed. Only authorised Netlify project users should have access to the form records.
+Membership fees cover July–June. The dashboard edits the public email and the two annual fees. The owner must separately update form notification recipients in Netlify. Netlify Forms → Submission notifications has a rule for info@taumarunui.co.nz covering both forms. The mailbox holder must accept Netlify’s confirmation email before notifications start. Verify receipt from both forms. Check Forms → Verified and Spam each working day until delivery is confirmed. Only authorised Netlify project users should have access to the form records.
 
 ## Accounts and recovery
 

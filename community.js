@@ -63,6 +63,7 @@ if (access) {
       if (item.locked) {
         row.querySelector('[value=approve]').textContent = 'Retry publication';
         row.querySelector('[value=decline]').hidden = true;
+        row.querySelector('[value=draft]').hidden = true;
       }
       row.addEventListener('submit',async event => {
         event.preventDefault();
@@ -73,11 +74,13 @@ if (access) {
         buttons.forEach(button => button.disabled = true);
         feedback.textContent = 'Saving…';
         try {
-          const result = await api(action,{...Object.fromEntries(new FormData(row)),id:item.id});
+          const result = await api(action,{...Object.fromEntries(new FormData(row)),id:item.id,version:item.version});
           await refresh(result.message);
         } catch (e) {
           feedback.textContent = e.message;
-          try { await refresh(e.message); } catch { /* Keep the actionable error visible. */ }
+          if (e.message.includes('Retry the saved approval') || e.message.includes('Another reviewer')) {
+            try { await refresh(e.message); } catch { /* Keep the error visible for retry. */ }
+          }
         } finally { buttons.forEach(button => button.disabled = false); }
       });
       queue.append(row);

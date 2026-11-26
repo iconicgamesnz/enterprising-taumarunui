@@ -60,7 +60,8 @@ export async function handle(request, store, getClient = calendarClient) {
       const decision = await read(store,'decisions/' + id);
       if (decision?.action === 'decline') continue;
       const submission = await read(store,key);
-      items.push({...submission,...decision?.event,id,locked:!!decision});
+      const draft=await read(store,'drafts/'+id);
+      items.push({...submission,...draft?.event,...decision?.event,id,version:draft?.version||'',locked:!!decision});
     }
     return reply({items:items.sort((a,b)=>a.created.localeCompare(b.created))});
   }
@@ -79,8 +80,17 @@ export async function handle(request, store, getClient = calendarClient) {
     if (!body.website) await store.setJSON('submissions/' + id,{...event,email,created:new Date().toISOString()},{onlyIfNew:true});
     return reply({message:'Submitted for ETI review.'},202);
   }
-  if (!['approve','decline'].includes(action)) throw error(404,'Unknown action.');
+  if (!['draft','approve','decline'].includes(action)) throw error(404,'Unknown action.');
   if (!await store.get('submissions/' + id)) throw error(404,'Submission unavailable.');
+  if (action === 'draft') {
+    if (await store.get('decisions/'+id)) throw error(409,'This event already has a decision. Refresh the queue.');
+    const previous=await store.getWithMetadata('drafts/'+id,{type:'json'});
+    if ((previous?.data.version||'')!==(body.version||'')) throw error(409,'Another reviewer saved changes. Refresh the queue.');
+    const entry={event:eventFields(body),version:crypto.randomUUID()};
+    const result=await store.setJSON('drafts/'+id,entry,previous?{onlyIfMatch:previous.etag}:{onlyIfNew:true});
+    if (!result.modified) throw error(409,'Another reviewer saved changes. Refresh the queue.');
+    return reply({message:'Edits saved for review.'});
+  }
   const client = action === 'approve' ? getClient() : null;
   const proposal = action === 'approve' ? {action,event:eventFields(body),calendar:calendarId()} : {action};
   await store.setJSON('decisions/' + id,proposal,{onlyIfNew:true});
