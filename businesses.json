@@ -53,6 +53,17 @@
       "approved": false,
       "source": "https://www.ruapehudc.govt.nz/repository/libraries/id%3A2dyphjrmg1cxby65trfv/hierarchy/sitecollectiondocuments/annual-reports/Annual%20Report%20for%20Current%20Year/2023_24%20Annual%20Report.pdf",
       "checked": "2026-11-26"
+    },
+    {
+      "name": "KoruForm",
+      "category": "Design, Digital & Creative Services",
+      "description": "Design, websites and 3D modelling services.",
+      "website": "https://koruform.nz/",
+      "location": "Ruapehu District",
+      "member": true,
+      "approved": true,
+      "source": "https://koruform.nz/",
+      "checked": "2026-11-26"
     }
   ]
 }
