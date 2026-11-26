@@ -17,7 +17,7 @@ function render(){
     const card=el('article');card.className='tile';card.style.marginBottom='1rem';
     const h=el('h2'),link=el('a',name);link.href=detailLink(slug,start);h.append(link);
     const p=el('p',displayDate(start,end,allDay)+(venue?' · '+venue:''));
-    const meta=details[slugKey(slug)]||{};
+    const meta=details[slugKey(slug)+'|'+start]||{};
     const image=safeUrl(meta.image);
     if(image){const img=el('img');img.src=image;img.alt=meta.imageAlt||name;img.loading='lazy';img.style.cssText='max-width:100%;max-height:320px;object-fit:contain;display:block;margin-bottom:1rem';card.append(img);}
     card.append(h,p);
