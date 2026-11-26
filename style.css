@@ -37,3 +37,5 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
 .listing{border:1px solid #e3e5e6;padding:25px}.listing h3{margin:0 0 10px}.listing p{color:#526172;line-height:1.5}
 .muted{color:#667789;font-size:14px}
 @media(max-width:800px){.feature,.listing-grid{grid-template-columns:1fr}.site-nav-toggle{display:block}.links{display:none;width:100%;flex-direction:column}.links.open{display:flex}.links a{padding:9px 0;font-size:15px}nav{flex-direction:row;flex-wrap:wrap;align-items:center}.hero .wrap{padding-top:65px;padding-bottom:65px}}
+
+.membership-options{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px}.membership-options article{background:white;padding:32px;border-top:3px solid var(--gold)}.price{font-size:48px;font-weight:800;margin:12px 0}.price small{font-size:16px;font-weight:400}.form input[type=checkbox]{display:inline-block;width:auto;margin-right:8px}.section li{margin:12px 0;line-height:1.6}
