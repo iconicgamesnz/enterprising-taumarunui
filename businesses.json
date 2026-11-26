@@ -1451,11 +1451,14 @@
     {
       "name": "Philip Hagan Design",
       "category": "Digital & Creative",
-      "description": "Taumarunui-area business identified in public company or directory records; current trading status requires confirmation.",
-      "approved": false,
-      "verification_status": "research_candidate",
-      "source": "https://www.checkbase.co.nz/locations/taumarunui",
-      "checked": "2026-11-26"
+      "description": "Taumarunui studio specializing in signage, signwriting, branding, graphic design, print and promotional apparel.",
+      "approved": true,
+      "verification_status": "official_business_website",
+      "source": "https://www.philiphagandesign.co.nz/",
+      "checked": "2026-11-26",
+      "location": "141B Hakiaha Street, Taumarunui 3920 (entrance on Turaki Street)",
+      "phone": "021 790 994",
+      "website": "https://www.philiphagandesign.co.nz/"
     },
     {
       "name": "Matapuna Store",
@@ -2034,6 +2037,40 @@
       "source": "Taumarunui business listing, November 2026",
       "approved": true,
       "verification_status": "current_public_operator_or_health_listing",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "BuildBusiness Internet Marketing",
+      "category": "Digital & Creative",
+      "description": "Taumarunui-based business website design, hosting, SEO and digital marketing services.",
+      "location": "Taumarunui, New Zealand",
+      "phone": "07 895 3344",
+      "website": "https://www.buildbusiness.co.nz/",
+      "source": "https://www.buildbusiness.co.nz/ruapehu-based/",
+      "approved": true,
+      "verification_status": "official_business_website_or_tourism_listing",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Nevalea Alpacas",
+      "category": "Tourism & Visitor Services",
+      "description": "Alpaca farm tours, farm shop and alpaca clothing near Taumarunui.",
+      "location": "5446 State Highway 4, Taumarunui district",
+      "website": "https://www.visitruapehu.com/see-and-do/all-activities/farm-tours-at-nevalea-alpacas",
+      "source": "https://www.visitruapehu.com/see-and-do/all-activities/farm-tours-at-nevalea-alpacas",
+      "approved": true,
+      "verification_status": "official_business_website_or_tourism_listing",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Iconic Games",
+      "category": "Digital & Creative",
+      "description": "Taumarunui-founded education technology studio developing games and interactive learning resources.",
+      "location": "Taumarunui / online",
+      "website": "https://iconicgames.co.nz/",
+      "source": "https://iconicgames.co.nz/about/",
+      "approved": true,
+      "verification_status": "official_business_website_or_tourism_listing",
       "checked": "2026-11-26"
     }
   ]
