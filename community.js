@@ -1,3 +1,4 @@
+import {openCommittee} from './committee.js';
 const endpoint = '/.netlify/functions/community-events';
 let reviewer = '';
 async function api(action, body) {
@@ -85,11 +86,11 @@ if (access) {
   access.addEventListener('submit',async event => {
     event.preventDefault();
     reviewer = access.elements.key.value.trim();
-    try { await refresh(); access.reset(); } catch (e) { reviewer = ''; status.textContent = e.message; }
+    try { await refresh(); access.reset(); openCommittee(reviewer); } catch (e) { reviewer = ''; status.textContent = e.message; }
   });
   document.querySelector('#refresh').onclick = () => refresh().catch(e => status.textContent = e.message);
   document.querySelector('#logout').onclick = () => {
-    reviewer = ''; queue.replaceChildren(); controls.hidden = true; access.hidden = false;
+    location.reload(); reviewer = ''; queue.replaceChildren(); controls.hidden = true; access.hidden = false;
     status.textContent = ''; access.elements.key.focus();
   };
 }

@@ -4,11 +4,11 @@ Replacement website developed by Iconic Mahi. Staging: https://taumarunui.netlif
 
 This repository is the permanent source for the staging project. Do not deploy an incomplete source tree over the existing staging site. Never commit private membership records, credentials or service account keys.
 
-Planned infrastructure: Netlify, Firebase Authentication, Firestore and ETI Local Events Google Calendar. Production migration requires committee approval.
+Infrastructure: Netlify Functions, Forms and Blobs, with Google Calendar for approved events. See [the committee handover](RELEASE.md).
 
 ### Community event review on Netlify
 
-Organisers submit from What’s On. ETI reviewers open the Event review link on that page. The first attempt to open the queue creates a random reviewer key. A Netlify project owner can copy it from **Blobs → eti-events-… → review-access** in the project dashboard. Each source branch has a separate store. Share the key privately with ETI reviewers. Deleting the review-access entry rotates the key on the next sign-in attempt.
+Organisers submit from What’s On. ETI reviewers open the Event review link on that page. The first attempt to open the queue creates a random reviewer key. A Netlify project owner can copy it from **Blobs → eti-events-… → review-access** in the project dashboard. Each source branch has a separate store. Keep the owner key private. Issue individual keys through the dashboard. Deleting the review-access entry rotates the key on the next sign-in attempt.
 
 To enable publication, set two Functions environment variables for the intended Netlify deployment context and redeploy:
 

@@ -101,3 +101,11 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
 .member-services li:before{content:"✓";position:absolute;left:0;color:#86642b;font-weight:900}
 .business-map-link{display:block;font-weight:700;color:#86642b;margin-top:9px;font-size:14px}
 @media(max-width:680px){.member-services{padding:23px 21px}.member-services ul{grid-template-columns:1fr}}
+
+#committee details {margin:1rem 0;border:1px solid #b7c3ca;padding:1rem;background:white}
+#committee summary {font-weight:700;cursor:pointer;padding:.5rem}
+#committee output {display:block;overflow-wrap:anywhere;padding:1rem}
+#committee .picker {display:grid;gap:.5rem;margin:1rem 0}
+#committee select {max-width:100%;padding:.7rem}
+.form input,.form textarea,.form select {min-width:0;box-sizing:border-box}
+[hidden]{display:none!important}

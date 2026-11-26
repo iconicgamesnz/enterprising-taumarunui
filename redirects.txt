@@ -1,0 +1,12 @@
+/businesses.json /.netlify/functions/committee 200!
+/whats-on/ /events.html 301
+/enterprising-taumarunui/ /about.html 301
+/about/ /about.html 301
+/membership/ /membership.html 301
+/contact-us/ /contact.html 301
+/events/ /events.html 301
+/event/ /events.html 301
+/business-directory/ /directory.html 301
+/event/* /legacy-events.html?event=:splat 301
+/series/* /legacy-events.html?series=:splat 301
+/events/* /events.html 301

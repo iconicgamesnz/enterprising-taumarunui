@@ -1,6 +1,6 @@
 import { storeName } from '../event-store.mjs';
 import { getStore } from '@netlify/blobs';
-import { randomBytes, timingSafeEqual, createHash } from 'node:crypto';
+import { reviewer as requireReviewer } from '../access.mjs';
 import { JWT } from 'google-auth-library';
 import { DateTime } from 'luxon';
 
@@ -23,17 +23,6 @@ function eventFields(body) {
   }
   if (data.end <= data.start) throw error(400,'The event must end after it starts.');
   return data;
-}
-const digest = value => createHash('sha256').update(value).digest();
-async function requireReviewer(request, store) {
-  // The site owner retrieves the generated key through their signed-in Netlify dashboard.
-  let secret = await store.get('review-access');
-  if (!secret) {
-    await store.set('review-access',randomBytes(32).toString('hex'),{onlyIfNew:true});
-    secret = await store.get('review-access');
-  }
-  const header = request.headers.get('Authorization') || '';
-  if (!secret || !timingSafeEqual(digest(header),digest('Bearer ' + secret))) throw error(401,'Enter the ETI reviewer key.');
 }
 const read = (store,key) => store.get(key,{type:'json'});
 function calendarClient() {

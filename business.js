@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (record.location) {
       info.append(create('h3', '', 'Location'));
       info.append(create('p', '', record.location));
-      if (/\\b(street|road|terrace|avenue|drive|lane|place)\\b/i.test(record.location)) {
+      if (/\b(street|road|terrace|avenue|drive|lane|place)\b/i.test(record.location)) {
         const query = encodeURIComponent(record.name + ', ' + record.location + ', New Zealand');
         info.append(link('Find on Google Maps ↗', 'https://www.google.com/maps/search/?api=1&query=' + query, 'business-map-link', true));
       }
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       ? 'This business has confirmed ETI membership. Membership is separate from the accuracy of individual contact details.'
       : 'This business is part of the local directory. Directory inclusion does not indicate ETI membership or endorsement.'));
     const subject = encodeURIComponent('ETI directory update: ' + record.name);
-    contact.append(link('Suggest an update', 'mailto:enterprisingtaumarunui@gmail.com?subject=' + subject, 'button'));
+    contact.append(link('Suggest an update', 'contact.html?business=' + subject, 'button'));
     details.append(contact);
     panel.append(details);
     panel.append(create('p', 'directory-disclaimer', 'Public information changes over time. Please confirm opening hours, services and appointments directly with the business. ETI reviews corrections before publishing them.'));
