@@ -1,6 +1,6 @@
 {
   "updated": "2026-11-26",
-  "verification_note": "Working research dataset. approved=true means visible in the directory, not ETI-approved or confirmed trading. approved=false means research-only and hidden. Source and contact accuracy vary and must be reviewed before formal handover. No membership/payment details published.",
+  "verification_note": "Working directory dataset. approved=true denotes currently configured to display, NOT independently confirmed trading or ETI approval. Research candidates remain hidden. A registered company, a 2025 campaign participant or a directory listing does not prove currently trading. Verify before formal handover. ETI member billing remains private.",
   "businesses": [
     {
       "name": "King Country Glass & Home Plus",
@@ -29,12 +29,13 @@
       "name": "King Country Motors",
       "category": "Automotive",
       "description": "Automotive servicing, WOF inspections, tyres, diagnostics and vehicle repairs.",
-      "location": "15 Hikaia Street, Taumarunui 3920",
+      "location": "15 Morero Terrace, Taumarunui 3920",
       "phone": "07 895 7127",
       "website": "https://www.kingcountrymotors.co.nz/pages/contact",
       "approved": true,
       "source": "https://www.kingcountrymotors.co.nz/pages/contact",
-      "checked": "2026-11-26"
+      "checked": "2026-11-26",
+      "verification_note": "Address cross-checked against public business listings; business should confirm before final handover."
     },
     {
       "name": "Ruapehu District Council",
@@ -394,9 +395,10 @@
       "description": "Home appliances and electronics retailer.",
       "approved": true,
       "verification_status": "public_listing_crosschecked",
-      "source": "https://businessme.co.nz/city/taumarunui/",
+      "source": "https://www.cylex.co.nz/taumarunui/retail-shops/",
       "checked": "2026-11-26",
-      "location": "Taumarunui, New Zealand"
+      "location": "137 Hakiaha Street, Taumarunui 3920",
+      "verification_note": "Address cross-checked against public business listings; business should confirm before final handover."
     },
     {
       "name": "PC Solutions Taumarunui",
@@ -472,8 +474,10 @@
       "description": "Convenience grocery and dairy.",
       "approved": false,
       "verification_status": "research_candidate",
-      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
-      "checked": "2026-11-26"
+      "source": "https://www.cylex.co.nz/taumarunui/retail-shops/",
+      "checked": "2026-11-26",
+      "location": "174 Hakiaha Street, Taumarunui 3920",
+      "verification_note": "Address cross-checked against public business listings; business should confirm before final handover."
     },
     {
       "name": "Main Street Traders",
@@ -481,8 +485,10 @@
       "description": "Local retail shop.",
       "approved": false,
       "verification_status": "research_candidate",
-      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
-      "checked": "2026-11-26"
+      "source": "https://www.cylex.co.nz/taumarunui/retail-shops/",
+      "checked": "2026-11-26",
+      "location": "71 Hakiaha Street, Taumarunui 3920",
+      "verification_note": "Address cross-checked against public business listings; business should confirm before final handover."
     },
     {
       "name": "Gorjis",
@@ -1145,6 +1151,233 @@
       "approved": false,
       "verification_status": "research_candidate",
       "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Totally Vets",
+      "category": "Veterinary Services",
+      "description": "Participated in ETI's July 2025 Shop Local campaign; current trading details require confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://taumarunui.co.nz/event/support-local-shop-local/",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Home Spot",
+      "category": "Retail & Shopping",
+      "description": "Taumarunui-area business identified in public company or directory records; current trading status requires confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://businessme.co.nz/city/taumarunui/",
+      "checked": "2026-11-26",
+      "location": "45 Hakiaha Street, Taumarunui 3920",
+      "verification_note": "Address cross-checked against public business listings; business should confirm before final handover."
+    },
+    {
+      "name": "King Country Radio",
+      "category": "Media & Communications",
+      "description": "Taumarunui-area business identified in public company or directory records; current trading status requires confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://www.checkbase.co.nz/locations/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Arian Accounting",
+      "category": "Professional Services",
+      "description": "Taumarunui-area business identified in public company or directory records; current trading status requires confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://www.checkbase.co.nz/locations/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Bacon Electrical",
+      "category": "Trades & Home Improvement",
+      "description": "Taumarunui-area business identified in public company or directory records; current trading status requires confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://www.checkbase.co.nz/locations/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Balloch Builders",
+      "category": "Construction & Infrastructure",
+      "description": "Taumarunui-area business identified in public company or directory records; current trading status requires confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://www.checkbase.co.nz/locations/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Annand Building Services",
+      "category": "Construction & Infrastructure",
+      "description": "Taumarunui-area business identified in public company or directory records; current trading status requires confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://www.checkbase.co.nz/locations/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Clinton Baker Builders",
+      "category": "Construction & Infrastructure",
+      "description": "Taumarunui-area business identified in public company or directory records; current trading status requires confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://www.checkbase.co.nz/locations/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Deans Plumbing",
+      "category": "Trades & Home Improvement",
+      "description": "Taumarunui-area business identified in public company or directory records; current trading status requires confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://www.checkbase.co.nz/locations/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "E-Z Electrical Services",
+      "category": "Trades & Home Improvement",
+      "description": "Taumarunui-area business identified in public company or directory records; current trading status requires confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://www.checkbase.co.nz/locations/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Gillards Motors",
+      "category": "Automotive",
+      "description": "Taumarunui-area business identified in public company or directory records; current trading status requires confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://www.checkbase.co.nz/locations/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Gurman's Dairy",
+      "category": "Groceries & Food Retail",
+      "description": "Taumarunui-area business identified in public company or directory records; current trading status requires confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://www.checkbase.co.nz/locations/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Kingan Contracting",
+      "category": "Construction & Infrastructure",
+      "description": "Taumarunui-area business identified in public company or directory records; current trading status requires confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://www.checkbase.co.nz/locations/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "LJS Solutions",
+      "category": "Construction & Infrastructure",
+      "description": "Taumarunui-area business identified in public company or directory records; current trading status requires confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://www.checkbase.co.nz/locations/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Murray Anderson Painting",
+      "category": "Trades & Home Improvement",
+      "description": "Taumarunui-area business identified in public company or directory records; current trading status requires confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://www.checkbase.co.nz/locations/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Natora Builders",
+      "category": "Construction & Infrastructure",
+      "description": "Taumarunui-area business identified in public company or directory records; current trading status requires confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://www.checkbase.co.nz/locations/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Nick Rule Flooring Contracting",
+      "category": "Trades & Home Improvement",
+      "description": "Taumarunui-area business identified in public company or directory records; current trading status requires confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://www.checkbase.co.nz/locations/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Noel Lawson Electrical Services",
+      "category": "Trades & Home Improvement",
+      "description": "Taumarunui-area business identified in public company or directory records; current trading status requires confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://www.checkbase.co.nz/locations/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Rob Walters Plumbing & Gas",
+      "category": "Trades & Home Improvement",
+      "description": "Taumarunui-area business identified in public company or directory records; current trading status requires confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://www.checkbase.co.nz/locations/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Ruapehu Cleaning Solutions",
+      "category": "Services",
+      "description": "Taumarunui-area business identified in public company or directory records; current trading status requires confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://www.checkbase.co.nz/locations/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Ruapehu Agricultural Development Services",
+      "category": "Rural & Agriculture",
+      "description": "Taumarunui-area business identified in public company or directory records; current trading status requires confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://www.checkbase.co.nz/locations/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Taumarunui Funeral Services",
+      "category": "Professional Services",
+      "description": "Taumarunui-area business identified in public company or directory records; current trading status requires confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://www.checkbase.co.nz/locations/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Real World Media",
+      "category": "Digital & Technology",
+      "description": "Taumarunui-area business identified in public company or directory records; current trading status requires confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://www.checkbase.co.nz/locations/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Pirihi Systems",
+      "category": "Digital & Technology",
+      "description": "Taumarunui-area business identified in public company or directory records; current trading status requires confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://www.checkbase.co.nz/locations/taumarunui",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Philip Hagan Design",
+      "category": "Creative & Digital",
+      "description": "Taumarunui-area business identified in public company or directory records; current trading status requires confirmation.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://www.checkbase.co.nz/locations/taumarunui",
       "checked": "2026-11-26"
     }
   ]
