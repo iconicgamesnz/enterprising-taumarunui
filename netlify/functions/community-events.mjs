@@ -3,6 +3,7 @@ import { getStore } from '@netlify/blobs';
 import { reviewer as requireReviewer } from '../access.mjs';
 import { JWT } from 'google-auth-library';
 import { DateTime } from 'luxon';
+import { recurrence, occurrences } from '../recurrence.mjs';
 
 const calendarId = () => process.env.ETI_CALENDAR_ID || 'enterprisingtaumarunui@gmail.com';
 const error = (status, message) => Object.assign(new Error(message), {status});
@@ -30,6 +31,8 @@ function eventFields(body) {
     if(u.protocol!=='https:'||u.username||u.password)throw error(400,'Use a public HTTPS URL.');
     data[key]=u.href;
   }
+  try { Object.assign(data,recurrence(body,data.start,data.end)); } catch(e) { throw error(400,e.message); }
+  for(const occurrence of occurrences(data))for(const value of [occurrence.start,occurrence.end]){const t=DateTime.fromISO(value,{zone:'Pacific/Auckland'});if(!t.isValid||t.toFormat("yyyy-MM-dd'T'HH:mm")!==value||t.getPossibleOffsets().length!==1)throw error(400,'Exclude the daylight-saving transition date or choose an unambiguous local time.');}
   return data;
 }
 const read = (store,key) => store.get(key,{type:'json'});
@@ -64,8 +67,10 @@ export async function handle(request, store, getClient = calendarClient) {
     for(const {key} of blobs){
       const entry=await read(store,key);
       if(!entry || entry.status!=='published')continue;
-      const {title,location,start,end,description,image='',registration=''}=entry.event;
-      items.push({id:key.slice('public-events/'.length),title,location,start,end,description,image,registration});
+      for(const instance of occurrences(entry.event)){
+        const {title,location,start,end,description,image='',registration='',occurrence}=instance;
+        items.push({id:key.slice('public-events/'.length)+'-'+occurrence,title,location,start,end,description,image,registration});
+      }
     }
     return reply({items:items.sort((a,b)=>a.start.localeCompare(b.start))});
   }
