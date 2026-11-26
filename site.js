@@ -29,6 +29,7 @@ async function applyPublishedContent(){
  const title=main.querySelector('h1'),intro=main.querySelector('.hero .wrap p:not(.eyebrow)')||main.querySelector('p:not(.eyebrow)');
  if(v.heading&&title)title.textContent=v.heading;if(v.intro&&intro)intro.textContent=v.intro;
  if(v.seoTitle)document.title=v.seoTitle;const meta=document.querySelector('meta[name=description]');if(v.description&&meta)meta.content=v.description;
+ if(v.body){const section=document.createElement('section');section.className='section';const wrap=document.createElement('div');wrap.className='wrap';const body=document.createElement('p');body.style.whiteSpace='pre-wrap';body.textContent=v.body;wrap.append(body);section.append(wrap);main.append(section);}
  if(v.photo){const image=document.createElement('img');image.src=v.photo;image.alt=v.alt||'';image.loading='lazy';image.style.cssText='display:block;max-width:100%;max-height:440px;object-fit:contain;border-radius:6px;margin:24px 0';const wrap=main.querySelector('.hero .wrap')||main;wrap.append(image);}
 }
 applyPublishedContent().catch(()=>{});
