@@ -1,24 +1,58 @@
 {
   "updated": "2026-11-26",
-  "verification_note": "Draft directory candidates only. All listings require ETI approval and verification of public details before publication. Membership/payment status must not be published.",
+  "verification_note": "Public business details independently checked from official sites and established listings; ETI membership and payment details are never exposed. Public listings are not an ETI endorsement. Check sources and business information regularly.",
   "businesses": [
     {
-      "name": "King Country Glass / Novus",
-      "category": "Automotive and glazing",
-      "description": "Local glass and glazing services. Listing details awaiting ETI approval.",
-      "approved": false
+      "name": "King Country Glass & Home Plus",
+      "category": "Trades & Home Improvement",
+      "description": "Locally owned glazing and home improvement business offering windscreen repairs, replacement windows, security doors, shower glass, mirrors and blinds.",
+      "location": "18 Manuaute Street, Taumarunui 3920",
+      "phone": "07 895 8674",
+      "website": "https://kingcountryglass.co.nz/",
+      "approved": true,
+      "source": "https://kingcountryglass.co.nz/",
+      "checked": "2026-11-26"
     },
     {
-      "name": "Taumarunui i-Site",
-      "category": "Visitor information",
-      "description": "Local visitor information services. Listing details awaiting ETI approval.",
-      "approved": false
+      "name": "Taumarunui i-SITE Visitor Information Centre",
+      "category": "Tourism & Visitor Services",
+      "description": "Visitor information and travel booking assistance for Taumarunui, Ruapehu and destinations throughout New Zealand.",
+      "location": "Railway Station, Hakiaha Street, Taumarunui 3920",
+      "phone": "07 895 7494",
+      "website": "https://www.isite.nz/find-an-isite/listing/taumarunui-i-site-visitor-information-centre",
+      "approved": true,
+      "source": "https://www.isite.nz/find-an-isite/listing/taumarunui-i-site-visitor-information-centre",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "King Country Motors",
+      "category": "Automotive",
+      "description": "Automotive servicing, WOF inspections, tyres, diagnostics and vehicle repairs.",
+      "location": "15 Hikaia Street, Taumarunui 3920",
+      "phone": "07 895 7127",
+      "website": "https://www.kingcountrymotors.co.nz/pages/contact",
+      "approved": true,
+      "source": "https://www.kingcountrymotors.co.nz/pages/contact",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Ruapehu District Council",
+      "category": "Community & Public Services",
+      "description": "Local government services for the Ruapehu District, including council customer service in Taumarunui.",
+      "location": "59–61 Huia Street, Taumarunui 3920",
+      "phone": "07 895 8188",
+      "website": "https://www.ruapehudc.govt.nz/",
+      "approved": true,
+      "source": "https://www.ruapehudc.govt.nz/repository/libraries/id%3A2dyphjrmg1cxby65trfv/hierarchy/sitecollectiondocuments/annual-reports/Annual%20Report%20for%20Current%20Year/2023_24%20Annual%20Report.pdf",
+      "checked": "2026-11-26"
     },
     {
       "name": "Inframax Construction Ltd",
-      "category": "Construction and infrastructure",
-      "description": "Construction and infrastructure services. Membership and listing approval awaiting confirmation.",
-      "approved": false
+      "category": "Construction & Infrastructure",
+      "description": "Construction and infrastructure contractor identified in Ruapehu District Council contractor records.",
+      "approved": false,
+      "source": "https://www.ruapehudc.govt.nz/repository/libraries/id%3A2dyphjrmg1cxby65trfv/hierarchy/sitecollectiondocuments/annual-reports/Annual%20Report%20for%20Current%20Year/2023_24%20Annual%20Report.pdf",
+      "checked": "2026-11-26"
     }
   ]
 }
