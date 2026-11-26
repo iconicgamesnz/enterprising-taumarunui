@@ -106,14 +106,14 @@
     {
       "name": "Thai Spoon Cafe and Thai Restaurant",
       "category": "Food & Drink",
-      "description": "Thai restaurant and cafe.",
+      "description": "Thai restaurant and cafe listed at 75 Hakiaha Street, Taumarunui.",
       "location": "75 Hakiaha Street, Taumarunui 3920",
       "phone": "07 895 7575",
-      "approved": false,
-      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
+      "approved": true,
+      "source": "Current local business search (26 November 2026); https://www.visitruapehu.com/see-do/eat-drink-shop/cafe-restaurant-75",
       "checked": "2026-11-26",
-      "verification_status": "needs_identity_check",
-      "verification_note": "75 Hakiaha Street is currently listed as Cafe & Restaurant 75; do not show a potentially superseded trading name."
+      "verification_status": "public_listing_and_local_confirmation_with_name_conflict",
+      "verification_note": "Current business search displays Thai Spoon here, while Visit Ruapehu describes the same address as Cafe & Restaurant 75. Confirm whether these are different trading periods before displaying both names."
     },
     {
       "name": "Unichem Taumarunui Pharmacy",
@@ -1681,10 +1681,11 @@
       "category": "Food & Drink",
       "description": "Cafe and restaurant in the town centre.",
       "location": "75 Hakiaha Street, Taumarunui 3920",
-      "approved": true,
-      "verification_status": "listed_by_official_operator_or_tourism_source",
+      "approved": false,
+      "verification_status": "conflicting_trading_name_same_premises",
       "checked": "2026-11-26",
-      "source": "https://www.visitruapehu.com/see-do/eat-drink-shop/cafe-restaurant-75"
+      "source": "https://www.visitruapehu.com/see-do/eat-drink-shop/cafe-restaurant-75",
+      "verification_note": "75 Hakiaha Street is also listed under Thai Spoon Cafe and Thai Restaurant. Hidden to avoid publishing a likely duplicate until operator confirms current trading name."
     },
     {
       "name": "Property Brokers Taumarunui",
