@@ -1080,6 +1080,70 @@
       "location": "Taumarunui and Ruapehu district",
       "website": "https://www.lovepm.co.nz/",
       "approved": true
+    },
+    {
+      "name": "Cafe & Restaurant 75",
+      "category": "Food & Drink",
+      "location": "75 Hakiaha Street",
+      "description": "Café and dining; coffee, takeaways and lunch",
+      "website": "https://www.visitruapehu.com/see-do/eat-drink-shop/cafe-restaurant-75",
+      "approved": false
+    },
+    {
+      "name": "Pizza K More",
+      "category": "Food & Drink",
+      "location": "1 Hakiaha Street",
+      "description": "Pizza and takeaways",
+      "website": "https://pizzakmore.co.nz/",
+      "approved": false
+    },
+    {
+      "name": "Hong Kong Fast Food",
+      "category": "Food & Drink",
+      "location": "Taumarunui",
+      "description": "Fast food and takeaways",
+      "website": "https://localista.co.nz/listing/hong-kong-fast-food?place=taumarunui+suburb%2C+nz",
+      "approved": false
+    },
+    {
+      "name": "The Flower Shed",
+      "category": "Shopping & Retail",
+      "location": "Taumarunui",
+      "description": "Florist and bouquets",
+      "website": "https://www.theflowershed.co.nz/",
+      "approved": false
+    },
+    {
+      "name": "EZ Electrical Services Ltd",
+      "category": "Trades & Home Improvement",
+      "location": "Taumarunui area",
+      "description": "Electrical services and wiring",
+      "website": "https://www.ezelectrical.co.nz/",
+      "approved": false
+    },
+    {
+      "name": "Taumarunui Auto Electrical Ltd",
+      "category": "Automotive",
+      "location": "181 Hakiaha Street",
+      "description": "Vehicle electrical services",
+      "website": "https://www.yellow.co.nz/taumarunui/bpp/taumarunui-auto-electrical-ltd-579401954",
+      "approved": false
+    },
+    {
+      "name": "Caltex Taumarunui",
+      "category": "Automotive",
+      "location": "Taumarunui",
+      "description": "Fuel and service station",
+      "website": "https://caltex.co.nz/find-a-station/station/caltex-taumarunui",
+      "approved": false
+    },
+    {
+      "name": "Taumarunui Hire Centre",
+      "category": "Trades & Home Improvement",
+      "location": "Taumarunui",
+      "description": "Equipment hire",
+      "website": "https://www.yellow.co.nz/taumarunui/bpp/taumarunui-hire-centre-579508678",
+      "approved": false
     }
   ]
 }
