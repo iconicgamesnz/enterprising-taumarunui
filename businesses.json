@@ -1,6 +1,6 @@
 {
   "updated": "2026-11-26",
-  "verification_note": "Working directory; public entries use business websites, local/tourism listings or current business search results, not guaranteed independent trading confirmation. Hidden research candidates need further checks. Membership badges are only shown when ETI confirms status; payment records never displayed. Confirm all details with businesses before final ETI handover.",
+  "verification_note": "Public listings are current publicly discoverable businesses, with information checked from official websites, tourism pages and relevant business directory providers; a listing does not independently guarantee trading status. Research-only candidates remain hidden. Closed businesses are excluded. ETI membership is marked only with explicit ETI confirmation, and no private payment information is published.",
   "businesses": [
     {
       "name": "King Country Glass & Home Plus",
@@ -431,11 +431,13 @@
     {
       "name": "Mr Plumber Taumarunui / Taumarunui Plumbing",
       "category": "Trades & Home Improvement",
-      "description": "Plumbing and related services.",
-      "approved": false,
-      "verification_status": "research_candidate",
-      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
-      "checked": "2026-11-26"
+      "description": "Plumbing, drainage, gasfitting, rural water and related trade services.",
+      "approved": true,
+      "verification_status": "current_business_or_relevant_provider_listing",
+      "source": "https://www.visitruapehu.com/see-do/eat-drink-shop/taumarunui-plumbing-ltd",
+      "checked": "2026-11-26",
+      "location": "10 Katarina Street, Taumarunui 3920",
+      "phone": "07 895 7023"
     },
     {
       "name": "Keystone Plumbing",
@@ -515,11 +517,13 @@
     {
       "name": "Gorjis",
       "category": "Retail & Shopping",
-      "description": "Local fashion and retail shop.",
-      "approved": false,
-      "verification_status": "research_candidate",
-      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
-      "checked": "2026-11-26"
+      "description": "Independent women's fashion and accessories boutique.",
+      "approved": true,
+      "verification_status": "current_business_or_relevant_provider_listing",
+      "source": "https://obi.co.nz/stockists/",
+      "checked": "2026-11-26",
+      "location": "49 Hakiaha Street, Taumarunui 3920",
+      "phone": "07 895 8406"
     },
     {
       "name": "My Sister's Wardrobe",
@@ -564,11 +568,13 @@
     {
       "name": "Central Mowers & Chainsaws",
       "category": "Rural & Agriculture",
-      "description": "Outdoor power equipment and machinery services.",
-      "approved": false,
-      "verification_status": "research_candidate",
-      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
-      "checked": "2026-11-26"
+      "description": "Mowers and chainsaws servicing, parts and sales.",
+      "approved": true,
+      "verification_status": "current_business_or_relevant_provider_listing",
+      "source": "https://www.cylex.co.nz/taumarunui/lawn-mowers/",
+      "checked": "2026-11-26",
+      "location": "101 Bell Road, Taumarunui 3920",
+      "phone": "07 895 6539"
     },
     {
       "name": "PDC Barn",
@@ -593,11 +599,14 @@
     {
       "name": "Postie Taumarunui",
       "category": "Retail & Shopping",
-      "description": "Clothing retailer.",
-      "approved": false,
-      "verification_status": "research_candidate",
-      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
-      "checked": "2026-11-26"
+      "description": "Clothing and everyday essentials for adults, children and babies.",
+      "approved": true,
+      "verification_status": "current_business_or_relevant_provider_listing",
+      "source": "https://www.postie.co.nz/store-detail/northern/taumarunui",
+      "checked": "2026-11-26",
+      "location": "107 Hakiaha Street, Taumarunui 3920",
+      "phone": "07 895 6923",
+      "website": "https://www.postie.co.nz/store-detail/northern/taumarunui"
     },
     {
       "name": "Bay Audiology Taumarunui",
@@ -623,20 +632,24 @@
     {
       "name": "Arcade Cafe",
       "category": "Food & Drink",
-      "description": "Cafe at the Taumarunui Central Arcade.",
-      "approved": false,
-      "verification_status": "research_candidate",
-      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
-      "checked": "2026-11-26"
+      "description": "Café serving breakfast, lunch and home-style baking.",
+      "approved": true,
+      "verification_status": "current_business_or_relevant_provider_listing",
+      "source": "https://www.tripadvisor.co.nz/Restaurant_Review-g1142008-d13328887-Reviews-Arcade_Cafe-Taumarunui_Manawatu_Wanganui_Region_North_Island.html",
+      "checked": "2026-11-26",
+      "location": "Shop 10, 101 Hakiaha Street, Taumarunui 3920",
+      "phone": "07 896 7988"
     },
     {
       "name": "JayZeez Dairy & Takeaways",
       "category": "Food & Drink",
-      "description": "Takeaway food and dairy.",
-      "approved": false,
-      "verification_status": "research_candidate",
-      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
-      "checked": "2026-11-26"
+      "description": "Takeaway shop offering fish and chips, burgers, and café-style meals.",
+      "approved": true,
+      "verification_status": "current_business_or_relevant_provider_listing",
+      "source": "https://www.tripadvisor.co.nz/",
+      "checked": "2026-11-26",
+      "location": "111 Hakiaha Street, Taumarunui 3920",
+      "phone": "07 895 8666"
     },
     {
       "name": "Taumarunui Canoe Hire & Jet Boat Tours",
@@ -651,11 +664,14 @@
     {
       "name": "Peak Chartered Accountants",
       "category": "Finance & Professional Services",
-      "description": "Accounting and advisory services.",
-      "approved": false,
-      "verification_status": "research_candidate",
-      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
-      "checked": "2026-11-26"
+      "description": "Chartered accounting, taxation, payroll and business advisory services.",
+      "approved": true,
+      "verification_status": "current_business_or_relevant_provider_listing",
+      "source": "https://www.peakca.co.nz/contact-us/",
+      "checked": "2026-11-26",
+      "location": "37 Miriama Street, Taumarunui 3920",
+      "phone": "07 895 3013",
+      "website": "https://www.peakca.co.nz/contact-us/"
     },
     {
       "name": "Active Property Management Ruapehu",
@@ -668,12 +684,15 @@
     },
     {
       "name": "King Country Pet Food New Zealand",
-      "category": "Rural & Agriculture",
-      "description": "Pet food manufacturing business.",
-      "approved": false,
-      "verification_status": "research_candidate",
-      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
-      "checked": "2026-11-26"
+      "category": "Manufacturing & Industry",
+      "description": "Commercial pet-food contract manufacturing and production.",
+      "approved": true,
+      "verification_status": "current_business_or_relevant_provider_listing",
+      "source": "https://kingcountrypetfood.com/",
+      "checked": "2026-11-26",
+      "location": "12 Racecourse Road, Manunui 3992",
+      "phone": "07 895 8000",
+      "website": "https://kingcountrypetfood.com/"
     },
     {
       "name": "Living on the Hedge",
@@ -688,11 +707,12 @@
       "name": "PGG Wrightson Taumarunui",
       "category": "Rural & Agriculture",
       "location": "31 Miriama Street, Taumarunui 3920",
-      "description": "Local business identified in public directory or company records; services and operating status require confirmation.",
-      "approved": false,
-      "verification_status": "research_candidate",
-      "source": "https://rohe.nz/agriculture/manawatu-whanganui",
-      "checked": "2026-11-26"
+      "description": "Rural retail, livestock and agricultural supply services.",
+      "approved": true,
+      "verification_status": "current_business_or_relevant_provider_listing",
+      "source": "https://www.pggwrightson.co.nz/",
+      "checked": "2026-11-26",
+      "phone": "07 895 3220"
     },
     {
       "name": "Garry Kidd Engineering Co",
@@ -709,11 +729,12 @@
       "name": "Liquorland Taumarunui",
       "category": "Retail & Shopping",
       "location": "15 Hakiaha Street, Taumarunui 3920",
-      "description": "Local business identified in public directory or company records; services and operating status require confirmation.",
-      "approved": false,
-      "verification_status": "research_candidate",
-      "source": "https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
-      "checked": "2026-11-26"
+      "description": "Specialist beverage retailer in central Taumarunui.",
+      "approved": true,
+      "verification_status": "current_business_or_relevant_provider_listing",
+      "source": "https://www.liquorland.co.nz/",
+      "checked": "2026-11-26",
+      "phone": "07 895 7216"
     },
     {
       "name": "Rongoā Angel",
@@ -809,11 +830,14 @@
     {
       "name": "Blue Hill Cafe",
       "category": "Food & Drink",
-      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
-      "approved": false,
-      "verification_status": "research_candidate",
-      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
-      "checked": "2026-11-26"
+      "description": "Locally operated café offering coffee, homemade baking and meals in Ōwhango.",
+      "approved": true,
+      "verification_status": "current_business_or_relevant_provider_listing",
+      "source": "https://www.bluehillcafe.co.nz/",
+      "checked": "2026-11-26",
+      "location": "2159 State Highway 4, Ōwhango 3990",
+      "phone": "07 895 4541",
+      "website": "https://www.bluehillcafe.co.nz/"
     },
     {
       "name": "BB Bushmans Bites",
@@ -1112,11 +1136,15 @@
     {
       "name": "Peak FM",
       "category": "Media & Communications",
-      "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
-      "approved": false,
-      "verification_status": "research_candidate",
-      "source": "https://list-it.nz/manawatu-whanganui/taumarunui",
-      "checked": "2026-11-26"
+      "description": "Regional radio station serving Taumarunui and the wider Ruapehu district.",
+      "approved": true,
+      "verification_status": "current_business_or_relevant_provider_listing",
+      "source": "https://peakfm.nz/",
+      "checked": "2026-11-26",
+      "location": "59 Seddon Street, Raetihi 4632",
+      "phone": "0800 473 253",
+      "website": "https://peakfm.nz/",
+      "service_area": "Taumarunui and Ruapehu; office located in Raetihi"
     },
     {
       "name": "Washking",
@@ -1186,13 +1214,14 @@
     {
       "name": "Home Spot",
       "category": "Retail & Shopping",
-      "description": "Taumarunui-area business identified in public company or directory records; current trading status requires confirmation.",
-      "approved": false,
-      "verification_status": "research_candidate",
+      "description": "Home appliances and homewares retailer.",
+      "approved": true,
+      "verification_status": "current_business_or_relevant_provider_listing",
       "source": "https://businessme.co.nz/city/taumarunui/",
       "checked": "2026-11-26",
       "location": "45 Hakiaha Street, Taumarunui 3920",
-      "verification_note": "Address cross-checked against public business listings; business should confirm before final handover."
+      "verification_note": "Address cross-checked against public business listings; business should confirm before final handover.",
+      "phone": "07 895 3371"
     },
     {
       "name": "King Country Radio",
@@ -1367,12 +1396,14 @@
     },
     {
       "name": "Taumarunui Funeral Services",
-      "category": "Professional Services",
-      "description": "Taumarunui-area business identified in public company or directory records; current trading status requires confirmation.",
-      "approved": false,
-      "verification_status": "research_candidate",
-      "source": "https://www.checkbase.co.nz/locations/taumarunui",
-      "checked": "2026-11-26"
+      "category": "Services",
+      "description": "Funeral planning, memorials and bereavement services.",
+      "approved": true,
+      "verification_status": "current_business_or_relevant_provider_listing",
+      "source": "https://taumarunuifunerals.co.nz/",
+      "checked": "2026-11-26",
+      "location": "34 Huia Street, Taumarunui 3920",
+      "website": "https://taumarunuifunerals.co.nz/"
     },
     {
       "name": "Real World Media",
@@ -1845,6 +1876,92 @@
       "description": "Public listing located; current trading status requires confirmation.",
       "approved": false,
       "verification_status": "research_candidate",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Brian Goodwin Plumbing",
+      "category": "Trades & Home Improvement",
+      "description": "Plumbing, gasfitting and drainage services for Taumarunui and surrounding rural districts.",
+      "location": "160 Totara Street, Manunui 3992",
+      "website": "https://www.briangoodwinplumbing.co.nz/",
+      "source": "https://www.briangoodwinplumbing.co.nz/",
+      "approved": true,
+      "verification_status": "current_public_business_listing",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Total Concrete Products",
+      "category": "Manufacturing & Industry",
+      "description": "Locally based manufacturer and supplier of precast concrete products.",
+      "location": "321 Taupo Road, Taumarunui 3920",
+      "phone": "07 895 7643",
+      "website": "https://www.totalconcreteproducts.co.nz/",
+      "source": "https://www.totalconcreteproducts.co.nz/",
+      "approved": true,
+      "verification_status": "current_public_business_listing",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Logic Joinery",
+      "category": "Trades & Home Improvement",
+      "description": "Joinery and carpentry services.",
+      "location": "120 Bell Road, Taumarunui 3920",
+      "phone": "07 895 5011",
+      "source": "Taumarunui public business listing 2026",
+      "approved": true,
+      "verification_status": "current_public_business_listing",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Flett & Gray Engineers",
+      "category": "Trades & Home Improvement",
+      "description": "General engineering workshop and welding services.",
+      "location": "46 Bell Road, Taumarunui 3920",
+      "phone": "07 895 6537",
+      "source": "Taumarunui public business listing 2026",
+      "approved": true,
+      "verification_status": "current_public_business_listing",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Salt & Pepper Indian Takeaway",
+      "category": "Food & Drink",
+      "description": "Indian takeaway meals.",
+      "location": "101 Hakiaha Street, Taumarunui 3920",
+      "phone": "022 027 5343",
+      "source": "Taumarunui public business listing 2026",
+      "approved": true,
+      "verification_status": "current_public_business_listing",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "RB Drainage, Gas & Plumbing Solutions",
+      "category": "Trades & Home Improvement",
+      "description": "Drainage, gasfitting and plumbing services.",
+      "location": "42 Brightwell Road, Taumarunui 3994",
+      "source": "https://www.yellow.co.nz/taumarunui/bpp/rb-drainage-gas-plumbing-solutions-ltd-579447119",
+      "approved": true,
+      "verification_status": "current_public_business_listing",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Wakelin Engineering",
+      "category": "Trades & Home Improvement",
+      "description": "Engineering and machinery services in the Taumarunui district.",
+      "location": "Taumarunui district",
+      "source": "https://www.visitruapehu.com/see-do/eat-drink-shop?page=2",
+      "approved": true,
+      "verification_status": "current_public_business_listing",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "SPCA Op Shop Taumarunui",
+      "category": "Retail & Shopping",
+      "description": "Community secondhand charity retail store.",
+      "location": "Taumarunui",
+      "source": "https://opshop.kiwi/guide/map",
+      "approved": true,
+      "verification_status": "current_public_business_listing",
       "checked": "2026-11-26"
     }
   ]
