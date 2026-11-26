@@ -15,7 +15,7 @@ await writeFile('netlify/event-store.mjs', 'export const storeName = "eti-events
 
 const {gunzipSync} = await import('node:zlib');
 const {readFile} = await import('node:fs/promises');
-await writeFile('dist/calendar-comparison.csv',gunzipSync(await readFile('reports/calendar-comparison.csv.gz')));
+// Comparison report remains in project archive and is not copied to public assets.
 await copyFile('redirects.txt','dist/_redirects');
 
 await copyFile('taumarunui-history.webp','dist/taumarunui-history.webp');

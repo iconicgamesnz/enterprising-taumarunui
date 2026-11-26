@@ -42,7 +42,7 @@ export default async function(request) {
   try {
     const store=getStore({name:storeName,consistency:'strong'});
     const url=new URL(request.url), action=url.searchParams.get('action')||'directory';
-    if(request.method==='GET'&&action==='directory')return send({businesses:await listings(store)});
+    if(request.method==='GET'&&action==='directory'){const fields=['id','name','category','location','description','website','phone','approved','member','directory_group','search_keywords','services','profile_intro','service_area'];return send({businesses:(await listings(store)).map(row=>Object.fromEntries(fields.filter(k=>Object.hasOwn(row,k)).map(k=>[k,row[k]])))});}
     if(request.method==='GET'&&action==='settings')return send((await get(store,'settings'))?.value||defaults);
     const role=await reviewer(request,store,['grant','revoke','keys','archive'].includes(action));
     if(request.method==='GET'){

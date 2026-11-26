@@ -8,6 +8,7 @@ import {occurrences} from '../recurrence.mjs';
 // Deliberately disabled by default. Only an explicitly approved dedicated mirror
 // calendar may be written; never send invitations or include attendee data.
 export default async function(){
+ if(process.env.CONTEXT!=='production')return;
  if(process.env.ETI_GOOGLE_SYNC_ENABLED!=='true')return;
  const id=process.env.ETI_GOOGLE_MIRROR_CALENDAR_ID;
  if(!id||!process.env.ETI_GOOGLE_SERVICE_ACCOUNT||id==='enterprisingtaumarunui@gmail.com')throw Error('An explicit dedicated mirror calendar and service account are required.');

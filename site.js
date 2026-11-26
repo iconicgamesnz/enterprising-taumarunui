@@ -33,3 +33,5 @@ async function applyPublishedContent(){
  if(v.photo){const image=document.createElement('img');image.src=v.photo;image.alt=v.alt||'';image.loading='lazy';image.style.cssText='display:block;max-width:100%;max-height:440px;object-fit:contain;border-radius:6px;margin:24px 0';const wrap=main.querySelector('.hero .wrap')||main;wrap.append(image);}
 }
 applyPublishedContent().catch(()=>{});
+
+if(!['admin.html','editor.html','workspace.html','calendar-review.html'].includes(location.pathname.split('/').pop())){const s=document.createElement('script');s.src='/workspace-public.js';document.head.append(s);}
