@@ -7,7 +7,7 @@ const derive=promisify(scrypt);
 const get=(s,k)=>s.get(k,{type:'json'});
 const reply=(data,status=200)=>Response.json(data,{status,headers:{'Cache-Control':'no-store','X-Content-Type-Options':'nosniff'}});
 const username=v=>String(v||'').trim().toLowerCase();
-const valid=u=>/^[a-z0-9][a-z0-9._-]{2,39}$/.test(u)&&u!=='owner';
+const valid=u=>/^[a-z0-9][a-z0-9._-]{2,39}$/.test(u)&&!['owner','demo'].includes(u);
 const makePassword=()=>randomBytes(18).toString('base64url');
 async function verifier(password,salt){return (await derive(password,salt,64)).toString('hex');}
 export default async function(request){

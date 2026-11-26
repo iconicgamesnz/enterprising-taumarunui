@@ -1,4 +1,5 @@
-import { mkdir, readdir, copyFile } from 'node:fs/promises';
+import { mkdir, readdir, copyFile, rm } from 'node:fs/promises';
+await rm('dist',{recursive:true,force:true});
 await mkdir('dist', {recursive:true});
 for (const file of await readdir('.')) {
   if (/\.(html|js|css)$/.test(file)) {

@@ -113,3 +113,5 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
 #directory-count {color:#425569}
 
 .wrap table {border-collapse:collapse;width:100%}.wrap th,.wrap td {padding:.55rem;border-bottom:1px solid #b7c3ca;text-align:left}
+
+[hidden]{display:none!important}

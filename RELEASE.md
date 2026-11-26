@@ -33,3 +33,7 @@ Legacy links for membership, contact, about ETI, the town, event listings and th
 ## Workspace update
 
 Use editor.html for existing pages, posts, media and users, workspace.html for new pages, menus, optional forms/comments and configuration restoration. Practice mode is local only. Real forms and comments are disabled by default and only the owner can enable collection after privacy approval. No email service is called. Configuration export is not a full backup. Do not remove visitor protection until historical files are securely archived and affected deploy URLs retired. The comparison CSV is no longer copied to the new public build.
+
+## Demo login
+
+Username `demo`, password `eti-practice` opens local practice mode only. It never creates a server session or accesses actual data. Custom page drafts preserve their published version until explicitly published or unpublished. The build removes stale generated assets before rebuilding.
