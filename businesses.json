@@ -289,8 +289,10 @@
       "location": "119 Hakiaha Street, Taumarunui 3920",
       "phone": "07 895 7089",
       "approved": true,
-      "source": "Public local business search and Taumarunui business directories (2026-11-26)",
-      "checked": "2026-11-26"
+      "source": "https://countrycarpetandfurniture.co.nz/",
+      "checked": "2026-11-26",
+      "website": "https://countrycarpetandfurniture.co.nz/",
+      "verification_status": "official_business_website"
     },
     {
       "name": "Bike Torque",
@@ -364,8 +366,8 @@
       "approved": false,
       "source": "Public local business search and Taumarunui business directories (2026-11-26)",
       "checked": "2026-11-26",
-      "verification_note": "Previous 61 Hakiaha address also lists Regent Cinema; reconfirm branch details prior to publication.",
-      "verification_status": "needs_address_check"
+      "verification_note": "Harcourts has historical third-party Taumarunui entries but no current local office on official office finder; hold pending operator confirmation.",
+      "verification_status": "historical_listing_unconfirmed"
     },
     {
       "name": "BNZ Taumarunui",
@@ -518,9 +520,9 @@
     {
       "name": "Main Street Traders",
       "category": "Retail & Shopping",
-      "description": "Local retail shop.",
-      "approved": false,
-      "verification_status": "research_candidate",
+      "description": "General retail store in central Taumarunui.",
+      "approved": true,
+      "verification_status": "recent_business_directory_listing",
       "source": "https://www.cylex.co.nz/taumarunui/retail-shops/",
       "checked": "2026-11-26",
       "location": "71 Hakiaha Street, Taumarunui 3920",
@@ -688,11 +690,14 @@
     {
       "name": "Active Property Management Ruapehu",
       "category": "Property & Real Estate",
-      "description": "Property management services.",
-      "approved": false,
-      "verification_status": "research_candidate",
-      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
-      "checked": "2026-11-26"
+      "description": "Taumarunui-based residential rental management services for owners and tenants.",
+      "approved": true,
+      "verification_status": "official_business_website",
+      "source": "https://www.activepropertymanagement.co.nz/",
+      "checked": "2026-11-26",
+      "location": "Taumarunui",
+      "phone": "021 624 996",
+      "website": "https://www.activepropertymanagement.co.nz/"
     },
     {
       "name": "King Country Pet Food New Zealand",
@@ -2072,6 +2077,40 @@
       "approved": true,
       "verification_status": "official_business_website_or_tourism_listing",
       "checked": "2026-11-26"
+    },
+    {
+      "name": "Taumarunui Golf Club",
+      "category": "Tourism & Visitor Services",
+      "description": "Tarrangower golf course, 18-hole rounds, green fees and a club community.",
+      "location": "165 Golf Road, Taumarunui 3920",
+      "phone": "07 896 7257",
+      "website": "https://www.taumarunuigolfclub.co.nz/",
+      "source": "https://www.taumarunuigolfclub.co.nz/locationcontact-us/",
+      "approved": true,
+      "checked": "2026-11-26",
+      "verification_status": "official_business_website"
+    },
+    {
+      "name": "The Tee Shirt Guy",
+      "category": "Retail & Shopping",
+      "description": "Online direct-to-garment printing of custom T-shirts, hoodies and branded clothing, operated through Philip Hagan Design.",
+      "location": "Taumarunui / online",
+      "website": "https://www.theteeshirtguy.co.nz/",
+      "source": "https://www.philiphagandesign.co.nz/",
+      "approved": true,
+      "checked": "2026-11-26",
+      "verification_status": "official_business_website"
+    },
+    {
+      "name": "Love Property Management",
+      "category": "Property & Real Estate",
+      "description": "Residential property management across Taumarunui and the wider Ruapehu district.",
+      "location": "Taumarunui and Ruapehu district",
+      "website": "https://www.lovepm.co.nz/",
+      "source": "https://www.lovepm.co.nz/",
+      "approved": true,
+      "checked": "2026-11-26",
+      "verification_status": "official_business_website"
     }
   ]
 }
