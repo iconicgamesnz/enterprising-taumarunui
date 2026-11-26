@@ -22,6 +22,14 @@ function eventFields(body) {
     if (!time.isValid || time.toFormat("yyyy-MM-dd'T'HH:mm") !== data[key] || time.getPossibleOffsets().length !== 1) throw error(400,'Choose a valid, unambiguous New Zealand local time.');
   }
   if (data.end <= data.start) throw error(400,'The event must end after it starts.');
+  for (const key of ['image','registration']) {
+    const value=body?.[key];
+    if (!value) {data[key]='';continue;}
+    if(typeof value!=='string'||value.length>1500)throw error(400,'Check '+key+' URL.');
+    let u;try{u=new URL(value);}catch{throw error(400,'Check '+key+' URL.');}
+    if(u.protocol!=='https:'||u.username||u.password)throw error(400,'Use a public HTTPS URL.');
+    data[key]=u.href;
+  }
   return data;
 }
 const read = (store,key) => store.get(key,{type:'json'});
@@ -50,7 +58,24 @@ export async function handle(request, store, getClient = calendarClient) {
   const url = new URL(request.url);
   const action = url.searchParams.get('action') || 'submit';
   if (action === 'calendar' && request.method === 'GET') return reply({id:calendarId()});
+  if (action === 'published' && request.method === 'GET') {
+    const {blobs}=await store.list({prefix:'public-events/'});
+    const items=[];
+    for(const {key} of blobs){
+      const entry=await read(store,key);
+      if(!entry || entry.status!=='published')continue;
+      const {title,location,start,end,description,image='',registration=''}=entry.event;
+      items.push({id:key.slice('public-events/'.length),title,location,start,end,description,image,registration});
+    }
+    return reply({items:items.sort((a,b)=>a.start.localeCompare(b.start))});
+  }
   if (action !== 'submit') await requireReviewer(request,store);
+  if(action==='manage' && request.method==='GET'){
+    const {blobs}=await store.list({prefix:'public-events/'});
+    const items=[];
+    for(const {key} of blobs){const entry=await read(store,key);if(entry)items.push({id:key.slice('public-events/'.length),...entry});}
+    return reply({items});
+  }
   if (action === 'queue' && request.method === 'GET') {
     const {blobs} = await store.list({prefix:'submissions/'});
     const items = [];
@@ -80,6 +105,17 @@ export async function handle(request, store, getClient = calendarClient) {
     if (!body.website) await store.setJSON('submissions/' + id,{...event,email,created:new Date().toISOString()},{onlyIfNew:true});
     return reply({message:'Submitted for ETI review.'},202);
   }
+  if(['create','edit','cancel'].includes(action)){
+    const k='public-events/'+id;
+    const prior=await store.getWithMetadata(k,{type:'json'});
+    if(action==='create'&&prior)throw error(409,'Event already exists.');
+    if(action!=='create'&&!prior)throw error(404,'Event unavailable.');
+    if(prior && prior.data.version!==body.version)throw error(409,'Another reviewer changed this event. Refresh and try again.');
+    const entry={event:action==='cancel'?prior.data.event:eventFields(body),status:action==='cancel'?'cancelled':'published',version:crypto.randomUUID()};
+    const result=await store.setJSON(k,entry,prior?{onlyIfMatch:prior.etag}:{onlyIfNew:true});
+    if(!result.modified)throw error(409,'Another reviewer changed this event. Refresh and try again.');
+    return reply({message:action==='cancel'?'Removed from public calendar.':'Saved to public calendar.'});
+  }
   if (!['draft','approve','decline'].includes(action)) throw error(404,'Unknown action.');
   if (!await store.get('submissions/' + id)) throw error(404,'Submission unavailable.');
   if (action === 'draft') {
@@ -91,14 +127,14 @@ export async function handle(request, store, getClient = calendarClient) {
     if (!result.modified) throw error(409,'Another reviewer saved changes. Refresh the queue.');
     return reply({message:'Edits saved for review.'});
   }
-  const client = action === 'approve' ? getClient() : null;
+  // Independent calendar is the publication destination. No outbound Google or email actions.
   const proposal = action === 'approve' ? {action,event:eventFields(body),calendar:calendarId()} : {action};
   await store.setJSON('decisions/' + id,proposal,{onlyIfNew:true});
   const decision = await read(store,'decisions/' + id);
   if (decision.action !== action) throw error(409,'Another reviewer already decided this event. Refresh the queue.');
   if (action === 'approve' && !await store.get('done/' + id)) {
-    if (decision.calendar !== calendarId()) throw error(409,'The destination calendar has changed. Contact the site owner.');
-    await publish(client,id,decision.event);
+    const saved=await store.setJSON('public-events/'+id,{event:decision.event,status:'published',version:crypto.randomUUID()},{onlyIfNew:true});
+    if(!saved.modified && !await store.get('public-events/'+id))throw error(503,'Publication not confirmed. Retry approval.');
     await store.set('done/' + id,'published',{onlyIfNew:true});
   }
   return reply({message:action === 'approve' ? 'Published to the community calendar.' : 'Submission declined.'});
