@@ -1,1 +1,13 @@
-{"private":true,"type":"module","scripts":{"build":"node scripts/build.mjs"},"dependencies":{"@netlify/blobs":"11.1.11","google-auth-library":"^10.0.0","luxon":"^3.7.0"}}
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs && node scripts/test-cms.mjs",
+    "test:cms": "node scripts/test-cms.mjs"
+  },
+  "dependencies": {
+    "@netlify/blobs": "11.1.11",
+    "google-auth-library": "^10.0.0",
+    "luxon": "^3.7.0"
+  }
+}

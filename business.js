@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     return;
   }
   try {
-    const response = await fetch('businesses.json', {cache: 'no-store'});
+    const response = await fetch('/.netlify/functions/committee?action=directory', {cache: 'no-store'});
     if (!response.ok) throw new Error('Unavailable');
     const data = await response.json();
     const record = (Array.isArray(data.businesses) ? data.businesses : [])

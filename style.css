@@ -22,7 +22,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
 /* Navigation, refined editorial sections, directory and CMS preview */
 .site-nav-toggle{display:none;background:transparent;border:1px solid #c6a46a;color:white;padding:10px 15px;font:700 14px inherit}
 .section-intro{max-width:720px;color:#516171;line-height:1.8;font-size:17px}
-.kicker{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#9d7b48;font-weight:800}
+.kicker{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#715225;font-weight:800}
 .stat-strip{background:#102740;color:#fff;padding:25px 0;border-top:1px solid #c6a46a50}
 .stat-strip .wrap{display:flex;gap:25px;justify-content:space-between;flex-wrap:wrap}
 .stat-strip strong{font-size:14px;letter-spacing:.08em}
@@ -74,7 +74,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
 .directory-help h3{font:800 24px Manrope,sans-serif;margin:0 0 8px}
 .directory-help p{font-size:14px;line-height:1.7;color:#dce5ec;max-width:700px;margin:0}
 .directory-help .button{white-space:nowrap;margin:0;flex:0 0 auto}
-.directory-disclaimer{font-size:12px!important;color:#647385!important;line-height:1.65;max-width:860px}
+.directory-disclaimer{font-size:12px!important;color:#465767!important;line-height:1.65;max-width:860px}
 .business-page{min-height:68vh}
 .back-link{font-weight:700;color:#5f4c2c;text-decoration:none;display:inline-block;margin:0 0 36px}
 .back-link:hover{text-decoration:underline}
@@ -108,4 +108,10 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
 #committee .picker {display:grid;gap:.5rem;margin:1rem 0}
 #committee select {max-width:100%;padding:.7rem}
 .form input,.form textarea,.form select {min-width:0;box-sizing:border-box}
+[hidden]{display:none!important}
+
+#directory-count {color:#425569}
+
+.wrap table {border-collapse:collapse;width:100%}.wrap th,.wrap td {padding:.55rem;border-bottom:1px solid #b7c3ca;text-align:left}
+
 [hidden]{display:none!important}

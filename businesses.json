@@ -25,7 +25,9 @@
       "location": "15 Hikaia Street, Taumarunui 3920",
       "phone": "07 895 7127",
       "website": "https://www.kingcountrymotors.co.nz/pages/contact",
-      "approved": true
+      "approved": true,
+      "directory_group": "Services",
+      "search_keywords": "mechanic WOF servicing tyres diagnostics"
     },
     {
       "name": "Ruapehu District Council",
@@ -64,7 +66,8 @@
       "description": "Cafe and Thai restaurant.",
       "location": "43 Hakiaha Street, Taumarunui 3920",
       "phone": "07 895 5822",
-      "approved": true
+      "approved": true,
+      "directory_group": "Eat & Drink"
     },
     {
       "name": "New World Taumarunui",
@@ -73,7 +76,9 @@
       "location": "10 Hakiaha Street, Taumarunui 3920",
       "phone": "07 896 0070",
       "approved": true,
-      "website": "https://www.newworld.co.nz/"
+      "website": "https://www.newworld.co.nz/",
+      "directory_group": "Shopping",
+      "search_keywords": "groceries grocery food catering"
     },
     {
       "name": "Thai Spoon Cafe and Thai Restaurant",
@@ -90,7 +95,9 @@
       "location": "93 Hakiaha Street, Taumarunui 3920",
       "phone": "07 895 7326",
       "approved": true,
-      "website": "https://www.taumarunuipharmacy.co.nz/"
+      "website": "https://www.taumarunuipharmacy.co.nz/",
+      "directory_group": "Shopping",
+      "search_keywords": "chemist prescription dispensary"
     },
     {
       "name": "Taumarunui Bakery",
@@ -106,7 +113,8 @@
       "description": "Tyre and wheel retailer and service provider.",
       "location": "127 Hakiaha Street, Taumarunui 3920",
       "phone": "07 895 5000",
-      "approved": true
+      "approved": true,
+      "directory_group": "Services"
     },
     {
       "name": "The Bakehouse Cafe",
@@ -114,7 +122,9 @@
       "description": "Bakery cafe and takeaway food.",
       "location": "105 Hakiaha Street, Taumarunui 3920",
       "phone": "07 895 7072",
-      "approved": true
+      "approved": true,
+      "directory_group": "Eat & Drink",
+      "search_keywords": "coffee breakfast baking lunch"
     },
     {
       "name": "Paper Plus Taumarunui",
@@ -138,7 +148,9 @@
       "description": "Fish and chips and takeaway meals.",
       "location": "2 Marae Street, Taumarunui 3920",
       "phone": "07 895 7230",
-      "approved": true
+      "approved": true,
+      "directory_group": "Eat & Drink",
+      "search_keywords": "fish chips burgers seafood"
     },
     {
       "name": "Kai Nui",
@@ -154,7 +166,9 @@
       "description": "Guided rail-cart and adventure tourism experiences.",
       "location": "9 Hakiaha Street, Taumarunui 3920",
       "phone": "07 895 7181",
-      "approved": true
+      "approved": true,
+      "directory_group": "Stay & Explore",
+      "search_keywords": "rail carts guided tours activities"
     },
     {
       "name": "Absolute Meats",
@@ -163,7 +177,8 @@
       "location": "109 Hakiaha Street, Taumarunui 3920",
       "phone": "07 895 7570",
       "approved": true,
-      "member": true
+      "member": true,
+      "directory_group": "Shopping"
     },
     {
       "name": "NZ Post Taumarunui",
@@ -179,7 +194,8 @@
       "description": "Tools, equipment and trade supplies.",
       "location": "52 Bell Road, Taumarunui 3920",
       "phone": "07 895 8582",
-      "approved": true
+      "approved": true,
+      "directory_group": "Shopping"
     },
     {
       "name": "T M P Fashions",
@@ -187,7 +203,9 @@
       "description": "Clothing, footwear and accessories for men, women and children, plus gifts.",
       "location": "85 Hakiaha Street, Taumarunui 3920",
       "phone": "07 895 7401",
-      "approved": true
+      "approved": true,
+      "directory_group": "Shopping",
+      "search_keywords": "clothes clothing fashion"
     },
     {
       "name": "Taumarunui RSA",
@@ -195,7 +213,8 @@
       "description": "Community club with restaurant and social facilities.",
       "location": "10 Marae Street, Taumarunui 3920",
       "phone": "07 895 7517",
-      "approved": true
+      "approved": true,
+      "directory_group": "Eat & Drink"
     },
     {
       "name": "Farmlands Taumarunui",
@@ -203,7 +222,8 @@
       "description": "Rural supplies and farming retail.",
       "location": "89 Bell Road, Taumarunui 3920",
       "phone": "07 896 0052",
-      "approved": true
+      "approved": true,
+      "directory_group": "Shopping"
     },
     {
       "name": "Country Carpet & Furniture",
@@ -212,7 +232,9 @@
       "location": "119 Hakiaha Street, Taumarunui 3920",
       "phone": "07 895 7089",
       "approved": true,
-      "website": "https://countrycarpetandfurniture.co.nz/"
+      "website": "https://countrycarpetandfurniture.co.nz/",
+      "directory_group": "Shopping",
+      "search_keywords": "carpet vinyl flooring furniture"
     },
     {
       "name": "Bike Torque",
@@ -252,7 +274,8 @@
       "description": "Antiques and collectibles.",
       "location": "79 Hakiaha Street, Taumarunui 3920",
       "approved": true,
-      "phone": "027 671 6028"
+      "phone": "027 671 6028",
+      "directory_group": "Shopping"
     },
     {
       "name": "Advantage Tyre & Battery Shop Taumarunui",
@@ -260,7 +283,8 @@
       "description": "Tyre and battery services.",
       "location": "178 Hakiaha Street, Taumarunui 3920",
       "approved": true,
-      "phone": "07 895 8394"
+      "phone": "07 895 8394",
+      "directory_group": "Services"
     },
     {
       "name": "BNZ Taumarunui",
@@ -276,7 +300,8 @@
       "description": "Fuel station and convenience retail.",
       "location": "4 Hakiaha Street, Taumarunui 3920",
       "phone": "07 895 7863",
-      "approved": true
+      "approved": true,
+      "directory_group": "Services"
     },
     {
       "name": "Four Square Taumarunui",
@@ -299,7 +324,8 @@
       "description": "Hardware and home improvement retailer.",
       "approved": true,
       "location": "Taitua Street, Taumarunui 3920",
-      "phone": "07 895 8107"
+      "phone": "07 895 8107",
+      "directory_group": "Shopping"
     },
     {
       "name": "100% Appliances Taumarunui",
@@ -322,7 +348,9 @@
       "description": "Plumbing, drainage, gasfitting, rural water and related trade services.",
       "approved": true,
       "location": "10 Katarina Street, Taumarunui 3920",
-      "phone": "07 895 7023"
+      "phone": "07 895 7023",
+      "directory_group": "Trades",
+      "search_keywords": "plumber plumbing woodfire installation"
     },
     {
       "name": "Keystone Plumbing",
@@ -344,7 +372,8 @@
       "description": "Mechanical, hydraulic and mobile equipment servicing.",
       "approved": true,
       "location": "52 Bell Road, Taumarunui 3920",
-      "phone": "027 382 8978"
+      "phone": "027 382 8978",
+      "directory_group": "Trades"
     },
     {
       "name": "The Heating Company Taumarunui",
@@ -398,7 +427,8 @@
       "description": "Veterinary clinic offering care for companion animals and rural clients.",
       "approved": true,
       "location": "168–170 Hakiaha Street, Taumarunui 3920",
-      "phone": "07 895 8899"
+      "phone": "07 895 8899",
+      "directory_group": "Services"
     },
     {
       "name": "Central Mowers & Chainsaws",
@@ -406,7 +436,8 @@
       "description": "Mowers and chainsaws servicing, parts and sales.",
       "approved": true,
       "location": "101 Bell Road, Taumarunui 3920",
-      "phone": "07 895 6539"
+      "phone": "07 895 6539",
+      "directory_group": "Shopping"
     },
     {
       "name": "PDC Barn",
@@ -423,7 +454,8 @@
       "approved": true,
       "location": "107 Hakiaha Street, Taumarunui 3920",
       "phone": "07 895 6923",
-      "website": "https://www.postie.co.nz/store-detail/northern/taumarunui"
+      "website": "https://www.postie.co.nz/store-detail/northern/taumarunui",
+      "directory_group": "Shopping"
     },
     {
       "name": "Bay Audiology Taumarunui",
@@ -438,7 +470,8 @@
       "description": "Tavern and restaurant.",
       "approved": true,
       "location": "123 Hakiaha Street, Taumarunui 3920",
-      "phone": "07 895 3489"
+      "phone": "07 895 3489",
+      "directory_group": "Eat & Drink"
     },
     {
       "name": "Arcade Cafe",
@@ -471,7 +504,9 @@
       "location": "37 Miriama Street, Taumarunui 3920",
       "phone": "07 895 3013",
       "website": "https://www.peakca.co.nz/contact-us/",
-      "member": true
+      "member": true,
+      "directory_group": "Services",
+      "search_keywords": "accountant tax business accounting"
     },
     {
       "name": "Active Property Management Ruapehu",
@@ -507,7 +542,8 @@
       "location": "31 Miriama Street, Taumarunui 3920",
       "description": "Rural retail, livestock and agricultural supply services.",
       "approved": true,
-      "phone": "07 895 3220"
+      "phone": "07 895 3220",
+      "directory_group": "Shopping"
     },
     {
       "name": "Garry Kidd Engineering Co",
@@ -572,7 +608,8 @@
       "description": "Business identified in a public directory or ETI-related records; current trading details require confirmation.",
       "approved": true,
       "location": "123 Bell Road, Taumarunui 3920",
-      "phone": "027 345 6399"
+      "phone": "027 345 6399",
+      "directory_group": "Trades"
     },
     {
       "name": "Taumarunui Health Hub",
@@ -632,7 +669,8 @@
       "approved": true,
       "location": "34 Huia Street, Taumarunui 3920",
       "website": "https://taumarunuifunerals.co.nz/",
-      "phone": "07 895 7420"
+      "phone": "07 895 7420",
+      "directory_group": "Services"
     },
     {
       "name": "Philip Hagan Design",
@@ -696,7 +734,8 @@
       "description": "Self-contained motel accommodation close to town.",
       "location": "6 Marae Street, Taumarunui 3920",
       "approved": true,
-      "phone": "07 895 8501"
+      "phone": "07 895 8501",
+      "directory_group": "Stay & Explore"
     },
     {
       "name": "Forgotten World Motel",
@@ -704,7 +743,8 @@
       "description": "Motel accommodation in the centre of Taumarunui.",
       "location": "9 Hakiaha Street, Taumarunui 3920",
       "approved": true,
-      "phone": "07 895 7181"
+      "phone": "07 895 7181",
+      "directory_group": "Stay & Explore"
     },
     {
       "name": "Taumarunui Holiday Park",
@@ -720,7 +760,8 @@
       "description": "Motor inn and conference venue.",
       "location": "7 Maata Street, Taumarunui 3920",
       "approved": true,
-      "phone": "07 895 7132"
+      "phone": "07 895 7132",
+      "directory_group": "Stay & Explore"
     },
     {
       "name": "Magpie Cottage",
@@ -728,7 +769,8 @@
       "description": "Bed-and-breakfast accommodation in Taumarunui.",
       "location": "37 Rangaroa Road, Taumarunui",
       "approved": true,
-      "phone": "07 895 3344"
+      "phone": "07 895 3344",
+      "directory_group": "Stay & Explore"
     },
     {
       "name": "The Inn at the Convent",
@@ -765,7 +807,8 @@
       "description": "Motel accommodation near town and the Ongarue River.",
       "location": "10–12 River Road, Taumarunui",
       "approved": true,
-      "phone": "07 895 8175"
+      "phone": "07 895 8175",
+      "directory_group": "Stay & Explore"
     },
     {
       "name": "Bradley's Garden Bed and Breakfast",
@@ -839,14 +882,16 @@
       "description": "Indian and Pakistani restaurant offering dine-in and takeaways.",
       "location": "25 Hakiaha Street, Taumarunui 3920",
       "approved": true,
-      "phone": "07 895 3399"
+      "phone": "07 895 3399",
+      "directory_group": "Eat & Drink"
     },
     {
       "name": "Property Brokers Taumarunui",
       "category": "Property & Real Estate",
       "description": "Residential, rural and commercial real estate services.",
       "location": "Taumarunui",
-      "approved": true
+      "approved": true,
+      "directory_group": "Services"
     },
     {
       "name": "Kramer's Takeaways",
@@ -1013,7 +1058,8 @@
       "description": "Dental care including urgent, adult and eligible adolescent and child dental services.",
       "location": "63 Kururau Road, Taumarunui 3920",
       "phone": "07 895 7850",
-      "approved": true
+      "approved": true,
+      "directory_group": "Services"
     },
     {
       "name": "LK Barbershop",
@@ -1080,6 +1126,80 @@
       "location": "Taumarunui and Ruapehu district",
       "website": "https://www.lovepm.co.nz/",
       "approved": true
+    },
+    {
+      "name": "Cafe & Restaurant 75",
+      "category": "Food & Drink",
+      "location": "75 Hakiaha Street",
+      "description": "Café and dining; coffee, takeaways and lunch",
+      "website": "https://www.visitruapehu.com/see-do/eat-drink-shop/cafe-restaurant-75",
+      "approved": false,
+      "directory_group": "Eat & Drink"
+    },
+    {
+      "name": "Pizza K More",
+      "category": "Food & Drink",
+      "location": "1 Hakiaha Street",
+      "description": "Pizza and takeaways",
+      "website": "https://pizzakmore.co.nz/",
+      "approved": false,
+      "directory_group": "Eat & Drink"
+    },
+    {
+      "name": "Hong Kong Fast Food",
+      "category": "Food & Drink",
+      "location": "Taumarunui",
+      "description": "Fast food and takeaways",
+      "website": "https://localista.co.nz/listing/hong-kong-fast-food?place=taumarunui+suburb%2C+nz",
+      "approved": false,
+      "directory_group": "Eat & Drink"
+    },
+    {
+      "name": "The Flower Shed",
+      "category": "Shopping & Retail",
+      "location": "Taumarunui",
+      "description": "Florist and bouquets",
+      "website": "https://www.theflowershed.co.nz/",
+      "approved": false,
+      "directory_group": "Shopping",
+      "search_keywords": "flowers florist bouquets"
+    },
+    {
+      "name": "EZ Electrical Services Ltd",
+      "category": "Trades & Home Improvement",
+      "location": "Taumarunui area",
+      "description": "Electrical services and wiring",
+      "website": "https://www.ezelectrical.co.nz/",
+      "approved": false,
+      "directory_group": "Trades"
+    },
+    {
+      "name": "Taumarunui Auto Electrical Ltd",
+      "category": "Automotive",
+      "location": "181 Hakiaha Street",
+      "description": "Vehicle electrical services",
+      "website": "https://www.yellow.co.nz/taumarunui/bpp/taumarunui-auto-electrical-ltd-579401954",
+      "approved": false,
+      "directory_group": "Trades"
+    },
+    {
+      "name": "Caltex Taumarunui",
+      "category": "Automotive",
+      "location": "Taumarunui",
+      "description": "Fuel and service station",
+      "website": "https://caltex.co.nz/find-a-station/station/caltex-taumarunui",
+      "approved": false,
+      "directory_group": "Services"
+    },
+    {
+      "name": "Taumarunui Hire Centre",
+      "category": "Trades & Home Improvement",
+      "location": "Taumarunui",
+      "description": "Equipment hire",
+      "website": "https://www.yellow.co.nz/taumarunui/bpp/taumarunui-hire-centre-579508678",
+      "approved": false,
+      "directory_group": "Services",
+      "search_keywords": "rental equipment hire"
     }
   ]
 }

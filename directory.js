@@ -32,11 +32,11 @@ document.addEventListener('DOMContentLoaded', async () => {
   };
   const pageLink = business => 'business.html?business=' + encodeURIComponent(business.name);
   const searchable = business => [
-    business.name, business.category, business.description, business.location
-  ].filter(Boolean).join(' ').toLocaleLowerCase('en-NZ');
+    business.name, business.category, business.description, business.location, business.directory_group, business.search_keywords
+  ].filter(Boolean).join(' ').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('en-NZ');
 
   try {
-    const response = await fetch('businesses.json', {cache:'no-store'});
+    const response = await fetch('/.netlify/functions/committee?action=directory', {cache:'no-store'});
     if (!response.ok) throw new Error('Cannot load directory');
     const json = await response.json();
     businesses = (Array.isArray(json.businesses) ? json.businesses : [])
@@ -53,15 +53,19 @@ document.addEventListener('DOMContentLoaded', async () => {
     category.append(option);
   }
 
+  function groupOf(b){if(b.directory_group)return b.directory_group;const c=String(b.category||'');if(/food|drink|cafe|restaurant/i.test(c))return 'Eat & Drink';if(/shop|retail|fashion/i.test(c))return 'Shopping';if(/trade|construction|home improvement/i.test(c))return 'Trades';if(/accommodation|tourism|visitor/i.test(c))return 'Stay & Explore';return 'Services';}
+  const broad=document.createElement('optgroup');broad.label='Browse broad categories';
+  for(const g of ['Eat & Drink','Shopping','Trades','Services','Stay & Explore']){const o=create('option','',g);o.value='group:'+g;broad.append(o);}
+  category.insertBefore(broad,category.children[1]||null);
   const initial = new URLSearchParams(window.location.search);
   if (initial.has('q')) search.value = initial.get('q') || '';
-  if (initial.has('category') && categories.includes(initial.get('category'))) category.value = initial.get('category');
+  if (initial.has('category') && [...category.options].some(o=>o.value===initial.get('category'))) category.value = initial.get('category');
 
   function render() {
-    const term = search.value.trim().toLocaleLowerCase('en-NZ');
+    const term = search.value.trim().normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('en-NZ');
     const filtered = businesses.filter(b =>
-      (!term || searchable(b).includes(term)) &&
-      (!category.value || b.category === category.value) &&
+      (!term || term.split(/\s+/).every(word=>searchable(b).includes(word))) &&
+      (!category.value || b.category === category.value || 'group:'+groupOf(b) === category.value) &&
       (!membersOnly.checked || b.member === true)
     ).sort((a, b) => {
       if (sort.value === 'members') return Number(b.member === true) - Number(a.member === true) || a.name.localeCompare(b.name);
