@@ -12,3 +12,23 @@ async function applyContactAndFees() {
   }
 }
 applyContactAndFees().catch(()=>{});
+
+// Apply only published, server-validated content; never inject HTML.
+async function applyPublishedContent(){
+ const page=(location.pathname.split('/').pop()||'index.html').replace(/\.html$/,'');
+ if(!['index','about','membership','contact','directory','events','photos','privacy'].includes(page))return;
+ const get=async id=>{const r=await fetch('/.netlify/functions/site-content?action=public&id='+id,{cache:'no-store'});return r.ok?(await r.json()).published:null;};
+ const [v,a]=await Promise.all([get(page),get('appearance')]);
+ if(a){
+  if(a.theme==='green'){document.documentElement.style.setProperty('--navy','#203e32');document.documentElement.style.setProperty('--blue','#345a48');document.querySelectorAll('.hero').forEach(el=>el.style.background='linear-gradient(120deg,#203e32,#345a48)');}
+  if(a.theme==='navy'){document.documentElement.style.setProperty('--navy','#091a2d');document.documentElement.style.setProperty('--blue','#17324e');document.querySelectorAll('.hero').forEach(el=>el.style.background='linear-gradient(120deg,#091a2d,#17324e)');}
+  if(a.font==='system'||a.font==='serif'){const f=a.font==='serif'?'Georgia,serif':'system-ui,sans-serif';document.body.style.fontFamily=f;document.querySelectorAll('h1,h2,h3').forEach(el=>el.style.fontFamily=f);}
+ }
+ if(!v)return;
+ const main=document.querySelector('main');if(!main)return;
+ const title=main.querySelector('h1'),intro=main.querySelector('.hero .wrap p:not(.eyebrow)')||main.querySelector('p:not(.eyebrow)');
+ if(v.heading&&title)title.textContent=v.heading;if(v.intro&&intro)intro.textContent=v.intro;
+ if(v.seoTitle)document.title=v.seoTitle;const meta=document.querySelector('meta[name=description]');if(v.description&&meta)meta.content=v.description;
+ if(v.photo){const image=document.createElement('img');image.src=v.photo;image.alt=v.alt||'';image.loading='lazy';image.style.cssText='display:block;max-width:100%;max-height:440px;object-fit:contain;border-radius:6px;margin:24px 0';const wrap=main.querySelector('.hero .wrap')||main;wrap.append(image);}
+}
+applyPublishedContent().catch(()=>{});
