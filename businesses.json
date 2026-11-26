@@ -1,6 +1,6 @@
 {
   "updated": "2026-11-26",
-  "verification_note": "Public directory working data compiled from public business listings. Listings are not ETI endorsements; verify contact details and operational status periodically. ETI membership and payment records remain private.",
+  "verification_note": "Working research database: approved=true records are visible in directory; approved=false records are research candidates pending verification/ETI review. Directory presence does not establish ETI membership. Review and confirm business details, including potentially outdated addresses, before client handover.",
   "businesses": [
     {
       "name": "King Country Glass & Home Plus",
@@ -17,12 +17,13 @@
       "name": "Taumarunui i-SITE Visitor Information Centre",
       "category": "Tourism & Visitor Services",
       "description": "Visitor information and travel booking assistance for Taumarunui, Ruapehu and destinations throughout New Zealand.",
-      "location": "Railway Station, Hakiaha Street, Taumarunui 3920",
+      "location": "116 Hakiaha Street, Taumarunui 3920",
       "phone": "07 895 7494",
       "website": "https://www.isite.nz/find-an-isite/listing/taumarunui-i-site-visitor-information-centre",
       "approved": true,
       "source": "https://www.isite.nz/find-an-isite/listing/taumarunui-i-site-visitor-information-centre",
-      "checked": "2026-11-26"
+      "checked": "2026-11-26",
+      "verification_note": "Public business listing gives 116 Hakiaha Street; confirm street number before final ETI handover."
     },
     {
       "name": "King Country Motors",
@@ -364,6 +365,276 @@
       "location": "173 Hakiaha Street, Taumarunui 3920",
       "approved": true,
       "source": "Public local business search and Taumarunui business directories (2026-11-26)",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Mitre 10 Taumarunui",
+      "category": "Retail & Shopping",
+      "description": "Hardware and home improvement retailer.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "100% Appliances Taumarunui",
+      "category": "Retail & Shopping",
+      "description": "Home appliances and electronics retailer.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "PC Solutions Taumarunui",
+      "category": "Digital & Technology",
+      "description": "Computer and IT services.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Mr Plumber Taumarunui / Taumarunui Plumbing",
+      "category": "Trades & Home Improvement",
+      "description": "Plumbing and related services.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Keystone Plumbing",
+      "category": "Trades & Home Improvement",
+      "description": "Plumbing services.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Ruapehu Auto Electrical",
+      "category": "Automotive",
+      "description": "Vehicle auto-electrical services.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Homersham Mechanical",
+      "category": "Automotive",
+      "description": "Automotive mechanical services.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "The Heating Company Taumarunui",
+      "category": "Trades & Home Improvement",
+      "description": "Heating services.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Dean Stewart Building & Contracting",
+      "category": "Construction & Infrastructure",
+      "description": "Building and construction services.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Jubilee Dairy",
+      "category": "Groceries & Food Retail",
+      "description": "Convenience grocery and dairy.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Main Street Traders",
+      "category": "Retail & Shopping",
+      "description": "Local retail shop.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Gorjis",
+      "category": "Retail & Shopping",
+      "description": "Local fashion and retail shop.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "My Sister's Wardrobe",
+      "category": "Retail & Shopping",
+      "description": "Clothing retailer.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "The Little Second Hand Shop",
+      "category": "Retail & Shopping",
+      "description": "Second-hand goods retailer.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Farmfirst Vets",
+      "category": "Health & Wellbeing",
+      "description": "Veterinary services.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Totally Vets Taumarunui",
+      "category": "Health & Wellbeing",
+      "description": "Veterinary services.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Central Mowers & Chainsaws",
+      "category": "Rural & Agriculture",
+      "description": "Outdoor power equipment and machinery services.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "PDC Barn",
+      "category": "Retail & Shopping",
+      "description": "Local retailer.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Oleezara",
+      "category": "Retail & Shopping",
+      "description": "Local retailer.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Postie Taumarunui",
+      "category": "Retail & Shopping",
+      "description": "Clothing retailer.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Bay Audiology Taumarunui",
+      "category": "Health & Wellbeing",
+      "description": "Hearing care services.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Rusty Nail Tavern",
+      "category": "Food & Drink",
+      "description": "Tavern and restaurant.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Arcade Cafe",
+      "category": "Food & Drink",
+      "description": "Cafe at the Taumarunui Central Arcade.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "JayZeez Dairy & Takeaways",
+      "category": "Food & Drink",
+      "description": "Takeaway food and dairy.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Taumarunui Central Arcade",
+      "category": "Retail & Shopping",
+      "description": "Shopping arcade housing multiple businesses.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Taumarunui Canoe Hire & Jet Boat Tours",
+      "category": "Tourism & Visitor Services",
+      "description": "Whanganui River canoe hire and guided tourism.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Peak Chartered Accountants",
+      "category": "Finance & Professional Services",
+      "description": "Accounting and advisory services.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Active Property Management Ruapehu",
+      "category": "Property & Professional Services",
+      "description": "Property management services.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "King Country Pet Food New Zealand",
+      "category": "Rural & Agriculture",
+      "description": "Pet food manufacturing business.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
+      "checked": "2026-11-26"
+    },
+    {
+      "name": "Living on the Hedge",
+      "category": "Trades & Home Improvement",
+      "description": "Gardening and hedge services.",
+      "approved": false,
+      "verification_status": "research_candidate",
+      "source": "https://list-it.nz/manawatu-whanganui/taumarunui ; https://businessme.co.nz/city/taumarunui/ ; https://taumarunui.co.nz/event/support-local-shop-local/ ; https://www.cylex.co.nz/map/taumarunui/hakiaha-st.html",
       "checked": "2026-11-26"
     }
   ]
