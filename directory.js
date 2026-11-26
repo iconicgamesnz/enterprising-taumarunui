@@ -33,10 +33,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   const pageLink = business => 'business.html?business=' + encodeURIComponent(business.name);
   const searchable = business => [
     business.name, business.category, business.description, business.location
-  ].filter(Boolean).join(' ').toLocaleLowerCase('en-NZ');
+  ].filter(Boolean).join(' ').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('en-NZ');
 
   try {
-    const response = await fetch('businesses.json', {cache:'no-store'});
+    const response = await fetch('/.netlify/functions/committee?action=directory', {cache:'no-store'});
     if (!response.ok) throw new Error('Cannot load directory');
     const json = await response.json();
     businesses = (Array.isArray(json.businesses) ? json.businesses : [])
@@ -58,9 +58,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (initial.has('category') && categories.includes(initial.get('category'))) category.value = initial.get('category');
 
   function render() {
-    const term = search.value.trim().toLocaleLowerCase('en-NZ');
+    const term = search.value.trim().normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('en-NZ');
     const filtered = businesses.filter(b =>
-      (!term || searchable(b).includes(term)) &&
+      (!term || term.split(/\s+/).every(word=>searchable(b).includes(word))) &&
       (!category.value || b.category === category.value) &&
       (!membersOnly.checked || b.member === true)
     ).sort((a, b) => {
