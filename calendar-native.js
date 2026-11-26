@@ -1,3 +1,4 @@
+import {christmasParade,isChristmasParade2026} from './featured-events.js';
 const form=document.querySelector('#calendar-filter'),target=document.querySelector('#calendar-results'),status=document.querySelector('#calendar-status'),more=document.querySelector('#calendar-more');
 const params=new URLSearchParams(location.search);
 const today=new Intl.DateTimeFormat('sv-SE',{timeZone:'Pacific/Auckland'}).format(new Date());
@@ -47,6 +48,12 @@ Promise.allSettled([read('/legacy-events.json'),read('/event-details.json'),read
  const map=new Map();
  for(const [title,start,end,location,slug,allDay] of archived){const k=slugKey(slug),meta=details[k+'|'+start]||{};const e={title,start,end,location,allDay,...meta,snapshot:true,href:'/legacy-events.html?'+new URLSearchParams({event:k,at:start})};map.set(key(e),e);}
  for(const e of current){e.href='/events.html?'+new URLSearchParams({id:e.id});map.set(key(e),e);}
+ // Merge the confirmed one-off event, rather than appending a duplicate.
+ const matches=[...map.entries()].filter(([,e])=>isChristmasParade2026(e));
+ const approved=matches.find(([,e])=>!e.snapshot);
+ for(const [k] of matches)map.delete(k);
+ const parade={...christmasParade,...(approved?approved[1]:{}),id:christmasParade.id,href:christmasParade.href};
+ map.set(key(parade),parade);
  rows=[...map.values()].sort((a,b)=>a.start.localeCompare(b.start));
  const id=params.get('id');if(id){const e=rows.find(x=>x.id===id);form.hidden=true;status.textContent=warnings.join(' ');if(e){const back=el('a','Back to calendar');back.href='/events.html';target.append(back,card(e,true));document.title=e.title+' | Enterprising Taumarunui';}else target.append(el('p','This event is unavailable or cancelled.'));return;}
  render();
